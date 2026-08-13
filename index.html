@@ -567,7 +567,123 @@
         }
 
         /* ========================================== */
-        /* 6 . SECTION JADWAL CSS                     */ 
+        /* 6. SECTION DAFTAR SISWA (AUTO + MANUAL SCROLL)*/
+        /* ========================================== */
+        
+        .siswa-section {
+            padding: 6rem 8%;
+        }
+
+        /* Container dengan Scrollbar */
+        .siswa-container {
+            width: 100%;
+            position: relative;
+            overflow-x: auto; /* Memungkinkan scrollbar horizontal */
+            overflow-y: hidden;
+            padding-bottom: 15px;
+            scroll-behavior: auto; /* Dibuat 'auto' agar animasi JS berjalan sangat mulus */
+        }
+
+        /* Track Card Horizontal */
+        .siswa-track {
+            display: flex;
+            gap: 20px;
+            width: max-content;
+            padding: 10px 5px;
+        }
+
+        /* Card Siswa */
+        .siswa-card {
+            background-color: var(--card-bg);
+            padding: 1rem;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            text-align: center;
+            width: 170px;
+            flex-shrink: 0;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .siswa-card:hover {
+            border-color: var(--accent-color);
+            transform: translateY(-5px);
+        }
+
+        .siswa-foto {
+            width: 100%;
+            height: 160px;
+            border-radius: 8px;
+            overflow: hidden;
+            margin-bottom: 0.8rem;
+            border: 2px solid white;
+        }
+
+        .siswa-foto img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .siswa-card h4 {
+            font-family: 'Nexa', sans-serif;
+            font-size: 0.9rem;
+            color: var(--text-main);
+        }
+
+        /* Custom Scrollbar Horizontal di Bawah (Desktop) */
+        .siswa-container::-webkit-scrollbar {
+            height: 8px;
+        }
+        .siswa-container::-webkit-scrollbar-track {
+            background: rgba(22, 30, 46, 0.7);
+            border-radius: 10px;
+        }
+        .siswa-container::-webkit-scrollbar-thumb {
+            background-color: var(--accent-color); /* Cyber Lime */
+            border-radius: 10px;
+        }
+        .siswa-container::-webkit-scrollbar-thumb:hover {
+            background-color: var(--accent-hover);
+        }
+
+        /* ========================================== */
+        /* RESPONSIVE MOBILE (VERTIKAL)               */
+        /* ========================================== */
+        @media (max-width: 768px) {
+            .siswa-section {
+                padding: 6rem 5% 2rem 5%;
+                scroll-margin-top: 100px;
+            }
+
+            .siswa-container {
+                height: 60vh;
+                overflow-y: auto;
+                overflow-x: hidden;
+                padding: 10px;
+                border-radius: 12px;
+                background-color: rgba(15, 23, 42, 0.4);
+                border: 1px solid var(--border-color);
+            }
+
+            .siswa-track {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
+                width: 100%;
+            }
+
+            .siswa-card {
+                width: 100%;
+            }
+
+            .siswa-container::-webkit-scrollbar {
+                width: 6px;
+                height: 0px;
+            }
+        }
+
+        /* ========================================== */
+        /* 7. SECTION JADWAL CSS                      */ 
         /* ========================================== */
 
         /* Grid Kontainer Dua Kolom */
@@ -686,10 +802,11 @@
         }
         
         /* ========================================== */
-        /* 7. GALERI FOTO CSS                         */
+        /* 8. GALERI FOTO CSS                         */
         /* ========================================== */
         .galeri-grid {
             display: flex;
+            flex-wrap: wrap;
             justify-content: center;
             gap: 25px;
         }
@@ -740,7 +857,7 @@
         }
 
         /* ========================================== */
-        /* 8. FOOTER CSS                              */
+        /* 9. FOOTER CSS                              */
         /* ========================================== */
         .footer {
             background-color: #090d16;
@@ -769,7 +886,7 @@
         }
 
         /* ========================================== */
-        /* 9. RESPONSIVE MOBILE (Layar HP)            */ 
+        /* 10. RESPONSIVE MOBILE (Layar HP)           */ 
         /* ========================================== */
         @media (max-width: 768px) {
             .navbar {
@@ -960,10 +1077,10 @@
                 <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">Wadah kreativitas, informasi, dan kenangan kebersamaan siswa-siswi Kelas 10.</p>
                 <div class="hero-buttons" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
                     <a href="#profil" class="btn btn-primary">Explore The Class</a>
-                    <a href="#organisasi" class="btn btn-secondary">Organisation</a>
+                    <a href="#siswa" class="btn btn-secondary">Daftar Siswa X TJKT 1</a>
                 </div>
             </div>
-        </section>
+        </section> 
 
         <!-- ========================================== -->
         <!-- PROFIL KELAS                               -->
@@ -1156,9 +1273,201 @@
             </div>
         </section>
 
+
         <!-- ========================================== -->
-        <!-- JADWAL PELAJARAN & PIKET                   -->
-        <!-- Informasi harian kelas                     -->
+        <!-- DAFTAR SISWA KELAS (ANIMASI & SCROLL)      -->
+        <!-- ========================================== -->
+        <section id="siswa" class="siswa-section">
+            <div class="section-title">
+                <h2 data-aos="fade-up" data-aos-duration="1000">Anggota Kelas</h2>
+                <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">Daftar teman-teman sekelas X TJKT 1</p>
+            </div>
+
+            <!-- Container Utama -->
+            <div class="siswa-container" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                <div class="siswa-track" id="siswaTrack">
+                    
+                    <div class="siswa-card">
+                        <div class="siswa-foto"><img src="Images/DaftarFotoSiswa/Pramudiya.jpeg" alt="Siswa 1"></div>
+                        <h4>Ahmad Diva Pramudiya</h4>
+                    </div>
+                    
+                    <div class="siswa-card">
+                        <div class="siswa-foto"><img src="Images/Placeholder.jpg" alt="Siswa 2"></div>
+                        <h4>Ahmad Rizqi Tri Utomo</h4>
+                    </div>
+                    
+                    <div class="siswa-card">
+                        <div class="siswa-foto"><img src="Images/Placeholder.jpg" alt="Siswa 3"></div>
+                        <h4>Ahmad Zacky Zakaria</h4>
+                    </div>
+                    
+                    <div class="siswa-card">
+                        <div class="siswa-foto"><img src="Images/Placeholder.jpg" alt="Siswa 4"></div>
+                        <h4>Al Adib Yusuf Suryawan</h4>
+                    </div>
+                    
+                    <div class="siswa-card">
+                        <div class="siswa-foto"><img src="Images/Placeholder.jpg" alt="Siswa 5"></div>
+                        <h4>Alex Nur Rif'an</h4>
+                    </div>
+
+                    <div class="siswa-card">
+                        <div class="siswa-foto"><img src="Images/Placeholder.jpg" alt="Siswa 6"></div>
+                        <h4>Aprilian Miftakhul Huda</h4>
+                    </div>
+
+                    <div class="siswa-card">
+                        <div class="siswa-foto"><img src="Images/Placeholder.jpg" alt="Siswa 7"></div>
+                        <h4>Arimby Anindya Nayottama</h4>
+                    </div>
+
+                    <div class="siswa-card">
+                        <div class="siswa-foto"><img src="Images/Placeholder.jpg" alt="Siswa 7"></div>
+                        <h4>Atha Arkananta Shaquille</h4>
+                    </div>
+
+                    <div class="siswa-card">
+                        <div class="siswa-foto"><img src="Images/DaftarFotoSiswa/Dafa.jpeg" alt="Siswa 7"></div>
+                        <h4>Dava Prayuliansyah</h4>
+                    </div>
+
+                    <div class="siswa-card">
+                        <div class="siswa-foto"><img src="Images/DaftarFotoSiswa/Fani.jpeg" alt="Siswa 7"></div>
+                        <h4>Fadhila Nuril Sayfani</h4>
+                    </div>
+
+                    <div class="siswa-card">
+                        <div class="siswa-foto"><img src="Images/Placeholder.jpg" alt="Siswa 7"></div>
+                        <h4>Fajar Dwi Setyo Nugroho</h4>
+                    </div>
+
+                    <div class="siswa-card">
+                        <div class="siswa-foto"><img src="Images/Placeholder.jpg" alt="Siswa 7"></div>
+                        <h4>Haninndya Dwi Febriana</h4>
+                    </div>
+
+                    <div class="siswa-card">
+                        <div class="siswa-foto"><img src="Images/Placeholder.jpg" alt="Siswa 7"></div>
+                        <h4>Haygal Maulana Rizky</h4>
+                    </div>
+
+                    <div class="siswa-card">
+                        <div class="siswa-foto"><img src="Images/Placeholder.jpg" alt="Siswa 7"></div>
+                        <h4>Julian Khasiib Raditya</h4>
+                    </div>
+
+                    <div class="siswa-card">
+                        <div class="siswa-foto"><img src="Images/Placeholder.jpg" alt="Siswa 7"></div>
+                        <h4>M Yusuf Hikmal Akbar</h4>
+                    </div>
+
+                    <div class="siswa-card">
+                        <div class="siswa-foto"><img src="Images/Placeholder.jpg" alt="Siswa 7"></div>
+                        <h4>M Tyaga Arifin Billah</h4>
+                    </div>
+
+                    <div class="siswa-card">
+                        <div class="siswa-foto"><img src="Images/Placeholder.jpg" alt="Siswa 7"></div>
+                        <h4>M Aga Satya</h4>
+                    </div>
+
+                    <div class="siswa-card">
+                        <div class="siswa-foto"><img src="Images/Placeholder.jpg" alt="Siswa 7"></div>
+                        <h4>M Ainun Khabibi</h4>
+                    </div>
+
+                    <div class="siswa-card">
+                        <div class="siswa-foto"><img src="Images/Placeholder.jpg" alt="Siswa 7"></div>
+                        <h4>M Ashofa Shobiburizqi</h4>
+                    </div>
+
+                    <div class="siswa-card">
+                        <div class="siswa-foto"><img src="Images/Placeholder.jpg" alt="Siswa 7"></div>
+                        <h4>M Davin Firman Alfarizzy</h4>
+                    </div>
+
+                    <div class="siswa-card">
+                        <div class="siswa-foto"><img src="Images/Placeholder.jpg" alt="Siswa 7"></div>
+                        <h4>M Fajar</h4>
+                    </div>
+
+                    <div class="siswa-card">
+                        <div class="siswa-foto"><img src="Images/Placeholder.jpg" alt="Siswa 7"></div>
+                        <h4>M Fajar Dwi Saputra</h4>
+                    </div>
+
+                    <div class="siswa-card">
+                        <div class="siswa-foto"><img src="Images/Placeholder.jpg" alt="Siswa 7"></div>
+                        <h4>M Fathan Athaya Putra Purnomo</h4>
+                    </div>
+
+                    <div class="siswa-card">
+                        <div class="siswa-foto"><img src="Images/Placeholder.jpg" alt="Siswa 7"></div>
+                        <h4>M Ilham Mustofa</h4>
+                    </div>
+
+                    <div class="siswa-card">
+                        <div class="siswa-foto"><img src="Images/Placeholder.jpg" alt="Siswa 7"></div>
+                        <h4>Nabilla Ajeng Asih Mariatun</h4>
+                    </div>
+
+                    <div class="siswa-card">
+                        <div class="siswa-foto"><img src="Images/Placeholder.jpg" alt="Siswa 7"></div>
+                        <h4>Pradibta Bayu Wirananda</h4>
+                    </div>
+
+                    <div class="siswa-card">
+                        <div class="siswa-foto"><img src="Images/Placeholder.jpg" alt="Siswa 7"></div>
+                        <h4>Raditya Fahmi Adhi Ardianto</h4>
+                    </div>
+
+                    <div class="siswa-card">
+                        <div class="siswa-foto"><img src="Images/Placeholder.jpg" alt="Siswa 7"></div>
+                        <h4>Ramadhan Yusuf Alrifqi</h4>
+                    </div>
+
+                    <div class="siswa-card">
+                        <div class="siswa-foto"><img src="Images/Placeholder.jpg" alt="Siswa 7"></div>
+                        <h4>Rendyansyah Ramadhan</h4>
+                    </div>
+
+                    <div class="siswa-card">
+                        <div class="siswa-foto"><img src="Images/Placeholder.jpg" alt="Siswa 7"></div>
+                        <h4>Rizky Wahyu Aditya</h4>
+                    </div>
+
+                    <div class="siswa-card">
+                        <div class="siswa-foto"><img src="Images/Placeholder.jpg" alt="Siswa 7"></div>
+                        <h4>Rossi Valentino Aldrin Pasha</h4>
+                    </div>
+
+                    <div class="siswa-card">
+                        <div class="siswa-foto"><img src="Images/Placeholder.jpg" alt="Siswa 7"></div>
+                        <h4>Sandy Heka Janatuka</h4>
+                    </div>
+
+                    <div class="siswa-card">
+                        <div class="siswa-foto"><img src="Images/DaftarFotoSiswa/Ozora.jpg" alt="Siswa 7"></div>
+                        <h4>Shira Ozora Zebadiah</h4>
+                    </div>
+
+                    <div class="siswa-card">
+                        <div class="siswa-foto"><img src="Images/Placeholder.jpg" alt="Siswa 7"></div>
+                        <h4>Yuwanda Mirza Kameel</h4>
+                    </div>
+
+                    <div class="siswa-card">
+                        <div class="siswa-foto"><img src="Images/Placeholder.jpg" alt="Siswa 7"></div>
+                        <h4>Zuhad Adidtya Zahril</h4>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================== -->
+        <!-- JADWAL PELAJARAN DAN PIKET                 -->
         <!-- ========================================== -->
         <section id="jadwal" class="jadwal-section">
             <div class="section-title">
@@ -1217,6 +1526,20 @@
                         <img src="Images/Kenangan/FotbarSamaKakakKelas1.jpeg" data-zoomable width="250">
                     </div>
                     <p class="caption">Kenangan - 2</p>
+                </div>
+                <!-- Item Galeri 3 -->
+                <div class="galeri-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                    <div class="img-placeholder">
+                        <img src="Images/Kenangan/SkagaraMlakuMlaku.jpeg" data-zoomable width="250">
+                    </div>
+                    <p class="caption">Kenangan - 3</p>
+                </div>
+                <!-- Item Galeri 4 -->
+                <div class="galeri-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                    <div class="img-placeholder">
+                        <img src="Images/Kenangan/SkagaraMlakuMlaku1.jpeg" data-zoomable width="250">
+                    </div>
+                    <p class="caption">Kenangan - 4</p>
                 </div>
             </div>
         </section>
@@ -1347,8 +1670,119 @@
             updateTampilan();
             setInterval(updateTampilan, 1000);
         }
-
         document.addEventListener("DOMContentLoaded", inisialisasiWaktu);
+
+        // ======================================================== //
+        // LINEAR SMOOTH SCROLL CARD SISWA (MENTOK KIRI & KANAN)    // 
+        // ======================================================== //
+        document.addEventListener("DOMContentLoaded", function() {
+            const container = document.querySelector(".siswa-container");
+            const track = document.getElementById("siswaTrack");
+
+            if (!container || !track) return;
+
+            // Hanya aktif di Layar Desktop (> 768px)
+            if (window.innerWidth > 768) {
+                let autoSpeed = 0.8; // Kecepatan jalan otomatis
+                let isHovered = false;
+                let isUserInteracting = false;
+                let interactTimeout;
+
+                let targetScroll = container.scrollLeft;
+                let currentScroll = container.scrollLeft;
+                let isWheelScrolling = false;
+
+                // Fungsi menghitung batas maksimal scroll kanan
+                function getMaxScroll() {
+                    return container.scrollWidth - container.clientWidth;
+                }
+
+                // 1. AUTO SCROLL (Berjalan sampai mentok di siswa terakhir)
+                function autoScrollStep() {
+                    const maxScroll = getMaxScroll();
+
+                    if (!isHovered && !isUserInteracting && !isWheelScrolling) {
+                        // Hanya jalan jika belum mentok di paling kanan
+                        if (container.scrollLeft < maxScroll) {
+                            container.scrollLeft += autoSpeed;
+                            
+                            // Kunci agar tidak melebihi batas mentok
+                            if (container.scrollLeft > maxScroll) {
+                                container.scrollLeft = maxScroll;
+                            }
+                        }
+                    }
+                    requestAnimationFrame(autoScrollStep);
+                }
+                requestAnimationFrame(autoScrollStep);
+
+                // Pause auto-scroll saat kursor berada di atas area card
+                container.addEventListener("mouseenter", () => isHovered = true);
+                container.addEventListener("mouseleave", () => isHovered = false);
+
+                // 2. SMOOTH MOUSE WHEEL (Mulus & Mentok Presisi)
+                function smoothWheelLoop() {
+                    if (isWheelScrolling) {
+                        const maxScroll = getMaxScroll();
+
+                        // Interpolasi Lerp untuk pergeseran mulus
+                        currentScroll += (targetScroll - currentScroll) * 0.1;
+                        container.scrollLeft = currentScroll;
+
+                        // Jika pergeseran sudah mendekati target, hentikan animasi wheel
+                        if (Math.abs(targetScroll - currentScroll) < 0.5) {
+                            container.scrollLeft = targetScroll; // Snap pas ke posisi target
+                            isWheelScrolling = false;
+                        } else {
+                            requestAnimationFrame(smoothWheelLoop);
+                        }
+                    }
+                }
+
+                // Event Listener Wheel Mouse
+                container.addEventListener("wheel", (e) => {
+                    if (e.deltaY !== 0) {
+                        e.preventDefault(); // Mencegah halaman utama scroll vertikal
+                        isUserInteracting = true;
+
+                        const maxScroll = getMaxScroll();
+
+                        if (!isWheelScrolling) {
+                            currentScroll = container.scrollLeft;
+                            targetScroll = container.scrollLeft;
+                            isWheelScrolling = true;
+                            requestAnimationFrame(smoothWheelLoop);
+                        }
+
+                        // Tambahkan jarak target berdasarkan putaran wheel
+                        targetScroll += e.deltaY * 1.5;
+
+                        // KUNCI BATAS: Tidak boleh kurang dari 0 (kiri) dan tidak boleh lewat maxScroll (kanan)
+                        targetScroll = Math.max(0, Math.min(targetScroll, maxScroll));
+
+                        // Timer reset interaksi user
+                        clearTimeout(interactTimeout);
+                        interactTimeout = setTimeout(() => {
+                            isUserInteracting = false;
+                        }, 1200);
+                    }
+                }, { passive: false });
+
+                // 3. DETEKSI SCROLLBAR DITARIK MANUAL
+                container.addEventListener("scroll", () => {
+                    if (!isWheelScrolling) {
+                        currentScroll = container.scrollLeft;
+                        targetScroll = container.scrollLeft;
+                        isUserInteracting = true;
+
+                        clearTimeout(interactTimeout);
+                        interactTimeout = setTimeout(() => {
+                            isUserInteracting = false;
+                        }, 1200);
+                    }
+                });
+            }
+        });
     </script>
 </body>
 </html>
