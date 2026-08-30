@@ -1073,7 +1073,7 @@
         <section id="hero" class="hero-section">
             <div class="hero-content">
                 <span class="badge" data-aos="fade-up" data-aos-duration="1000">Welcome to our website</span>
-                <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">X TJKT 1</h1>
+                <h1 class="typing-text data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200"></h1>
                 <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">Wadah kreativitas, informasi, dan kenangan kebersamaan siswa-siswi Kelas 10.</p>
                 <div class="hero-buttons" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
                     <a href="#profil" class="btn btn-primary">Explore The Class</a>
@@ -1110,7 +1110,7 @@
                     <h3>Wali Kelas</h3>
                     <!-- Placeholder Foto Wali Kelas -->
                     <div class="foto-placeholder">[Foto Wali Kelas]</div>
-                    <h4>Agus Wahyu D, S.Pd.</h4>
+                    <h4>Agus Wahyu, S.Pd.</h4>
                 </div>
             </div>
         </section>
@@ -1190,7 +1190,7 @@
                             <!-- CABANG KANAN: BENDAHARA -->
                             <li>
                                 <div class="card-pengurus">
-                                    <div class="foto-pengurus"><img src="Images/Placeholder.jpg" alt="Bendahara 1"></div>
+                                    <div class="foto-pengurus"><img src="Images/DaftarFotoSiswa/Arimby.jpeg" alt="Bendahara 1"></div>
                                     <span class="jabatan">Bendahara 1</span>
                                     <h4>Arimby Anindya Nayottama</h4>
                                 </div>
@@ -1242,12 +1242,12 @@
                 <div class="card-pengurus">
                     <div class="foto-pengurus"><img src="Images/Placeholder.jpg" alt="Bendahara 1"></div>
                     <span class="jabatan">Bendahara 1</span>
-                    <h4>Arimby Anindya Nayottama</h4>
+                    <h4>Nabilla Ajeng Asih</h4>
                 </div>
                 <div class="card-pengurus">
                     <div class="foto-pengurus"><img src="Images/Placeholder.jpg" alt="Bendahara 2"></div>
                     <span class="jabatan">Bendahara 2</span>
-                    <h4>Muhammad Fajar</h4>
+                    <h4>Al Adib Yusuf</h4>
                 </div>
                 
                 <!-- Seksi Kerohanian -->
@@ -1318,7 +1318,7 @@
                     </div>
 
                     <div class="siswa-card">
-                        <div class="siswa-foto"><img src="Images/Placeholder.jpg" alt="Siswa 7"></div>
+                        <div class="siswa-foto"><img src="Images/DaftarFotoSiswa/Arimby.jpeg" alt="Siswa 7"></div>
                         <h4>Arimby Anindya Nayottama</h4>
                     </div>
 
@@ -1783,6 +1783,52 @@
                 });
             }
         });
+
+        // ======================================================== //
+        // TITLE TYPING TEXT EFFECT                                 // 
+        // ======================================================== //
+        const words = ["X TJKT 1", "Software Engineering"];
+        function jalankanEfekKetik(elemen) {
+            let wordIndex = 0;
+            let charIndex = 0;
+            let isDeleting = false;
+
+            function type() {
+                const currentWord = words[wordIndex];
+                
+                if (isDeleting) {
+                elemen.textContent = currentWord.substring(0, charIndex - 1);
+                charIndex--;
+                } else {
+                elemen.textContent = currentWord.substring(0, charIndex + 1);
+                charIndex++;
+                }
+
+                let typingSpeed = isDeleting ? 50 : 100;
+
+                if (!isDeleting && charIndex === currentWord.length) {
+                    typingSpeed = 3000; 
+                    isDeleting = true;
+                } 
+                else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                wordIndex = (wordIndex + 1) % words.length;
+                typingSpeed = 500; 
+                }
+
+                setTimeout(type, typingSpeed);
+            }
+
+            type();
+        }
+
+            document.addEventListener("DOMContentLoaded", () => {
+                const semuaKomponenTeks = document.querySelectorAll('.typing-text');
+                
+                semuaKomponenTeks.forEach((elemen) => {
+                    jalankanEfekKetik(elemen);
+                });
+            });
     </script>
 </body>
 </html>
