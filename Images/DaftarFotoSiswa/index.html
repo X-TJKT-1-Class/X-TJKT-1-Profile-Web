@@ -1,0 +1,1857 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- JUDUL WEBSITE (Paling Penting! Masukkan kata kunci utama di sini) -->
+    <title>X TJKT 1 Web Profile</title>
+
+    <!-- Meta Deskripsi yang akan muncul di bawah judul pada pencarian Google -->
+    <meta name="description" content="Official X TJKT 1 Web Profile. Portofolio dan informasi seputar jurusan Teknik Jaringan Komputer dan Telekomunikasi kelas 10 TJKT 1">
+
+    <!-- Meta Keywords (Kata kunci pencarian) -->
+    <meta name="keywords" content="X TJKT 1 Web Profile, X TJKT 1, SMKN 3 Jepara, TJKT 1, Profile Web TJKT">
+
+    <!-- Author -->
+    <meta name="author" content="Atha Arkananta Shaquille">
+
+    <meta name="google-site-verification" content="3b0w0oJfxYWzfE7unPsdlLrd6MDxD8ZE0TYjsRDCepo" />
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    
+    <style>
+        /* Custom Font */
+        @font-face {
+            font-family: 'LemonMilk';
+            src: url('./Fonts/LEMONMILK-Regular.otf') format('opentype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'AltaHaas';
+            src: url('./Fonts/AlteHaasGroteskRegular.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'BebasNeue';
+            src: url('./Fonts/BebasNeue-Regular.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'CaviarDreams';
+            src: url('./Fonts/CaviarDreams.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Cocogoose';
+            src: url('./Fonts/Cocogoose-Pro-Light-trial.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Nexa';
+            src: url('./Fonts/Nexa-ExtraLight.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Roboto-Regular';
+            src: url('./Fonts/Roboto-Regular.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Roboto-Thin';
+            src: url('./Fonts/Roboto-Thin.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Sketchy';
+            src: url('./Fonts/A bit sketchy.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Arcade';
+            src: url('./Fonts/ka1.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'ARCADECLASSIC';
+            src: url('./Fonts/ARCADECLASSIC.TTF') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'SegaArcade';
+            src: url('./Fonts/SegaArcadeFont-Regular.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Miracle';
+            src: url('./Fonts/MiracleHistory.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'KGRedHands';
+            src: url('./Fonts/KGRedHands.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'DigitalNumber';
+            src: url('./Fonts/Technology.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        /* ========================================== */
+        /* ROOT COLOR                                 */ 
+        /* ========================================== */
+        :root {
+            /* ========================================== */
+            /* 1. PALET WARNA UTAMA (BACKGROUND & TEXT)   */
+            /* ========================================== */
+            --bg-color: #0b0f17;         /* Dipertajam ke latar lebih gelap agar aksen menyala */
+            --card-bg: #161e2e;          /* Container Slate gelap modern */
+            --card-hover: #1e293b;       /* Efek hover pada kartu */
+            
+            --text-main: #f8fafc;        /* Teks utama (Putih bersih) */
+            --text-muted: #94a3b8;       /* Teks sekunder (Muted Gray) */
+            --text-dim: #64748b;         /* Teks tersier / keterangan kecil */
+
+            /* ========================================== */
+            /* 2. WARNA AKSEN & HYPER-CONTRAST            */
+            /* ========================================== */
+            --accent-color: #d4ff00;     /* Cyber Lime */
+            --accent-hover: #b2d800;     /* Cyber Lime Hover */
+            --accent-glow: rgba(212, 255, 0, 0.25); /* Efek berpijar/neon */
+
+            /* Magenta dipoles dari #FF00FF menjadi Neon Electric Fuchsia */
+            --magenta-color: #f43f5e;    /* Magenta/Electric Rose modern (lebih enak di mata) */
+            --magenta-glow: rgba(244, 63, 94, 0.25);
+
+            /* Aksen Gradien Kekinian */
+            --gradient-primary: linear-gradient(135deg, #d4ff00 0%, #00f0ff 100%);
+            --gradient-accent: linear-gradient(135deg, #f43f5e 0%, #fb923c 100%);
+
+            /* ========================================== */
+            /* 3. BORDER & GLASSMORPHISM (EFEK KACA)     */
+            /* ========================================== */
+            --border-color: rgba(255, 255, 255, 0.08); /* Border tipis halus */
+            --border-hover: rgba(212, 255, 0, 0.4);     /* Border menyala saat di-hover */
+
+            --glass-bg: rgba(22, 30, 46, 0.7);          /* Latar kaca transparan */
+            --glass-border: rgba(255, 255, 255, 0.1);   /* Garis hiasan kaca */
+
+            /* ========================================== */
+            /* 4. BAYANGAN (SHADOWS & GLOW EFFECTS)      */
+            /* ========================================== */
+            --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.4);
+            --shadow-lg: 0 12px 32px -8px rgba(0, 0, 0, 0.6);
+            --glow-accent: 0 0 20px var(--accent-glow);  /* Efek neon berpijar */
+
+            /* ========================================== */
+            /* 5. TYPOGRAPHY & RADIUS                    */
+            /* ========================================== */
+            --font-family: 'Inter', 'Poppins', system-ui, -apple-system, sans-serif;
+            --radius-sm: 8px;
+            --radius-md: 12px;
+            --radius-lg: 20px;
+            --radius-full: 9999px;
+        }
+
+        mark {
+            background-color: #d4ff0028;
+            border-radius: 4px;
+            padding: 2px 6px;
+            font-style: italic;
+            border: 1px solid #d4ff00;
+            color: white;
+        }
+
+        .blue-mark {
+            background-color: #f43f5d25;
+            border-radius: 4px;
+            padding: 2px 6px;
+            font-style: italic;
+            border: 1px solid var(--magenta-color);
+            color: white;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth; /* Efek scroll halus saat mengeklik menu navbar */
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: var(--font-family);
+            line-height: 1.6;   
+        }
+
+        .for-seo {
+            display: none;
+        }
+
+        /* ========================================== */
+        /* 1. NAVBAR / MENU UTAMA CSS                 */
+        /* ========================================== */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.2rem 8%;
+            background-color: rgba(15, 23, 42, 0.85); /* Semi-transparan */
+            backdrop-filter: blur(10px);               /* Efek kaca buram */
+            border-bottom: 1px solid var(--accent-color);
+            z-index: 1000;
+            opacity: 1;
+            visibility: visible;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+
+        .logo-and-clock {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .real-time-clock {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'DigitalNumber';
+            color: var(--text-muted);
+            display: flex;
+            margin-left: 200px;
+        }
+
+        .real-time-clock div {
+            width: 10px;
+            height: 10px;
+            background-color: rgb(0, 189, 0);
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        .real-time-day {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .real-day {
+            display: flex;
+            gap: 10px;
+        }
+
+        .real-day-text {
+            font-family: 'CaviarDreams';
+            font-size: 20px;
+        }
+
+        .mobile-real-day {
+            display: none;
+        }
+
+        .logo h2 {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--accent-color);
+            text-decoration: none;
+            letter-spacing: 1px;
+            font-family: 'AltaHaas';
+        }
+
+        .nav-links ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: var(--text-main);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            font-family: 'Nexa';
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-color);
+        }
+
+        /* ========================================== */
+        /* 2. HERO SECTION CSS                        */
+        /* ========================================== */
+        .hero-section {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 8%;
+            background: radial-gradient(circle at center, #1e293b 0%, #0f172a 100%);
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 0.4rem 1rem;
+            background-color: rgba(212, 255, 0, 0.1);
+            color: var(--accent-color);
+            border: 1px solid var(--accent-color);
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+            font-family: 'AltaHaas';
+            color: var(--accent-color);
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+            font-family: 'Nexa'; 
+            text-align: center;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        /* Tombol */
+        .btn {
+            padding: 0.8rem 1.8rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary {
+            background-color: var(--accent-color);
+            color: #0f172a;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--accent-hover);
+            box-shadow: var(--glow-accent);
+            border-color: var(--border-hover);
+            transform: translateY(-3px);
+        }
+
+        .btn-secondary {
+            border: 1px solid var(--border-color);
+            color: var(--text-main);
+            background-color: var(--card-bg);
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--text-muted);
+            transform: translateY(-3px);
+        }
+
+        /* ========================================== */
+        /* 3. UTILITAS SECTION GENERAL CSS            */
+        /* ========================================== */
+        section {
+            padding: 6rem 8%;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 4rem;
+            font-family: 'KGRedHands';
+        }
+
+        .section-title h2 {
+            font-size: 2.2rem;
+            color: var(--accent-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .section-title p {
+            color: var(--text-muted);   
+        }
+
+        /* Placeholders Foto */
+        .foto-placeholder, .foto-pengurus, .img-placeholder {
+            background-color: #334155;
+            color: var(--text-muted);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+
+        /* ========================================== */
+        /* 4. PROFIL KELAS CSS                        */
+        /* ========================================== */
+        .profil-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 2rem;
+            align-items: start;
+        }
+
+        .deskripsi-kelas, .walikelas-card {
+            background-color: var(--card-bg);
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+        }
+
+        .deskripsi-kelas h3 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-family: 'Cocogoose';
+            font-size: 20px;
+        }
+
+        .walikelas-card .foto-placeholder {
+            height: 200px;
+        }
+
+        .walikelas-card h3 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-family: 'Cocogoose';
+            font-size: 20px;
+        }
+
+        .walikelas-card h4 {
+            text-align: center;
+            font-family: 'Roboto-Thin';
+            font-style: italic;
+            font-size: 20px;
+        }
+
+        .organisasi-grid-mobile {
+            display: none;
+        }
+
+        /* ========================================== */
+        /* 5. STRUKTUR ORGANISASI TREE CSS            */
+        /* ========================================== */
+
+        /* Wadah utama agar bisa digeser (scroll) jika di layar HP */
+        .tree-container {
+            display: flex;
+            justify-content: center;
+            overflow-x: auto;
+            padding-bottom: 2rem;
+        }
+
+        /* Membentuk Garis Pohon Menggunakan Pseudo-elements */
+        .tree ul {
+            padding-top: 20px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            padding-left: 0;
+        }
+
+        .tree li {
+            float: left;
+            text-align: center;
+            list-style-type: none;
+            position: relative;
+            padding: 20px 10px 0 10px;
+        }
+
+        /* Garis horizontal atas */
+        .tree li::before, .tree li::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 50%;
+            border-top: 2px solid var(--accent-color, #d4ff00);
+            width: 50%;
+            height: 20px;
+        }
+        .tree li::after {
+            right: auto;
+            left: 50%;
+            border-left: 2px solid var(--accent-color, #d4ff00);
+        }
+
+        /* Membersihkan garis pada elemen tunggal */
+        .tree li:only-child::after, .tree li:only-child::before {
+            display: none;
+        }
+        .tree li:only-child {
+            padding-top: 0;
+        }
+        .tree li:first-child::before, .tree li:last-child::after {
+            border: 0 none;
+        }
+        .tree li:last-child::before {
+            border-right: 2px solid var(--accent-color, #d4ff00);
+            border-radius: 0 5px 0 0;
+        }
+        .tree li:first-child::after {
+            border-radius: 5px 0 0 0;
+        }
+
+        /* Garis vertikal ke bawah dari induk ke anak */
+        .tree ul ul::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            border-left: 2px solid var(--accent-color, #d4ff00);
+            width: 0;
+            height: 20px;
+            transform: translateX(-50%);
+        }
+
+        /* KUSTOMISASI KARTU PENGURUS */
+        .card-pengurus {
+            background-color: var(--card-bg);
+            padding: 1.2rem;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            text-align: center;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+            width: 190px; /* Lebar card dikunci agar rapi saat dijajarkan */
+            margin: 0 auto;
+            display: inline-block;
+        }
+
+        .card-pengurus h4 {
+            font-family: 'Nexa', sans-serif;
+            font-size: 0.95rem; /* Dikecilkan sedikit agar nama panjang tidak turun baris */
+        }
+
+        .card-pengurus:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-color);
+        }
+
+        .foto-pengurus img {
+            width: 100%; /* Mengikuti lebar parent, bukan 300px kaku seperti sebelumnya */
+            height: 160px;
+            border: 2px solid white;
+            border-radius: 8px;
+            object-fit: cover;
+            display: block;
+            margin-bottom: 0.8rem;
+        }
+
+        .jabatan {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 700;
+            font-family: 'KGRedHands', sans-serif;
+            color: var(--accent-color);
+            text-transform: uppercase;
+            margin-bottom: 0.3rem;
+        }
+
+        /* ========================================== */
+        /* 6. SECTION DAFTAR SISWA (AUTO + MANUAL SCROLL)*/
+        /* ========================================== */
+        
+        .siswa-section {
+            padding: 6rem 8%;
+        }
+
+        /* Container dengan Scrollbar */
+        .siswa-container {
+            width: 100%;
+            position: relative;
+            overflow-x: auto; /* Memungkinkan scrollbar horizontal */
+            overflow-y: hidden;
+            padding-bottom: 15px;
+            scroll-behavior: auto; /* Dibuat 'auto' agar animasi JS berjalan sangat mulus */
+        }
+
+        /* Track Card Horizontal */
+        .siswa-track {
+            display: flex;
+            gap: 20px;
+            width: max-content;
+            padding: 10px 5px;
+        }
+
+        /* Card Siswa */
+        .siswa-card {
+            background-color: var(--card-bg);
+            padding: 1rem;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            text-align: center;
+            width: 170px;
+            flex-shrink: 0;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .siswa-card:hover {
+            border-color: var(--accent-color);
+            transform: translateY(-5px);
+        }
+
+        .siswa-foto {
+            width: 100%;
+            height: 160px;
+            border-radius: 8px;
+            overflow: hidden;
+            margin-bottom: 0.8rem;
+            border: 2px solid white;
+        }
+
+        .siswa-foto img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .siswa-card h4 {
+            font-family: 'Nexa', sans-serif;
+            font-size: 0.9rem;
+            color: var(--text-main);
+        }
+
+        /* Custom Scrollbar Horizontal di Bawah (Desktop) */
+        .siswa-container::-webkit-scrollbar {
+            height: 8px;
+        }
+        .siswa-container::-webkit-scrollbar-track {
+            background: rgba(22, 30, 46, 0.7);
+            border-radius: 10px;
+        }
+        .siswa-container::-webkit-scrollbar-thumb {
+            background-color: var(--accent-color); /* Cyber Lime */
+            border-radius: 10px;
+        }
+        .siswa-container::-webkit-scrollbar-thumb:hover {
+            background-color: var(--accent-hover);
+        }
+
+        /* ========================================== */
+        /* RESPONSIVE MOBILE (VERTIKAL)               */
+        /* ========================================== */
+        @media (max-width: 768px) {
+            .siswa-section {
+                padding: 6rem 5% 2rem 5%;
+                scroll-margin-top: 100px;
+            }
+
+            .siswa-container {
+                height: 60vh;
+                overflow-y: auto;
+                overflow-x: hidden;
+                padding: 10px;
+                border-radius: 12px;
+                background-color: rgba(15, 23, 42, 0.4);
+                border: 1px solid var(--border-color);
+            }
+
+            .siswa-track {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
+                width: 100%;
+            }
+
+            .siswa-card {
+                width: 100%;
+            }
+
+            .siswa-container::-webkit-scrollbar {
+                width: 6px;
+                height: 0px;
+            }
+        }
+
+        /* ========================================== */
+        /* 7. SECTION JADWAL CSS                      */ 
+        /* ========================================== */
+
+        /* Grid Kontainer Dua Kolom */
+        .jadwal-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+
+        /* Kartu Utama (Jadwal Pelajaran) */
+        .jadwal-box-pelajaran {
+            background: #1e293b; /* Dark Slate background */
+            border: 1px solid #334155;
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+            transition: border-color 0.3s ease;
+            height: fit-content;
+        }
+
+        /* Kartu Utama (Jadwal Piket) */
+        .jadwal-box-piket {
+            background: #1e293b; /* Dark Slate background */
+            border: 1px solid #334155;
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+            transition: border-color 0.3s ease;
+        }
+
+        .jadwal-box-pelajaran:hover,
+        .jadwal-box-piket:hover {
+            border-color: rgba(212, 255, 0, 0.3); /* Subtle glow Cyber Lime */
+        }
+
+        /* Judul Box dengan Accent Bar di Kiri */
+        .jadwal-box-pelajaran h3,
+        .jadwal-box-piket h3 {
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: #d4ff00; /* Cyber Lime */
+            margin-bottom: 1.5rem;
+            padding-left: 0.8rem;
+            border-left: 4px solid #d4ff00;
+            display: flex;
+            align-items: center;
+            letter-spacing: 0.5px;
+            font-family: 'Cocogoose';
+        }
+
+        /* Reset List */
+        .list-jadwal,
+        .list-piket {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 0.85rem; /* Jarak antar hari */
+            justify-content: center;
+        }
+
+        /* Kartu Mini untuk Setiap Hari (li) */
+        .list-jadwal li, 
+        .list-piket li {
+            background-color: rgba(15, 23, 42, 0.6); /* Kotak dalam lebih gelap */
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            padding: 0.85rem 1.1rem;
+            display: flex;
+            flex-direction: column; /* Nama hari di atas, teks di bawah */
+            gap: 0.3rem;
+            transition: all 0.25s ease;
+            font-size: 0.92rem;
+            color: #cbd5e1;
+            line-height: 1.5;
+            width: 100%;
+        }
+
+        /* Efek Hover saat Kursor Menempel */
+        .list-jadwal li:hover, 
+        .list-piket li:hover {
+            background-color: rgba(15, 23, 42, 0.95);
+            transform: translateX(6px); /* Bergeser halus ke kanan */
+            border-color: #d4ff00;
+        }
+
+        /* Styling Lencana Nama Hari (strong) */
+        .list-jadwal li strong, 
+        .list-piket li strong {
+            color: #f8fafc;
+            font-weight: 700;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: inline-block;
+            width: fit-content;
+            background-color: rgba(212, 255, 0, 0.12);
+            color: #d4ff00;
+            padding: 0.15rem 0.6rem;
+            border-radius: 6px;
+            margin-bottom: 0.2rem;
+        }
+
+        .list-piket li {
+            color: #cbd5e1; 
+        }
+
+        .list-piket li:hover {
+            color: #f1f5f9; 
+        }
+
+        .separator {
+            color: #d4ff00;       
+            font-weight: bold;    
+            margin: 0 6px;        
+            display: inline-block;
+        }
+        
+        /* ========================================== */
+        /* 8. GALERI FOTO CSS                         */
+        /* ========================================== */
+        .galeri-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 25px;
+        }
+
+        .galeri-card {
+            background-color: var(--card-bg);
+            padding: 1rem;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            width: fit-content;
+            height: fit-content;
+            transition: all 0.25s ease;
+            border: 1px solid transparent;
+        }
+
+        .galeri-card:hover {
+            background-color: var(--card-bg);
+            padding: 1rem;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            width: fit-content;
+            height: fit-content;
+            transform: translateY(-6px);
+            border: 1px solid var(--accent-color)
+        }
+
+        .galeri-card .img-placeholder {
+            width: 300px;
+            height: 200px;
+        }
+        
+        .img-placeholder img {
+            width: 300px;
+            height: 200px;
+            border: 2px solid white;
+            border-radius: 10px;
+            object-fit: cover;
+            aspect-ratio: 4 / 3;
+            display: block;
+        }
+
+        .caption {
+            font-size: 25px;
+            text-align: center;
+            color: var(--text-muted);
+            margin-top: 0.5rem;
+            font-family: 'Miracle';
+        }
+
+        /* ========================================== */
+        /* 9. FOOTER CSS                              */
+        /* ========================================== */
+        .footer {
+            background-color: #090d16;
+            padding: 2rem 8%;
+            border-top: 1px solid var(--border-color);
+            text-align: center;
+        }
+
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            align-items: center;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .social-links a {
+            color: var(--accent-color);
+            text-decoration: none;
+            margin: 0 0.8rem;
+        }
+
+        .social-links a:hover {
+            text-decoration: underline;
+        }
+
+        /* ========================================== */
+        /* 10. RESPONSIVE MOBILE (Layar HP)           */ 
+        /* ========================================== */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                gap: 1rem;
+                z-index: 1;
+            }
+            
+            .logo {
+                display: flex;
+            }
+
+            .logo-and-clock {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 5vh;
+            }
+
+            .real-time-clock {
+                display: flex;
+                margin-left: auto;
+            }
+
+            .real-day {
+                display: none;
+            }
+
+            .mobile-real-day {
+                display: flex;
+                position: absolute;
+                background-color: rgb(15, 23, 42);         
+                border-bottom: 1px solid white;
+                border-left: 1px solid white;
+                border-right: 1px solid white;
+                border-radius: 0 0 12px 12px;
+                opacity: 1;
+                visibility: visible;
+                padding: 10px;
+                z-index: 0;
+                margin-top: 96px;
+            }
+
+            .mobile-real-day-text {
+                display: flex;
+                font-family: 'CaviarDreams';
+                font-size: 20px;
+            }
+
+            .nav-links ul {
+                gap: 1rem;
+                font-size: 0.9rem;
+            }
+
+            .hero-content h1 {
+                font-size: 2.2rem;
+            }
+            
+            .hero-content p {
+                font-size: 1.2rem;
+                color: var(--text-muted);
+                margin-bottom: 2rem;
+                font-family: 'Nexa'; 
+                text-align: center;
+            }
+
+            .hero-buttons {
+                display: flex;
+                gap: 1rem;
+                justify-content: center; 
+            }
+
+            .profil-content {
+                grid-template-columns: 1fr;
+            }
+
+            .profil-section {
+                scroll-margin-top: 100px;
+            }
+
+            .deskripsi-kelas {
+                padding: 7%;
+            }
+
+            .deskripsi-kelas p {
+                text-align: center;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+            }
+
+            .organisasi-section {
+                scroll-margin-top: 100px;
+            }
+
+            .tree-container {
+                display: none;
+            }
+
+            .organisasi-grid-mobile {
+                display: grid;
+                justify-content: center;
+                gap: 1.5rem;
+            }
+
+            .foto-pengurus img {
+                width: 300px;
+                height: 200px;
+                border: 2px solid white;
+                border-radius: 10px;
+                object-fit: cover;
+                display: block;
+            }
+
+            .card-pengurus {
+                width: 250px;
+            }
+
+            .jadwal-section {
+                scroll-margin-top: 100px;
+            }
+            
+            .galeri-section {
+                scroll-margin-top: 100px;
+            }
+            
+            .galeri-grid {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+            }
+        }
+
+        .medium-zoom-image--opened {
+            object-fit: contain !important;
+        }
+    </style>
+</head>
+<body>
+    <!-- ========================================== -->
+    <!-- NAVBAR / MENU UTAMA                        -->
+    <!-- Tempat navigasi antar halaman/bagian web   -->
+    <!-- ========================================== -->
+    <header class="navbar">
+        <div class="logo-and-clock">
+            <div class="logo" data-aos="fade-right" data-aos-duration="1000">
+                <h2>X TJKT 1</h2>
+            </div>
+    
+            <div class="real-time-day" data-aos="fade-left" data-aos-duration="1000">
+                <div class="real-time-clock" >
+                    <div id="clockIcon"></div> <!-- Clock Icon -->
+                    <h2 id="clockTime">00:00:00 WIB</h2> <!-- Time Format -->
+                </div>
+
+                <div class="real-day">
+                    <h2 class="real-day-text" id="realDay">HARI</h2>
+                </div>
+            </div>
+        </div>
+
+        <nav class="nav-links" data-aos="fade-left" data-aos-duration="1000">
+            <ul>
+                <li><a href="#hero">Beranda</a></li>
+                <li><a href="#profil">Profil</a></li>
+                <li><a href="#organisasi">Organisasi</a></li>
+                <li><a href="#jadwal">Jadwal</a></li>
+                <li><a href="#galeri">Galeri</a></li>
+            </ul>
+        </nav>
+
+        <!-- FOR SEO (DO NOT TOUCH THIS) -->
+        <div class="for-seo">
+            <h1>X TJKT 1 Web Profile</h1>
+        </div>
+
+        <div class="mobile-real-day">
+            <h2 class="mobile-real-day-text" id="mobileRealDay">HARI</h2>
+        </div>
+    </header>
+
+    <main>
+        <!-- ========================================== -->
+        <!-- HERO PAGE / BANNER UTAMA                   -->
+        <!-- Bagian pertama yang dilihat pengunjung     -->
+        <!-- ========================================== -->
+        <section id="hero" class="hero-section">
+            <div class="hero-content">
+                <span class="badge" data-aos="fade-up" data-aos-duration="1000">Welcome to our website</span>
+                <h1 class="typing-text data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200"></h1>
+                <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">Wadah kreativitas, informasi, dan kenangan kebersamaan siswa-siswi Kelas 10.</p>
+                <div class="hero-buttons" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
+                    <a href="#profil" class="btn btn-primary">Explore The Class</a>
+                    <a href="#siswa" class="btn btn-secondary">Daftar Siswa X TJKT 1</a>
+                </div>
+            </div>
+        </section> 
+
+        <!-- ========================================== -->
+        <!-- PROFIL KELAS                               -->
+        <!-- Berisi info umum, motto, & wali kelas      -->
+        <!-- ========================================== -->
+        <section id="profil" class="profil-section">
+            <div class="section-title">
+                <h2 data-aos="fade-up" data-aos-duration="1000">Profil Kelas</h2>
+                <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">Deskripsi kelas dan wali kelas X TJKT 1</p>
+            </div>
+            
+            <div class="profil-content">
+                <div class="deskripsi-kelas" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="400">
+                    <h3>Tentang Kami</h3>
+                    <p>Kami adalah keluarga besar <mark class="blue-mark">X TJKT 1</mark>. Bersama, kami 
+                        siap <mark class="blue-mark">mengeksplorasi</mark> dunia <mark class="blue-mark">teknologi</mark>
+                        dan menciptakan
+                        kenangan terbaik di jenjang <mark class="blue-mark">SMK</mark>.
+                        
+                        Dan sebagai seorang murid, kami berusaha memiliki sikap <mark>integritas</mark> dengan selalu
+                        menjunjung tinggi <mark>kejujuran</mark>, <mark>tanggung jawab</mark>, 
+                        dan <mark>kedisiplinan</mark> dalam setiap kegiatan di sekolah. 
+                        dengan seperti itu kami dapat mengembangkan sikap sebagai seorang murid dengan <mark>baik</mark></p>
+                </div>
+                
+                <div class="walikelas-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                    <h3>Wali Kelas</h3>
+                    <!-- Placeholder Foto Wali Kelas -->
+                    <div class="foto-placeholder">[Foto Wali Kelas]</div>
+                    <h4>Agus Wahyu, S.Pd.</h4>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================== -->
+        <!-- STRUKTUR ORGANISASI KELAS                  -->
+        <!-- Daftar pengurus kelas (Ketua, Wakil, dll)  -->
+        <!-- ========================================== -->
+        <section id="organisasi" class="organisasi-section">
+            <div class="section-title">
+                <h2 data-aos="fade-up" data-aos-duration="1000">Struktur Organisasi</h2>
+                <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">Daftar nama murid pengurus kelas X TJKT 1</p>
+            </div>
+
+            <!-- DESKTOP DISPLAY -->
+            <div class="tree-container" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                <ul class="tree">
+                    <li>
+                        <!-- TIER 1: KETUA KELAS -->
+                        <div class="card-pengurus">
+                            <div class="foto-pengurus"><img src="Images/PengurusKelas/KetuaKelas.jpeg" alt="Ketua"></div>
+                            <span class="jabatan">Ketua Kelas</span>
+                            <h4>Dava Prayuliansyah</h4>
+                        </div>
+                        
+                        <ul>
+                            <!-- CABANG KIRI: SEKRETARIS -->
+                            <li>
+                                <div class="card-pengurus">
+                                    <div class="foto-pengurus"><img src="Images/PengurusKelas/Sekretaris1.jpeg" alt="Sek 1"></div>
+                                    <span class="jabatan">Sekretaris 1</span>
+                                    <h4>Fadhila Nuril Sayfani</h4>
+                                </div>
+                                <ul>
+                                    <li>
+                                        <div class="card-pengurus">
+                                            <div class="foto-pengurus"><img src="Images/Placeholder.jpg" alt="Sek 2"></div>
+                                            <span class="jabatan">Sekretaris 2</span>
+                                            <h4>M Davin Firman</h4>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <!-- CABANG TENGAH: WAKIL & SEKSI-SEKSI -->
+                            <li>
+                                <div class="card-pengurus">
+                                    <div class="foto-pengurus"><img src="Images/PengurusKelas/WakilKetua.jpeg" alt="Wakil Ketua"></div>
+                                    <span class="jabatan">Wakil Ketua</span>
+                                    <h4>Ahmad Diva Pramudya</h4>
+                                </div>
+                                <ul>
+                                    <li>
+                                        <div class="card-pengurus">
+                                            <div class="foto-pengurus"><img src="Images/Placeholder.jpg" alt="Kerohanian"></div>
+                                            <span class="jabatan">Kerohanian</span>
+                                            <h4>Ethan Sakan</h4>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="card-pengurus">
+                                            <div class="foto-pengurus"><img src="Images/PengurusKelas/Kebersihan.jpg" alt="Kebersihan"></div>
+                                            <span class="jabatan">Kebersihan</span>
+                                            <h4>Shira Ozora</h4>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="card-pengurus">
+                                            <div class="foto-pengurus"><img src="Images/PengurusKelas/Keamanan.jpeg" alt="Keamanan"></div>
+                                            <span class="jabatan">Keamanan</span>
+                                            <h4>Rossi Valentino</h4>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <!-- CABANG KANAN: BENDAHARA -->
+                            <li>
+                                <div class="card-pengurus">
+                                    <div class="foto-pengurus"><img src="Images/DaftarFotoSiswa/Arimby.jpeg" alt="Bendahara 1"></div>
+                                    <span class="jabatan">Bendahara 1</span>
+                                    <h4>Arimby Anindya Nayottama</h4>
+                                </div>
+                                <ul>
+                                    <li>
+                                        <div class="card-pengurus">
+                                            <div class="foto-pengurus"><img src="Images/Placeholder.jpg" alt="Bendahara 2"></div>
+                                            <span class="jabatan">Bendahara 2</span>
+                                            <h4>Muhammad Fajar</h4>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- MOBILE DISPLAY -->
+            <div class="organisasi-grid-mobile" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                
+                <!-- Ketua Kelas -->
+                <div class="card-pengurus">
+                    <div class="foto-pengurus"><img src="Images/PengurusKelas/KetuaKelas.jpeg" alt="Ketua Kelas"></div>
+                    <span class="jabatan">Ketua Kelas</span>
+                    <h4>Dava Prayuliansyah</h4>
+                </div>
+
+                <!-- Wakil Ketua Kelas -->
+                <div class="card-pengurus">
+                    <div class="foto-pengurus"><img src="Images/PengurusKelas/WakilKetua.jpeg" alt="Wakil Ketua"></div>
+                    <span class="jabatan">Wakil Ketua</span>
+                    <h4>Ahmad Diva Pramudya</h4>
+                </div>
+
+                <!-- Sekretaris 1 & 2 -->
+                <div class="card-pengurus">
+                    <div class="foto-pengurus"><img src="Images/PengurusKelas/Sekretaris1.jpeg" alt="Sek 1"></div>
+                    <span class="jabatan">Sekretaris 1</span>
+                    <h4>Fadhila Nuril Sayfani</h4>
+                </div>
+                <div class="card-pengurus">
+                    <div class="foto-pengurus"><img src="Images/Placeholder.jpg" alt="Sek 2"></div>
+                    <span class="jabatan">Sekretaris 2</span>
+                    <h4>M Davin Firman</h4>
+                </div>
+
+                <!-- Bendahara 1 & 2 -->
+                <div class="card-pengurus">
+                    <div class="foto-pengurus"><img src="Images/PengurusKelas/Bendahara1.jpeg" alt="Bendahara 1"></div>
+                    <span class="jabatan">Bendahara 1</span>
+                    <h4>Arimby Anindya Nayottama</h4>
+                </div>
+                <div class="card-pengurus">
+                    <div class="foto-pengurus"><img src="Images/Placeholder.jpg" alt="Bendahara 2"></div>
+                    <span class="jabatan">Bendahara 2</span>
+                    <h4>Muhammade Fajar</h4>
+                </div>
+                
+                <!-- Seksi Kerohanian -->
+                <div class="card-pengurus">
+                    <div class="foto-pengurus"><img src="Images/Placeholder.jpg" alt="Kerohanian"></div>
+                    <span class="jabatan">Kerohanian</span>
+                    <h4>Ethan Sakan</h4>
+                </div>
+
+                <!-- Seksi Kebersihan -->
+                <div class="card-pengurus">
+                    <div class="foto-pengurus"><img src="Images/PengurusKelas/Kebersihan.jpg" alt="Kebersihan"></div>
+                    <span class="jabatan">Kebersihan</span>
+                    <h4>Shira Ozora</h4>
+                </div>
+
+                <!-- Seksi Keamanan -->
+                <div class="card-pengurus">
+                    <div class="foto-pengurus"><img src="Images/PengurusKelas/Keamanan.jpeg" alt="Keamanan"></div>
+                    <span class="jabatan">Keamanan</span>
+                    <h4>Rossi Valentino</h4>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ========================================== -->
+        <!-- DAFTAR SISWA KELAS (ANIMASI & SCROLL)      -->
+        <!-- ========================================== -->
+        <section id="siswa" class="siswa-section">
+            <div class="section-title">
+                <h2 data-aos="fade-up" data-aos-duration="1000">Anggota Kelas</h2>
+                <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">Daftar teman-teman sekelas X TJKT 1</p>
+            </div>
+
+            <!-- Container Utama -->
+            <div class="siswa-container" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                <div class="siswa-track" id="siswaTrack">
+                    
+                    <div class="siswa-card">
+                        <div class="siswa-foto"><img src="Images/DaftarFotoSiswa/Pramudiya.jpeg" alt="Siswa 1"></div>
+                        <h4>Ahmad Diva Pramudiya</h4>
+                    </div>
+                    
+                    <div class="siswa-card">
+                        <div class="siswa-foto"><img src="Images/Placeholder.jpg" alt="Siswa 2"></div>
+                        <h4>Ahmad Rizqi Tri Utomo</h4>
+                    </div>
+                    
+                    <div class="siswa-card">
+                        <div class="siswa-foto"><img src="Images/Placeholder.jpg" alt="Siswa 3"></div>
+                        <h4>Ahmad Zacky Zakaria</h4>
+                    </div>
+                    
+                    <div class="siswa-card">
+                        <div class="siswa-foto"><img src="Images/DaftarFotoSiswa/Adib.jpeg" alt="Siswa 4"></div>
+                        <h4>Al Adib Yusuf Suryawan</h4>
+                    </div>
+                    
+                    <div class="siswa-card">
+                        <div class="siswa-foto"><img src="Images/Placeholder.jpg" alt="Siswa 5"></div>
+                        <h4>Alex Nur Rif'an</h4>
+                    </div>
+
+                    <div class="siswa-card">
+                        <div class="siswa-foto"><img src="Images/Placeholder.jpg" alt="Siswa 6"></div>
+                        <h4>Aprilian Miftakhul Huda</h4>
+                    </div>
+
+                    <div class="siswa-card">
+                        <div class="siswa-foto"><img src="Images/DaftarFotoSiswa/Arimby.jpeg" alt="Siswa 7"></div>
+                        <h4>Arimby Anindya Nayottama</h4>
+                    </div>
+
+                    <div class="siswa-card">
+                        <div class="siswa-foto"><img src="Images/DaftarFotoSiswa/AthaArkananta.jpeg" alt="Siswa 7"></div>
+                        <h4>Atha Arkananta Shaquille</h4>
+                    </div>
+
+                    <div class="siswa-card">
+                        <div class="siswa-foto"><img src="Images/DaftarFotoSiswa/Dafa.jpeg" alt="Siswa 7"></div>
+                        <h4>Dava Prayuliansyah</h4>
+                    </div>
+
+                    <div class="siswa-card">
+                        <div class="siswa-foto"><img src="Images/DaftarFotoSiswa/Fani.jpeg" alt="Siswa 7"></div>
+                        <h4>Fadhila Nuril Sayfani</h4>
+                    </div>
+
+                    <div class="siswa-card">
+                        <div class="siswa-foto"><img src="Images/Placeholder.jpg" alt="Siswa 7"></div>
+                        <h4>Fajar Dwi Setyo Nugroho</h4>
+                    </div>
+
+                    <div class="siswa-card">
+                        <div class="siswa-foto"><img src="Images/DaftarFotoSiswa/Hannindya.png" alt="Siswa 7"></div>
+                        <h4>Haninndya Dwi Febriana</h4>
+                    </div>
+
+                    <div class="siswa-card">
+                        <div class="siswa-foto"><img src="Images/Placeholder.jpg" alt="Siswa 7"></div>
+                        <h4>Haygal Maulana Rizky</h4>
+                    </div>
+
+                    <div class="siswa-card">
+                        <div class="siswa-foto"><img src="Images/DaftarFotoSiswa/Julian.jpeg" alt="Siswa 7"></div>
+                        <h4>Julian Khasiib Raditya</h4>
+                    </div>
+
+                    <div class="siswa-card">
+                        <div class="siswa-foto"><img src="Images/Placeholder.jpg" alt="Siswa 7"></div>
+                        <h4>M Yusuf Hikmal Akbar</h4>
+                    </div>
+
+                    <div class="siswa-card">
+                        <div class="siswa-foto"><img src="Images/DaftarFotoSiswa/Tyaga.jpeg" alt="Siswa 7"></div>
+                        <h4>M Tyaga Arifin Billah</h4>
+                    </div>
+
+                    <div class="siswa-card">
+                        <div class="siswa-foto"><img src="Images/Placeholder.jpg" alt="Siswa 7"></div>
+                        <h4>M Aga Satya</h4>
+                    </div>
+
+                    <div class="siswa-card">
+                        <div class="siswa-foto"><img src="Images/Placeholder.jpg" alt="Siswa 7"></div>
+                        <h4>M Ainun Khabibi</h4>
+                    </div>
+
+                    <div class="siswa-card">
+                        <div class="siswa-foto"><img src="Images/Placeholder.jpg" alt="Siswa 7"></div>
+                        <h4>M Ashofa Shobiburizqi</h4>
+                    </div>
+
+                    <div class="siswa-card">
+                        <div class="siswa-foto"><img src="Images/Placeholder.jpg" alt="Siswa 7"></div>
+                        <h4>M Davin Firman Alfarizzy</h4>
+                    </div>
+
+                    <div class="siswa-card">
+                        <div class="siswa-foto"><img src="Images/Placeholder.jpg" alt="Siswa 7"></div>
+                        <h4>M Fajar</h4>
+                    </div>
+
+                    <div class="siswa-card">
+                        <div class="siswa-foto"><img src="Images/Placeholder.jpg" alt="Siswa 7"></div>
+                        <h4>M Fajar Dwi Saputra</h4>
+                    </div>
+
+                    <div class="siswa-card">
+                        <div class="siswa-foto"><img src="Images/Placeholder.jpg" alt="Siswa 7"></div>
+                        <h4>M Fathan Athaya Putra Purnomo</h4>
+                    </div>
+
+                    <div class="siswa-card">
+                        <div class="siswa-foto"><img src="Images/Placeholder.jpg" alt="Siswa 7"></div>
+                        <h4>M Ilham Mustofa</h4>
+                    </div>
+
+                    <div class="siswa-card">
+                        <div class="siswa-foto"><img src="Images/DaftarFotoSiswa/Nabilla.jpeg" alt="Siswa 7"></div>
+                        <h4>Nabilla Ajeng Asih Mariatun</h4>
+                    </div>
+
+                    <div class="siswa-card">
+                        <div class="siswa-foto"><img src="Images/Placeholder.jpg" alt="Siswa 7"></div>
+                        <h4>Pradibta Bayu Wirananda</h4>
+                    </div>
+
+                    <div class="siswa-card">
+                        <div class="siswa-foto"><img src="Images/DaftarFotoSiswa/Fahmi.jpeg" alt="Siswa 7"></div>
+                        <h4>Raditya Fahmi Adhi Ardianto</h4>
+                    </div>
+
+                    <div class="siswa-card">
+                        <div class="siswa-foto"><img src="Images/DaftarFotoSiswa/Yusuf.jpeg" alt="Siswa 7"></div>
+                        <h4>Ramadhan Yusuf Alrifqi</h4>
+                    </div>
+
+                    <div class="siswa-card">
+                        <div class="siswa-foto"><img src="Images/DaftarFotoSiswa/Rendy.jpeg" alt="Siswa 7"></div>
+                        <h4>Rendyansyah Ramadhan</h4>
+                    </div>
+
+                    <div class="siswa-card">
+                        <div class="siswa-foto"><img src="Images/Placeholder.jpg" alt="Siswa 7"></div>
+                        <h4>Rizky Wahyu Aditya</h4>
+                    </div>
+
+                    <div class="siswa-card">
+                        <div class="siswa-foto"><img src="Images/DaftarFotoSiswa/Valen.jpeg" alt="Siswa 7"></div>
+                        <h4>Rossi Valentino Aldrin Pasha</h4>
+                    </div>
+
+                    <div class="siswa-card">
+                        <div class="siswa-foto"><img src="Images/DaftarFotoSiswa/Sandy.jpeg" alt="Siswa 7"></div>
+                        <h4>Sandy Heka Janatuka</h4>
+                    </div>
+
+                    <div class="siswa-card">
+                        <div class="siswa-foto"><img src="Images/DaftarFotoSiswa/Ozora.jpg" alt="Siswa 7"></div>
+                        <h4>Shira Ozora Zebadiah</h4>
+                    </div>
+
+                    <div class="siswa-card">
+                        <div class="siswa-foto"><img src="Images/DaftarFotoSiswa/Yuwanda.jpeg" alt="Siswa 7"></div>
+                        <h4>Yuwanda Mirza Kameel</h4>
+                    </div>
+
+                    <div class="siswa-card">
+                        <div class="siswa-foto"><img src="Images/DaftarFotoSiswa/Zuhad.jpeg" alt="Siswa 7"></div>
+                        <h4>Zuhad Adidtya Zahril</h4>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================== -->
+        <!-- JADWAL PELAJARAN DAN PIKET                 -->
+        <!-- ========================================== -->
+        <section id="jadwal" class="jadwal-section">
+            <div class="section-title">
+                <h2 data-aos="fade-up" data-aos-duration="1000">Jadwal Kelas</h2>
+                <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">Informasi jadwal pelajaran dan piket</p>
+            </div>
+
+            <div class="jadwal-container">
+                <!-- Tabel atau List Jadwal Pelajaran -->
+                <div class="jadwal-box-pelajaran">
+                    <h3 data-aos="fade-right" data-aos-duration="1000">Jadwal Pelajaran</h3>
+                    <ul class="list-jadwal" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                        <li><strong>Senin:</strong> 1. Upacara <span class="separator"></span> 2. Program Keahlian <span class="separator"></span> 3. Bimbingan Konseling <span class="separator"></span> 4. IPAS</li>
+                        <li><strong>Selasa:</strong> 1. Program Keahlian <span class="separator"></span> 2. Pendidikan Pancasila <span class="separator"></span> 3. Bahasa Indonesia</li>
+                        <li><strong>Rabu:</strong> 1. Bahasa Indonesia <span class="separator"></span> 2. Bahasa Inggris <span class="separator"></span> 3. Pendidikan Jasmani <span class="separator"></span> 4. PAI</li>
+                        <li><strong>Kamis:</strong> 1. Sejarah <span class="separator"></span> 2. Matematika <span class="separator"></span> 3. Koding dan AI <span class="separator"></span> 4. Bahasa Jawa <span class="separator"></span> 5. Seni Rupa</li>
+                        <li><strong>Jumat:</strong> 1. Kokurikuler <span class="separator"></span> 2. Bahasa Inggris <span class="separator"></span> 3. Matematika <span class="separator"></span> 4. Informatika</li>
+                    </ul>
+                </div>
+
+                <!-- Tabel atau List Jadwal Piket -->
+                <div class="jadwal-box-piket">
+                    <h3 data-aos="fade-right" data-aos-duration="1000">Jadwal Piket Kebersihan</h3>
+                    <ul class="list-piket" data-aos="fade-up" data-aos-duration="1000">
+                        <li><strong>Senin:</strong> 1. Ashofa <span class="separator"></span> 2. Rizqi <span class="separator"></span> 3. Sandy <span class="separator"></span> 4. Aga <span class="separator"></span> 5. Pramudya <span class="separator"></span> 6. Hanin <span class="separator"></span> 7. Rendy</li>
+                        <li><strong>Selasa:</strong> 1. Fathan <span class="separator"></span> 2. Huda <span class="separator"></span> 3. Ethan <span class="separator"></span> 4. Atha <span class="separator"></span> 5. Dava <span class="separator"></span> 6. Fajar <span class="separator"></span> 7. Zora</li>
+                        <li><strong>Rabu:</strong> 1. Fajar Dwi Setyo Nugroho <span class="separator"></span> 2. Tyaga <span class="separator"></span> 3. Fajar Dwi S <span class="separator"></span> 4. Zacky <span class="separator"></span> 5. Valen <span class="separator"></span> 6. Arimby <span class="separator"></span> 7. Mirza</li>
+                        <li><strong>Kamis:</strong> 1. Akbar <span class="separator"></span> 2. Rizqi Wahyu <span class="separator"></span> 3. Dibta <span class="separator"></span> 4. Ilham <span class="separator"></span> 5. Fahmi <span class="separator"></span> 6. Julian <span class="separator"></span> 7. Billa</li>
+                        <li><strong>Jumat:</strong> 1. Zuhad <span class="separator"></span> 2. Adib <span class="separator"></span> 3. Davin <span class="separator"></span> 4. Haygal <span class="separator"></span> 5. M Ainun K <span class="separator"></span> 6. Alex <span class="separator"></span> 7. Ramadhan Yusuf <span class="separator"></span> 8. Fani</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================== -->
+        <!-- GALERI FOTO KELAS                          -->
+        <!-- Tempat menampilkan dokumentasi acara/momen -->
+        <!-- ========================================== -->
+        <section id="galeri" class="galeri-section">
+            <div class="section-title">
+                <h2 data-aos="fade-up" data-aos-duration="1000">Galeri Kenangan</h2>
+                <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">Kumpulan kenangan kelas X TJKT 1</p>   
+            </div>
+
+            <div class="galeri-grid">
+                <!-- Item Galeri 1 -->
+                <div class="galeri-card" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="img-placeholder">
+                        <img src="Images/Kenangan/FotbarSamaKakakKelas.jpeg" data-zoomable width="250">
+                    </div>
+                    <p class="caption">Kenangan - 1</p>
+                </div>
+                <!-- Item Galeri 2 -->
+                <div class="galeri-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                    <div class="img-placeholder">
+                        <img src="Images/Kenangan/FotbarSamaKakakKelas1.jpeg" data-zoomable width="250">
+                    </div>
+                    <p class="caption">Kenangan - 2</p>
+                </div>
+                <!-- Item Galeri 3 -->
+                <div class="galeri-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                    <div class="img-placeholder">
+                        <img src="Images/Kenangan/SkagaraMlakuMlaku.jpeg" data-zoomable width="250">
+                    </div>
+                    <p class="caption">Kenangan - 3</p>
+                </div>
+                <!-- Item Galeri 4 -->
+                <div class="galeri-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                    <div class="img-placeholder">
+                        <img src="Images/Kenangan/SkagaraMlakuMlaku1.jpeg" data-zoomable width="250">
+                    </div>
+                    <p class="caption">Kenangan - 4</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ========================================== -->
+    <!-- FOOTER                                     --> 
+    <!-- Hak cipta & kontak sosmed kelas            -->
+    <!-- ========================================== -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2026 X TJKT 1. All Rights Reserved</p>
+            <div class="social-links">
+                <a href="https://www.instagram.com/ofc_tjktone1?igsi=MWd6dGgxajhrbnMweg==">Instagram</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========================================== -->
+    <!-- JAVASCRIPT                                 -->
+    <!-- ========================================== -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/medium-zoom/dist/medium-zoom.min.js"></script>
+    <script>
+        mediumZoom('[data-zoomable]');
+
+        // ======================================== //
+        // AOS JS                                   // 
+        // ======================================== //
+        AOS.init({
+            // Opsional Settings:
+            once: false, // set 'true' jika animasi hanya ingin diputar 1x
+            mirror: false // set 'true' agar animasi muncul lagi saat di-scroll balik ke atas
+        });
+
+        // ======================================== //
+        // REAL TIME CLOCK JS                       // 
+        // ======================================== //
+        async function inisialisasiJamWorldTime() {
+            const elemenJam = document.getElementById('clockTime');
+            if (!elemenJam) return;
+
+            let jamTimestamp;
+
+            try {
+                const response = await fetch('https://worldtimeapi.org/api/timezone/Asia/Jakarta');
+                if (!response.ok) throw new Error("Gagal mengambil data dari WorldTimeAPI");
+                
+                const data = await response.json();
+                // Menggunakan properti datetime ISO
+                jamTimestamp = new Date(data.datetime).getTime();
+            } catch (error) {
+                console.warn("API error, beralih ke jam lokal:", error);
+                jamTimestamp = Date.now();
+            }
+
+            function updateJam() {
+                const waktu = new Date(jamTimestamp);
+                const jam = String(waktu.getHours()).padStart(2, '0');
+                const menit = String(waktu.getMinutes()).padStart(2, '0');
+                const detik = String(waktu.getSeconds()).padStart(2, '0');
+
+                elemenJam.textContent = `${jam}:${menit}:${detik} WIB`;
+                jamTimestamp += 1000;
+            }
+
+            updateJam();
+            setInterval(updateJam, 1000);
+        }
+
+        document.addEventListener("DOMContentLoaded", inisialisasiJamWorldTime);
+
+        // ======================================== //
+        // REAL DAY INFORMATION JS                  // 
+        // ======================================== //
+        const namaHari = ["Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu"];
+        const namaBulan = ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"];
+
+        async function ambilTanggalAPI() {
+            // 1. Coba WorldTimeAPI
+            try {
+                const res = await fetch('https://worldtimeapi.org/api/timezone/Asia/Jakarta');
+                if (!res.ok) throw new Error("WorldTimeAPI error");
+                const data = await res.json();
+                return new Date(data.datetime);
+            } catch (err1) {
+                console.warn("WorldTimeAPI gagal, mencoba API cadangan (TimeAPI)...");
+            }
+
+            // 2. Coba API Cadangan (TimeAPI)
+            try {
+                const res = await fetch('https://timeapi.io/api/time/current/zone?timeZone=Asia/Jakarta');
+                if (!res.ok) throw new Error("TimeAPI error");
+                const data = await res.json();
+                return new Date(data.dateTime);
+            } catch (err2) {
+                console.warn("Semua API gagal/offline, menggunakan tanggal perangkat lokal.");
+            }
+
+            // 3. Fallback Terakhir: Jam Lokal Perangkat
+            return new Date();
+        }
+
+        async function inisialisasiWaktu() {
+            const elemenHari = document.getElementById('realDay');
+            const elemenHari1 = document.getElementById('mobileRealDay');
+
+            // Dapatkan tanggal awal (dari API atau Lokal)
+            const objekWaktu = await ambilTanggalAPI();
+            let timestamp = objekWaktu.getTime();
+
+            function updateTampilan() {
+                const sekarang = new Date(timestamp);
+
+                // Format Hari, Tanggal, Bulan, Tahun
+                const hari = namaHari[sekarang.getDay()];
+                const tanggal = sekarang.getDate();
+                const bulan = namaBulan[sekarang.getMonth()];
+                const tahun = sekarang.getFullYear();
+
+                if (elemenHari) elemenHari.textContent = `${hari}, ${tanggal} ${bulan} ${tahun}`;
+                if (elemenHari1) elemenHari1.textContent = `${hari}, ${tanggal} ${bulan} ${tahun}`;
+
+                // Tambah 1 detik
+                timestamp += 1000;
+            }
+
+            updateTampilan();
+            setInterval(updateTampilan, 1000);
+        }
+        document.addEventListener("DOMContentLoaded", inisialisasiWaktu);
+
+        // ======================================================== //
+        // LINEAR SMOOTH SCROLL CARD SISWA (MENTOK KIRI & KANAN)    // 
+        // ======================================================== //
+        document.addEventListener("DOMContentLoaded", function() {
+            const container = document.querySelector(".siswa-container");
+            const track = document.getElementById("siswaTrack");
+
+            if (!container || !track) return;
+
+            // Hanya aktif di Layar Desktop (> 768px)
+            if (window.innerWidth > 768) {
+                let autoSpeed = 0.8; // Kecepatan jalan otomatis
+                let isHovered = false;
+                let isUserInteracting = false;
+                let interactTimeout;
+
+                let targetScroll = container.scrollLeft;
+                let currentScroll = container.scrollLeft;
+                let isWheelScrolling = false;
+
+                // Fungsi menghitung batas maksimal scroll kanan
+                function getMaxScroll() {
+                    return container.scrollWidth - container.clientWidth;
+                }
+
+                // 1. AUTO SCROLL (Berjalan sampai mentok di siswa terakhir)
+                function autoScrollStep() {
+                    const maxScroll = getMaxScroll();
+
+                    if (!isHovered && !isUserInteracting && !isWheelScrolling) {
+                        // Hanya jalan jika belum mentok di paling kanan
+                        if (container.scrollLeft < maxScroll) {
+                            container.scrollLeft += autoSpeed;
+                            
+                            // Kunci agar tidak melebihi batas mentok
+                            if (container.scrollLeft > maxScroll) {
+                                container.scrollLeft = maxScroll;
+                            }
+                        }
+                    }
+                    requestAnimationFrame(autoScrollStep);
+                }
+                requestAnimationFrame(autoScrollStep);
+
+                // Pause auto-scroll saat kursor berada di atas area card
+                container.addEventListener("mouseenter", () => isHovered = true);
+                container.addEventListener("mouseleave", () => isHovered = false);
+
+                // 2. SMOOTH MOUSE WHEEL (Mulus & Mentok Presisi)
+                function smoothWheelLoop() {
+                    if (isWheelScrolling) {
+                        const maxScroll = getMaxScroll();
+
+                        // Interpolasi Lerp untuk pergeseran mulus
+                        currentScroll += (targetScroll - currentScroll) * 0.1;
+                        container.scrollLeft = currentScroll;
+
+                        // Jika pergeseran sudah mendekati target, hentikan animasi wheel
+                        if (Math.abs(targetScroll - currentScroll) < 0.5) {
+                            container.scrollLeft = targetScroll; // Snap pas ke posisi target
+                            isWheelScrolling = false;
+                        } else {
+                            requestAnimationFrame(smoothWheelLoop);
+                        }
+                    }
+                }
+
+                // Event Listener Wheel Mouse
+                container.addEventListener("wheel", (e) => {
+                    if (e.deltaY !== 0) {
+                        e.preventDefault(); // Mencegah halaman utama scroll vertikal
+                        isUserInteracting = true;
+
+                        const maxScroll = getMaxScroll();
+
+                        if (!isWheelScrolling) {
+                            currentScroll = container.scrollLeft;
+                            targetScroll = container.scrollLeft;
+                            isWheelScrolling = true;
+                            requestAnimationFrame(smoothWheelLoop);
+                        }
+
+                        // Tambahkan jarak target berdasarkan putaran wheel
+                        targetScroll += e.deltaY * 1.5;
+
+                        // KUNCI BATAS: Tidak boleh kurang dari 0 (kiri) dan tidak boleh lewat maxScroll (kanan)
+                        targetScroll = Math.max(0, Math.min(targetScroll, maxScroll));
+
+                        // Timer reset interaksi user
+                        clearTimeout(interactTimeout);
+                        interactTimeout = setTimeout(() => {
+                            isUserInteracting = false;
+                        }, 1200);
+                    }
+                }, { passive: false });
+
+                // 3. DETEKSI SCROLLBAR DITARIK MANUAL
+                container.addEventListener("scroll", () => {
+                    if (!isWheelScrolling) {
+                        currentScroll = container.scrollLeft;
+                        targetScroll = container.scrollLeft;
+                        isUserInteracting = true;
+
+                        clearTimeout(interactTimeout);
+                        interactTimeout = setTimeout(() => {
+                            isUserInteracting = false;
+                        }, 1200);
+                    }
+                });
+            }
+        });
+
+        // ======================================================== //
+        // TITLE TYPING TEXT EFFECT                                 // 
+        // ======================================================== //
+        const words = ["X TJKT 1", "Software Engineering"];
+        function jalankanEfekKetik(elemen) {
+            let wordIndex = 0;
+            let charIndex = 0;
+            let isDeleting = false;
+
+            function type() {
+                const currentWord = words[wordIndex];
+                
+                if (isDeleting) {
+                elemen.textContent = currentWord.substring(0, charIndex - 1);
+                charIndex--;
+                } else {
+                elemen.textContent = currentWord.substring(0, charIndex + 1);
+                charIndex++;
+                }
+
+                let typingSpeed = isDeleting ? 50 : 100;
+
+                if (!isDeleting && charIndex === currentWord.length) {
+                    typingSpeed = 3000; 
+                    isDeleting = true;
+                } 
+                else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                wordIndex = (wordIndex + 1) % words.length;
+                typingSpeed = 500; 
+                }
+
+                setTimeout(type, typingSpeed);
+            }
+
+            type();
+        }
+
+            document.addEventListener("DOMContentLoaded", () => {
+                const semuaKomponenTeks = document.querySelectorAll('.typing-text');
+                
+                semuaKomponenTeks.forEach((elemen) => {
+                    jalankanEfekKetik(elemen);
+                });
+            });
+    </script>
+</body>
+</html>
