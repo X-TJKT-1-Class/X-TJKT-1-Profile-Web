@@ -242,7 +242,7 @@
             font-family: 'DigitalNumber';
             color: var(--text-muted);
             display: flex;
-            margin-left: 200px;
+            margin-left: 100px;
         }
 
         .real-time-clock div {
@@ -274,6 +274,13 @@
             display: none;
         }
 
+        .logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+        }
+
         .logo h2 {
             font-size: 1.5rem;
             font-weight: 800;
@@ -281,6 +288,11 @@
             text-decoration: none;
             letter-spacing: 1px;
             font-family: 'AltaHaas';
+        }
+
+        .logo img {
+            width: 40px;
+            height: 40px;
         }
 
         .nav-links ul {
@@ -1053,6 +1065,7 @@
     <header class="navbar">
         <div class="logo-and-clock">
             <div class="logo" data-aos="fade-right" data-aos-duration="1000">
+                <img src="Images/favicon.png">
                 <h2>X TJKT 1</h2>
             </div>
     
@@ -1078,7 +1091,7 @@
             </ul>
         </nav>
 
-        <!-- FOR SEO (DO NOT TOUCH THIS) -->
+        <!-- FOR SEO OR SEARCH ENGINE OPTIMIZATION (DO NOT TOUCH THIS) -->
         <div class="for-seo">
             <h1>X TJKT 1 Web Profile</h1>
         </div>
