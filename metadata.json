@@ -1,0 +1,6 @@
+{
+  "name": "X TJKT 1 - Class Profile Web",
+  "description": "Official interactive class profile website for X TJKT 1 (Class of skagara school), featuring organizational structure, schedules, student directory, gallery, and real-time task manager.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

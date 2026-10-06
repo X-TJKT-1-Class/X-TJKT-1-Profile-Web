@@ -1,0 +1,2435 @@
+<!DOCTYPE html>
+<html lang="id" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+  <title>X TJKT 1 — Class Profile | Skagara</title>
+
+  <!-- Meta Deskripsi, Keywords & Verifikasi Google -->
+  <meta name="description" content="Official X TJKT 1 Web Profile. Portofolio dan informasi seputar jurusan Teknik Jaringan Komputer dan Telekomunikasi kelas 10 TJKT 1">
+  <meta name="keywords" content="X TJKT 1 Web Profile, X TJKT 1, SMKN 3 Jepara, TJKT 1, Profile Web TJKT">
+  <meta name="author" content="Atha Arkananta Shaquille">
+  <meta name="google-site-verification" content="3b0w0oJfxYWzfE7unPsdlLrd6MDxD8ZE0TYjsRDCepo" />
+
+  <!-- FAVICON (Icon Web) -->
+  <link rel="icon" type="image/png" href="Images/favicon.png">
+  <link rel="apple-touch-icon" href="Images/favicon.png">
+
+  <!-- OPEN GRAPH (Untuk Mengganti Tulisan GitHub Pages Documentation di Google) -->
+  <meta property="og:site_name" content="X TJKT 1 Official">
+  <meta property="og:title" content="X TJKT 1 Web Profile">
+  <meta property="og:description" content="Official X TJKT 1 Web Profile. Portofolio dan informasi seputar jurusan Teknik Jaringan Komputer dan Telekomunikasi kelas 10 TJKT 1">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://x-tjkt-1-class.github.io/X-TJKT-1-Profile-Web/">
+
+  <!-- Google Fonts: Space Grotesk, Plus Jakarta Sans, JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Plus+Jakarta+Sans:wght@300;400white;700;800&family=Space+Grotesk:wghtwhite;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS -->
+  <link rel="stylesheet" href="./src/output.css">
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Firebase App (Compat SDK) -->
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+  <!-- Firestore (Compat SDK) -->
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore-compat.js"></script>
+
+  <!-- Immediate Theme Initializer to prevent flash -->
+  <script>
+    (function() {
+      const saved = localStorage.getItem('skagara_monochrome_theme');
+      if (saved === 'light') {
+        document.documentElement.classList.remove('dark');
+      } else {
+        document.documentElement.classList.add('dark');
+      }
+    })();
+  </script>
+
+  <style>
+    /* Custom Minimalist Monochrome Styles */
+    :root {
+      --bg-primary: #050505;
+      --border-color: #27272a;
+    }
+
+    /* Scrollbar cleanup */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    /* Typewriter Cursor */
+    .typewriter-cursor {
+      display: inline-block;
+      width: 3px;
+      height: 1.1em;
+      vertical-align: middle;
+      background-color: currentColor;
+      margin-left: 4px;
+      animation: blinkCursor 0.8s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+    @keyframes blinkCursor {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+
+    /* Idle Floating / Breathing Animation for Student Cards */
+    @keyframes idleFloat {
+      0%, 100% {
+        transform: translateY(0px);
+      }
+      50% {
+        transform: translateY(-8px);
+      }
+    }
+    .animate-idle-float {
+      animation: idleFloat 5s ease-in-out infinite;
+    }
+
+    /* Scroll Reveal & Entrance Stagger */
+    .reveal-elem {
+      opacity: 0;
+      transform: translateY(28px) scale(0.98);
+      filter: blur(6px);
+      transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1), 
+                  transform 0.75s cubic-bezier(0.16, 1, 0.3, 1), 
+                  filter 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+      will-change: opacity, transform, filter;
+    }
+    .reveal-elem.revealed {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+      filter: blur(0);
+    }
+
+    /* Loading Shutter Curtain */
+    .shutter-top, .shutter-bottom {
+      transition: transform 0.85s cubic-bezier(0.85, 0, 0.15, 1);
+    }
+    .loading-finished .shutter-top {
+      transform: translateY(-100%);
+    }
+    .loading-finished .shutter-bottom {
+      transform: translateY(100%);
+    }
+
+    /* Tilt 3D perspective */
+    .tilt-card {
+      transform-style: preserve-3d;
+      transition: transform 0.15s ease-out;
+    }
+
+    /* =========================================================
+       COMPREHENSIVE HIGH-CONTRAST LIGHT MODE FIXES
+       ========================================================= */
+    html:not(.dark) {
+      color-scheme: light;
+    }
+    html:not(.dark) body {
+      background-color: #ffffff !important;
+      color: #09090b !important;
+    }
+    html:not(.dark) nav#mainNav {
+      background-color: rgba(255, 255, 255, 0.92) !important;
+      border-color: #e4e4e7 !important;
+    }
+    html:not(.dark) #mobileMenuDrawer {
+      background-color: #ffffff !important;
+      border-color: #e4e4e7 !important;
+    }
+    html:not(.dark) #mobileMenuDrawer a {
+      color: #27272a !important;
+      border-color: #f4f4f5 !important;
+    }
+    html:not(.dark) #mobileMenuDrawer a:hover {
+      color: #000000 !important;
+      background-color: #f4f4f5 !important;
+    }
+    html:not(.dark) section {
+      background-color: #ffffff !important;
+      border-color: #e4e4e7 !important;
+    }
+    html:not(.dark) section#structure,
+    html:not(.dark) section#schedule,
+    html:not(.dark) section#tasks {
+      background-color: #fafafa !important;
+    }
+    html:not(.dark) .bg-black {
+      background-color: #ffffff !important;
+    }
+    html:not(.dark) .bg-mono-950,
+    html:not(.dark) .bg-mono-950\/70,
+    html:not(.dark) .bg-mono-950\/50,
+    html:not(.dark) .bg-mono-950\/40,
+    html:not(.dark) .bg-mono-950\/30 {
+      background-color: #f4f4f5 !important;
+    }
+    html:not(.dark) .bg-mono-900,
+    html:not(.dark) .bg-mono-900\/60 {
+      background-color: #e4e4e7 !important;
+    }
+    html:not(.dark) .text-white {
+      color: #09090b !important;
+    }
+    html:not(.dark) .text-mono-200 {
+      color: #18181b !important;
+    }
+    html:not(.dark) .text-mono-300 {
+      color: #27272a !important;
+    }
+    html:not(.dark) .text-mono-400 {
+      color: #52525b !important;
+    }
+    html:not(.dark) .text-mono-500 {
+      color: #71717a !important;
+    }
+    html:not(.dark) .border-mono-800,
+    html:not(.dark) .border-mono-700,
+    html:not(.dark) .border-mono-900 {
+      border-color: #e4e4e7 !important;
+    }
+    html:not(.dark) .hover\:border-white:hover {
+      border-color: #09090b !important;
+    }
+    /* Buttons in light mode */
+    html:not(.dark) .bg-white.text-black:not(.day-tab-btn):not(#tabBtnLessons):not(#tabBtnPiket) {
+      background-color: #09090b !important;
+      color: #ffffff !important;
+    }
+    html:not(.dark) #adminAuthBtn {
+      background-color: #09090b !important;
+      color: #ffffff !important;
+    }
+    /* Active Schedule Day Tabs in Light Mode */
+    html:not(.dark) .day-tab-btn.active-day {
+      background-color: #09090b !important;
+      color: #ffffff !important;
+      border-color: #09090b !important;
+    }
+    html:not(.dark) .day-tab-btn:not(.active-day) {
+      background-color: #ffffff !important;
+      color: #52525b !important;
+      border-color: #e4e4e7 !important;
+    }
+    /* Subtab Lesson vs Piket */
+    html:not(.dark) .subtab-active {
+      background-color: #09090b !important;
+      color: #ffffff !important;
+    }
+    html:not(.dark) .subtab-inactive {
+      background-color: #ffffff !important;
+      color: #52525b !important;
+      border-color: #e4e4e7 !important;
+    }
+    /* Modals in light mode */
+    html:not(.dark) #adminPinModal > div,
+    html:not(.dark) #addTaskModal > div {
+      background-color: #ffffff !important;
+      border-color: #e4e4e7 !important;
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1) !important;
+    }
+    html:not(.dark) #adminPinModal input,
+    html:not(.dark) #addTaskModal input,
+    html:not(.dark) #addTaskModal textarea,
+    html:not(.dark) #addTaskModal select {
+      background-color: #f8fafc !important;
+      border-color: #cbd5e1 !important;
+      color: #09090b !important;
+    }
+    /* Urgency Banner in light mode */
+    html:not(.dark) #urgencyAlertBanner {
+      background-color: #f4f4f5 !important;
+      border-color: #09090b !important;
+      color: #09090b !important;
+    }
+    /* Fix Hero gradient overlay in light mode */
+    html:not(.dark) #hero .bg-gradient-to-b {
+      background: linear-gradient(to bottom, rgba(255,255,255,0.7), rgba(255,255,255,0.9), #ffffff) !important;
+    }
+    html:not(.dark) #heroBgGroup1 {
+      opacity: 0.15 !important;
+    }
+    html:not(.dark) #heroBgGroup2 {
+      opacity: 0.10 !important;
+    }
+    /* Targeted Light Mode Fixes for Selected Elements */
+    /* Selector 1: Tasks indicator dot in main navigation */
+    html:not(.dark) nav#mainNav a[href="#tasks"] > span:nth-of-type(2) {
+      background-color: #09090b !important;
+    }
+    /* Selector 2, 3, 4: Hero Class Logo Container and Text */
+    html:not(.dark) section#hero > div:nth-of-type(5) > div:nth-of-type(1) > div:nth-of-type(1) {
+      background-color: rgba(255, 255, 255, 0.95) !important;
+      border-color: #e4e4e7 !important;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.06), 0 2px 4px -2px rgba(0, 0, 0, 0.04) !important;
+    }
+    html:not(.dark) section#hero > div:nth-of-type(5) > div:nth-of-type(1) > div:nth-of-type(1):hover {
+      border-color: #a1a1aa !important;
+    }
+    html:not(.dark) section#hero > div:nth-of-type(5) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) {
+      color: #09090b !important;
+    }
+    html:not(.dark) section#hero > div:nth-of-type(5) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2) {
+      color: #52525b !important;
+    }
+    /* Selector 5, 6, 7: Hero School Logo Container and Text */
+    html:not(.dark) section#hero > div:nth-of-type(5) > div:nth-of-type(1) > div:nth-of-type(3) {
+      background-color: rgba(255, 255, 255, 0.95) !important;
+      border-color: #e4e4e7 !important;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.06), 0 2px 4px -2px rgba(0, 0, 0, 0.04) !important;
+    }
+    html:not(.dark) section#hero > div:nth-of-type(5) > div:nth-of-type(1) > div:nth-of-type(3):hover {
+      border-color: #a1a1aa !important;
+    }
+    html:not(.dark) section#hero > div:nth-of-type(5) > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(2) > div:nth-of-type(1) {
+      color: #09090b !important;
+    }
+    html:not(.dark) section#hero > div:nth-of-type(5) > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(2) > div:nth-of-type(2) {
+      color: #52525b !important;
+    }
+    /* Selector 8, 9, 10: Hero Live Task Board Button, Icon, and Label */
+    html:not(.dark) section#hero > div:nth-of-type(5) > div:nth-of-type(3) > a:nth-of-type(2) {
+      background-color: #ffffff !important;
+      border-color: #d4d4d8 !important;
+      color: #09090b !important;
+      box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.08), 0 1px 2px -1px rgba(0, 0, 0, 0.05) !important;
+    }
+    html:not(.dark) section#hero > div:nth-of-type(5) > div:nth-of-type(3) > a:nth-of-type(2):hover {
+      background-color: #f4f4f5 !important;
+      border-color: #a1a1aa !important;
+    }
+    html:not(.dark) section#hero > div:nth-of-type(5) > div:nth-of-type(3) > a:nth-of-type(2) > svg,
+    html:not(.dark) section#hero > div:nth-of-type(5) > div:nth-of-type(3) > a:nth-of-type(2) > i {
+      color: #52525b !important;
+    }
+    html:not(.dark) section#hero > div:nth-of-type(5) > div:nth-of-type(3) > a:nth-of-type(2) > span {
+      color: #09090b !important;
+    }
+  </style>
+</head>
+<body class="bg-black text-white dark:bg-black dark:text-white transition-colors duration-300 font-sans antialiased overflow-x-hidden selection:bg-white selection:text-black">
+
+  <!-- 1. HIGH-INTENSITY LOADING SCREEN -->
+  <div id="loadingScreen" class="fixed inset-0 z-50 flex flex-col items-center justify-center overflow-hidden">
+    <!-- Top Curtain -->
+    <div class="shutter-top absolute top-0 left-0 w-full h-1/2 bg-black border-b border-mono-800 flex items-end justify-center pb-6">
+      <div class="text-center">
+        <div class="inline-flex items-center gap-2 px-3 py-1 mb-2 rounded-full border border-mono-800 bg-mono-950 text-mono-400 font-mono text-xs uppercase tracking-widest">
+          <span class="w-1.5 h-1.5 rounded-full bg-white animate-pulse"></span>
+          SYSTEM.INITIALIZING // NETWORK NODE
+        </div>
+        <h1 class="text-xl md:text-3xl font-display font-bold tracking-tight text-white uppercase px-4">
+          Welcome to X TJKT 1 Web Profile
+        </h1>
+      </div>
+    </div>
+
+    <!-- Bottom Curtain -->
+    <div class="shutter-bottom absolute bottom-0 left-0 w-full h-1/2 bg-black border-t border-mono-800 flex flex-col items-center justify-start pt-6">
+      <div class="w-64 max-w-[85vw] space-y-3 text-center">
+        <div class="flex justify-between items-center text-xs font-mono text-mono-400">
+          <span id="loadStatusText">ESTABLISHING CONNECTION...</span>
+          <span id="loadPercent" class="font-bold text-white">0%</span>
+        </div>
+        <!-- Progress Bar -->
+        <div class="w-full h-1 bg-mono-900 rounded-full overflow-hidden border border-mono-800">
+          <div id="loadProgressBar" class="h-full bg-white transition-all duration-75 ease-out" style="width: 0%;"></div>
+        </div>
+        <p class="text-[11px] font-mono text-mono-500 uppercase tracking-widest">
+          SMK Negeri 3 Jepara &bull; COMPUTER &amp; NETWORK ENGINEERING
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAVIGATION BAR (MINIMALIST MONOCHROME) -->
+  <nav class="sticky top-0 z-40 w-full bg-black/25 dark:bg-black/25 backdrop-blur-md border-b border-mono-800 transition-colors duration-300" id="mainNav">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <!-- Brand Logo -->
+      <a href="#hero" class="flex items-center gap-3 group">
+        <div class="w-9 h-9 rounded-lg bg-white text-black font-mono font-black text-sm flex items-center justify-center transition-transform group-hover:scale-105">
+          10
+        </div>
+        <div class="flex flex-col">
+          <span class="font-display font-bold text-base tracking-tight text-white dark:text-white group-hover:text-mono-300 transition-colors">
+            X TJKT 1
+          </span>
+          <span class="text-[10px] font-mono text-mono-400 tracking-widest uppercase">
+            SKAGARA
+          </span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Items -->
+      <div class="hidden md:flex items-center gap-6 font-mono text-xs uppercase tracking-wider text-mono-400">
+        <a href="#profile" class="hover:text-white transition-colors py-1">Profile</a>
+        <a href="#structure" class="hover:text-white transition-colors py-1">Structure</a>
+        <a href="#students" class="hover:text-white transition-colors py-1">Students</a>
+        <a href="#schedule" class="hover:text-white transition-colors py-1">Schedule</a>
+        <a href="#gallery" class="hover:text-white transition-colors py-1">Gallery</a>
+        <a href="#tasks" class="hover:text-white transition-colors py-1 flex items-center gap-1.5">
+          <span>Tasks</span>
+          <span class="w-1.5 h-1.5 rounded-full bg-black dark:bg-white transition-colors"></span>
+        </a>
+      </div>
+
+      <!-- Action Utilities -->
+      <div class="flex items-center gap-2 sm:gap-3">
+        <!-- Live Clock Tag -->
+        <div class="hidden lg:flex items-center gap-2 px-2.5 py-1 rounded border border-mono-800 bg-mono-950 font-mono text-[11px] text-mono-300">
+          <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-ping"></span>
+          <span id="navLiveClock">00:00:00 WIB</span>
+        </div>
+
+        <!-- Theme Toggle (Monochrome B&W) -->
+        <button id="themeToggleBtn" aria-label="Toggle Monochrome Theme" class="w-9 h-9 rounded-lg border border-mono-800 bg-mono-900/60 hover:bg-mono-800 text-mono-200 hover:text-white flex items-center justify-center transition-all">
+          <i data-lucide="sun" id="sunIcon" class="w-4 h-4 hidden"></i>
+          <i data-lucide="moon" id="moonIcon" class="w-4 h-4"></i>
+        </button>
+
+        <!-- Mobile Menu Button -->
+        <button id="mobileMenuBtn" aria-label="Toggle Mobile Menu" class="md:hidden w-9 h-9 rounded-lg border border-mono-800 bg-mono-900/60 text-mono-200 flex items-center justify-center">
+          <i data-lucide="menu" id="menuIcon" class="w-4 h-4"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div id="mobileMenuDrawer" class="hidden md:hidden border-t border-mono-800 bg-black/95 px-6 py-5 space-y-3 font-mono text-xs uppercase tracking-wider">
+      <a href="#profile" class="block py-2 text-mono-300 hover:text-white transition-colors border-b border-mono-900">Profile</a>
+      <a href="#structure" class="block py-2 text-mono-300 hover:text-white transition-colors border-b border-mono-900">Structure</a>
+      <a href="#students" class="block py-2 text-mono-300 hover:text-white transition-colors border-b border-mono-900">Students</a>
+      <a href="#schedule" class="block py-2 text-mono-300 hover:text-white transition-colors border-b border-mono-900">Schedule</a>
+      <a href="#gallery" class="block py-2 text-mono-300 hover:text-white transition-colors border-b border-mono-900">Gallery</a>
+      <a href="#tasks" class="block py-2 text-mono-300 hover:text-white transition-colors">Tasks &amp; To-Do</a>
+    </div>
+  </nav>
+
+  <!-- 2. HERO SECTION (MINIMALIST MONOCHROME & TYPEWRITER EFFECT) -->
+  <section id="hero" class="relative min-h-[92vh] flex items-center justify-center overflow-hidden border-b border-mono-800 py-16 sm:py-24">
+    <!-- Blurred Background Photos (Dual Group Photos, Heavily Blurred & Monochrome) -->
+    <div id="heroBgGroup1" class="absolute inset-0 z-0 pointer-events-none opacity-100 dark:opacity-100">
+      <img src="Images/Fotbar/SkagaraMlakuMlaku2.jpg" 
+           alt="Class Group Photo 1" 
+           class="w-full h-full filter blur-sm object-cover grayscale scale-100" />
+    </div>
+
+    <!-- Monochrome Subtle Grid Overlay -->
+    <div class="absolute inset-0 z-0 bg-[radial-gradient(#27272a_1px,transparent_1px)] [background-size:24px_24px] opacity-40 pointer-events-none"></div>
+    <div class="absolute inset-0 z-0 bg-gradient-to-b from-black/60 via-black/85 to-black pointer-events-none"></div>
+
+    <!-- Hero Content -->
+    <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center">
+      <!-- Dual Logos: Class Logo & School Logo -->
+      <div class="reveal-elem flex items-center justify-center gap-4 sm:gap-6 mb-8">
+        <!-- Class Logo -->
+        <div class="group flex items-center gap-2.5 px-3.5 py-2 rounded-xl border border-mono-200 dark:border-mono-800 bg-white/95 dark:bg-black/60 backdrop-blur-md shadow-md dark:shadow-2xl hover:border-mono-400 dark:hover:border-white transition-all">
+          <div class="w-10 h-10 rounded-lg bg-transparent text-white dark:bg-transparent dark:text-black flex items-center justify-center font-display font-black text-lg tracking-tighter shadow-inner">
+            <img src="Images/Logo/xtjkt1logo.png">
+          </div>
+          <div class="text-left font-mono">
+            <div class="text-xs font-bold text-mono-900 dark:text-white tracking-wide">X TJKT 1</div>
+            <div class="text-[9px] text-white dark:text-mono-400 uppercase tracking-widest">Class Crest</div>
+          </div>
+        </div>
+
+        <div class="h-6 w-px bg-mono-200 dark:bg-mono-800"></div>
+
+        <!-- School Logo -->
+        <div class="group flex items-center gap-2.5 px-3.5 py-2 rounded-xl border border-mono-200 dark:border-mono-800 bg-white/95 dark:bg-black/60 backdrop-blur-md shadow-md dark:shadow-2xl hover:border-mono-400 dark:hover:border-white transition-all">
+          <div class="w-10 h-10 rounded-lg text-mono-900 dark:text-white flex items-center justify-center font-display font-bold text-xs tracking-tighter">
+            <img src="Images/Logo/SMEALOGO.png">
+          </div>
+          <div class="text-left font-mono">
+            <div class="text-xs font-bold text-mono-900 dark:text-white tracking-wide">SKAGARA</div>
+            <div class="text-[9px] text-white dark:text-mono-400 uppercase tracking-widest">Vocation Tech</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Typewriter Headline Block -->
+      <div class="reveal-elem min-h-[140px] sm:min-h-[160px] flex flex-col items-center justify-center">
+        <!-- Headline 1 -->
+        <h1 class="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-extrabold tracking-tight text-white mb-2 leading-tight">
+          <span id="heroTypewriterLine1" class="text-white"></span><span id="cursor1" class="typewriter-cursor"></span>
+        </h1>
+        <!-- Headline 2 -->
+        <h2 class="text-xl sm:text-3xl md:text-4xl font-display font-semibold text-mono-400 tracking-tight">
+          <span id="heroTypewriterLine2" class="text-mono-300"></span><span id="cursor2" class="typewriter-cursor hidden"></span>
+        </h2>
+      </div>
+
+      <!-- Description & Sub-tag -->
+      <p class="reveal-elem max-w-2xl text-sm sm:text-base text-mono-400 font-sans leading-relaxed mt-4 mb-8">
+        Kompartemen Teknik Jaringan Komputer dan Telekomunikasi. Berkomitmen pada keunggulan rekayasa jaringan, 
+        disiplin operasional, dan integritas tinggi dalam ekosistem digital modern Skagara.
+      </p>
+
+      <!-- CTA Action Buttons -->
+      <div class="reveal-elem flex flex-wrap items-center justify-center gap-3 sm:gap-4 mb-14">
+        <a href="#profile" class="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-white text-black font-mono text-xs uppercase tracking-wider font-bold hover:bg-mono-200 transition-transform active:scale-95 shadow-lg">
+          <span>Explore Class Profile</span>
+          <i data-lucide="arrow-down" class="w-4 h-4"></i>
+        </a>
+        <a href="#tasks" class="inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-mono-300 dark:border-mono-700 bg-white dark:bg-black/60 hover:bg-mono-100 dark:hover:bg-mono-900 text-mono-900 dark:text-white font-mono text-xs uppercase tracking-wider font-medium hover:border-mono-400 dark:hover:border-mono-500 shadow-sm transition-all">
+          <i data-lucide="check-square" class="w-4 h-4 text-white dark:text-mono-400"></i>
+          <span>Pengingat Tugas</span>
+        </a>
+      </div>
+
+      <!-- Metrics Banner (Monochrome) -->
+      <div class="reveal-elem grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 w-full max-w-3xl">
+        <div class="p-4 rounded-xl border border-mono-800 bg-mono-950/70 backdrop-blur-sm text-center">
+          <div class="font-mono text-2xl font-bold text-white">35</div>
+          <div class="text-[11px] font-mono text-mono-500 uppercase tracking-widest mt-1">Students</div>
+        </div>
+        <div class="p-4 rounded-xl border border-mono-800 bg-mono-950/70 backdrop-blur-sm text-center">
+          <div class="font-mono text-2xl font-bold text-white">01</div>
+          <div class="text-[11px] font-mono text-mono-500 uppercase tracking-widest mt-1">Teacher</div>
+        </div>
+        <div class="p-4 rounded-xl border border-mono-800 bg-mono-950/70 backdrop-blur-sm text-center">
+          <div class="font-mono text-2xl font-bold text-white">100%</div>
+          <div class="text-[11px] font-mono text-mono-500 uppercase tracking-widest mt-1">Energy</div>
+        </div>
+        <div class="p-4 rounded-xl border border-mono-800 bg-mono-950/70 backdrop-blur-sm text-center">
+          <div class="font-mono text-2xl font-bold text-white">5G</div>
+          <div class="text-[11px] font-mono text-mono-500 uppercase tracking-widest mt-1">Network</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. PROFILE SECTION & HOMEROOM TEACHER -->
+  <section id="profile" class="py-20 sm:py-28 border-b border-mono-800 relative bg-black">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Section Header -->
+      <div class="reveal-elem flex flex-col md:flex-row md:items-end justify-between mb-12 sm:mb-16 gap-4">
+        <div>
+          <div class="inline-flex items-center gap-2 font-mono text-xs text-mono-400 uppercase tracking-widest mb-2">
+            <span class="w-1.5 h-1.5 bg-white"></span>
+            01 // PROFILE &amp; IDENTITY
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-display font-bold tracking-tight text-white">
+            Profil Kelas
+          </h2>
+        </div>
+        <p class="font-mono text-xs text-mono-500 uppercase tracking-wider max-w-sm">
+          SKAGARA &bull; JURUSAN TJKT &bull; ANGKATAN 2026/2027
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+        <!-- Class Story & Competence Narrative -->
+        <div class="reveal-elem lg:col-span-7 space-y-6">
+          <div class="p-6 sm:p-8 rounded-2xl border border-mono-800 hover:border-white bg-mono-950 transition-all duration-300 relative overflow-hidden">
+            <h3 class="text-xl font-display font-bold text-white mb-4">
+              Visi Misi &amp; Karakter Kelas X TJKT 1
+            </h3>
+            <p class="text-mono-300 text-sm sm:text-base leading-relaxed mb-4">
+              X TJKT 1 adalah kelas percontohan kejuruan Teknik Jaringan Komputer dan Telekomunikasi di Skagara. 
+              Fokus pembelajaran kami mencakup fondasi arsitektur jaringan TCP/IP, konfigurasi MikroTik &amp; Cisco, 
+              splicing serat optik (Fiber Optics), serta administrasi server Linux modern.
+            </p>
+            <p class="text-mono-400 text-sm sm:text-base leading-relaxed mb-6">
+              Lebih dari sekadar keterampilan teknis, kami menjunjung tinggi kultur kekeluargaan, kedisiplinan laboratorium, 
+              kejujuran akademik, dan kecepatan dalam memecahkan masalah sistem secara kolaboratif.
+            </p>
+
+            <!-- Technical Focus Badges (Monochrome) -->
+            <div class="flex flex-wrap gap-2 pt-4 border-t border-mono-800">
+              <span class="px-3 py-1 rounded border border-mono-800 bg-black text-mono-300 font-mono text-xs">Ip Address</span>
+              <span class="px-3 py-1 rounded border border-mono-800 bg-black text-mono-300 font-mono text-xs">5G Network</span>
+              <span class="px-3 py-1 rounded border border-mono-800 bg-black text-mono-300 font-mono text-xs">Fiber Optics</span>
+              <span class="px-3 py-1 rounded border border-mono-800 bg-black text-mono-300 font-mono text-xs">Network Administration</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Homeroom Teacher (Wali Kelas) Dedicated Card -->
+        <div class="reveal-elem lg:col-span-5">
+          <div class="p-6 sm:p-8 rounded-2xl border border-mono-800 bg-mono-950 relative group transition-all duration-300 hover:border-white">
+            <div class="flex items-center justify-between mb-6">
+              <span class="px-2.5 py-1 rounded bg-white text-black font-mono text-[10px] uppercase font-bold tracking-wider">
+                Wali Kelas
+              </span>
+              <span class="font-mono text-xs text-mono-400"></span>
+            </div>
+
+            <!-- Teacher Portrait Photo -->
+            <div class="relative w-full aspect-[4/3] rounded-xl overflow-hidden mb-6 border border-mono-800 bg-mono-900">
+              <img src="PlaceholderImg/Placeholder.jpg" 
+                   alt="Wali Kelas - Ibu Rina Setyawati, S.Kom" 
+                   class="w-full h-full object-cover grayscale contrast-125 group-hover:scale-105 transition-transform duration-500" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent"></div>
+              <div class="absolute bottom-3 left-4 right-4 flex items-center justify-between">
+                <span class="text-xs font-mono text-mono-300"></span>
+                <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+              </div>
+            </div>
+
+            <div class="space-y-2">
+              <h4 class="text-2xl font-display font-bold text-white">
+                Agus Wahyu Destriyanto S.Pd
+              </h4>
+              <p class="font-mono text-xs text-mono-400 uppercase tracking-wider">
+                Wali Kelas X TJKT 1.
+              </p>
+              <div class="p-4 rounded-xl border border-mono-800 bg-black/60 font-sans italic text-sm text-white mt-4 leading-relaxed">
+                &ldquo;Bangunlah jaringan yang tangguh tidak hanya dalam kabel dan router, namun juga dalam ikatan persaudaraan dan etos kerja profesional kalian.&rdquo;
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. ORGANIZATIONAL STRUCTURE SECTION (MONOCHROME HIERARCHY) -->
+  <section id="structure" class="py-20 sm:py-28 border-b border-mono-800 bg-mono-950/40 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Section Header -->
+      <div class="reveal-elem flex flex-col md:flex-row md:items-end justify-between mb-12 sm:mb-16 gap-4">
+        <div>
+          <div class="inline-flex items-center gap-2 font-mono text-xs text-mono-400 uppercase tracking-widest mb-2">
+            <span class="w-1.5 h-1.5 bg-white"></span>
+            02 // GOVERNANCE &amp; HIERARCHY
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-display font-bold tracking-tight text-white">
+            Struktur Organisasi
+          </h2>
+        </div>
+        <p class="font-mono text-xs text-mono-500 uppercase tracking-wider">
+          LEADERSHIP COUNCIL &bull; PERIODE 2026/2027
+        </p>
+      </div>
+
+      <!-- Hierarchy Tier 1: President & Vice President -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-4xl mx-auto mb-8">
+        <!-- Ketua Kelas -->
+        <div class="reveal-elem p-6 rounded-xl border border-mono-800 bg-black group transition-all duration-300 hover:border-white">
+          <div class="flex items-center justify-between mb-4">
+            <div class="flex items-center gap-2">
+              <h5 class="font-display font-bold text-white text-base">Ketua Kelas</h5>
+            </div>
+            <span class="font-mono text-[10px] text-mono-500 uppercase"></span>
+          </div>
+          <div class="flex items-center gap-4 mb-4">
+            <div class="w-14 h-14 rounded-lg overflow-hidden border border-mono-800 flex-shrink-0 bg-mono-900">
+              <img src="Images/Dafa.jpeg"
+                   alt="Dafa Prayuliansyah" class="w-full h-full object-cover grayscale group-hover:scale-105 group-hover:grayscale-0 transition-transform" />
+            </div>
+            <div>
+              <h6 class="font-display font-bold text-white text-sm">Dafa Prayuliansyah</h6>
+              <p class="font-mono text-xs text-mono-400">Ketua Kelas</p>
+              <p class="font-mono text-[11px] text-mono-500 mt-0.5"></p>
+            </div>
+          </div>
+          <p class="text-xs text-mono-500 leading-relaxed border-t border-mono-800 pt-3">
+            Bertanggung jawab memimpin kelas, mengatur kegiatan, dan menjadi penghubung antara siswa dan wali kelas.
+          </p>
+        </div>
+
+        <!-- Wakil Ketua -->
+        <div class="reveal-elem p-6 rounded-xl border border-mono-800 bg-black group transition-all duration-300 hover:border-white">
+          <div class="flex items-center justify-between mb-4">
+            <div class="flex items-center gap-2">
+              <h5 class="font-display font-bold text-white text-base">Wakil Ketua</h5>
+            </div>
+            <span class="font-mono text-[10px] text-mono-500 uppercase"></span>
+          </div>
+          <div class="flex items-center gap-4 mb-4">
+            <div class="w-14 h-14 rounded-lg overflow-hidden border border-mono-800 flex-shrink-0 bg-mono-900">
+              <img src="Images/Pramudiya.jpeg"
+                   alt="Ahmad Diva Pramudiya" class="w-full h-full object-cover grayscale group-hover:scale-105 group-hover:grayscale-0 transition-transform" />
+            </div>
+            <div>
+              <h6 class="font-display font-bold text-white text-sm">Ahmad Diva Pramudiya</h6>
+              <p class="font-mono text-xs text-mono-400">Wakil Ketua</p>
+              <p class="font-mono text-[11px] text-mono-500 mt-0.5"></p>
+            </div>
+          </div>
+          <p class="text-xs text-mono-500 leading-relaxed border-t border-mono-800 pt-3">
+            Bertanggung jawab menjadi wakil ketua kelas dan mendukung ketua dalam pengelolaan kelas.
+          </p>
+        </div>
+      </div>
+
+      <!-- Hierarchy Tier 2: Secretaries & Treasurers -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+        <!-- Sekretaris 1 -->
+        <div class="reveal-elem p-6 rounded-xl border border-mono-800 bg-black group transition-all duration-300 hover:border-white">
+          <div class="flex items-center justify-between mb-4">
+            <div class="flex items-center gap-2">
+              <h5 class="font-display font-bold text-white text-base">Sekretaris 1</h5>
+            </div>
+            <span class="font-mono text-[10px] text-mono-500 uppercase"></span>
+          </div>
+          <div class="flex items-center gap-4 mb-4">
+            <div class="w-14 h-14 rounded-lg overflow-hidden border border-mono-800 flex-shrink-0 bg-mono-900">
+              <img src="Images/Fani.jpeg"
+                   alt="Fadhila Nuril Sayfani" class="w-full h-full object-cover grayscale group-hover:scale-105 group-hover:grayscale-0 transition-transform" />
+            </div>
+            <div>
+              <h6 class="font-display font-bold text-white text-sm">Fadhila Nuril Sayfani</h6>
+              <p class="font-mono text-xs text-mono-400">Sekretaris 1</p>
+              <p class="font-mono text-[11px] text-mono-500 mt-0.5"></p>
+            </div>
+          </div>
+          <p class="text-xs text-mono-500 leading-relaxed border-t border-mono-800 pt-3">
+            Bertanggung jawab mencatat notulansi kelas.
+          </p>
+        </div>
+
+        <!-- Sekretaris 2 -->
+        <div class="reveal-elem p-6 rounded-xl border border-mono-800 bg-black group transition-all duration-300 hover:border-white">
+          <div class="flex items-center justify-between mb-4">
+            <div class="flex items-center gap-2">
+              <h5 class="font-display font-bold text-white text-base">Sekretaris 2</h5>
+            </div>
+            <span class="font-mono text-[10px] text-mono-500 uppercase"></span>
+          </div>
+          <div class="flex items-center gap-4 mb-4">
+            <div class="w-14 h-14 rounded-lg overflow-hidden border border-mono-800 flex-shrink-0 bg-mono-900">
+              <img src="PlaceholderImg/Placeholder.jpg"
+                   alt="M Davin Firman Al Farizzy" class="w-full h-full object-cover grayscale group-hover:scale-105 transition-transform" />
+            </div>
+            <div>
+              <h6 class="font-display font-bold text-white text-sm">M Davin Firman Al Farizzy</h6>
+              <p class="font-mono text-xs text-mono-400">Sekretaris 2</p>
+              <p class="font-mono text-[11px] text-mono-500 mt-0.5"></p>
+            </div>
+          </div>
+          <p class="text-xs text-mono-500 leading-relaxed border-t border-mono-800 pt-3">
+            Bertanggung jawab mencatat notulansi kelas.
+          </p>
+        </div>
+
+        <!-- Bendahara 1 -->
+        <div class="reveal-elem p-6 rounded-xl border border-mono-800 bg-black group transition-all duration-300 hover:border-white">
+          <div class="flex items-center justify-between mb-4">
+            <div class="flex items-center gap-2">
+              <h5 class="font-display font-bold text-white text-base">Bendahara 1</h5>
+            </div>
+            <span class="font-mono text-[10px] text-mono-500 uppercase"></span>
+          </div>
+          <div class="flex items-center gap-4 mb-4">
+            <div class="w-14 h-14 rounded-lg overflow-hidden border border-mono-800 flex-shrink-0 bg-mono-900">
+              <img src="Images/Arimby.jpeg"
+                   alt="Arimby Aninndya Nayottama" class="w-full h-full object-cover grayscale group-hover:scale-105 group-hover:grayscale-0 transition-transform" />
+            </div>
+            <div>
+              <h6 class="font-display font-bold text-white text-sm">Arimby Aninndya Nayottama</h6>
+              <p class="font-mono text-xs text-mono-400">Bendahara 1</p>
+              <p class="font-mono text-[11px] text-mono-500 mt-0.5"></p>
+            </div>
+          </div>
+          <p class="text-xs text-mono-500 leading-relaxed border-t border-mono-800 pt-3">
+            Bertanggung jawab atas pengelolaan keuangan kelas.
+          </p>
+        </div>
+
+        <!-- Bendahara 2 -->
+        <div class="reveal-elem p-6 rounded-xl border border-mono-800 bg-black group transition-all duration-300 hover:border-white">
+          <div class="flex items-center justify-between mb-4">
+            <div class="flex items-center gap-2">
+              <h5 class="font-display font-bold text-white text-base">Bendahara 2</h5>
+            </div>
+            <span class="font-mono text-[10px] text-mono-500 uppercase"></span>
+          </div>
+          <div class="flex items-center gap-4 mb-4">
+            <div class="w-14 h-14 rounded-lg overflow-hidden border border-mono-800 flex-shrink-0 bg-mono-900">
+              <img src="Images/Fajar.jpeg"
+                   alt="Muhammad Fajar" class="w-full h-full object-cover grayscale group-hover:scale-105 group-hover:grayscale-0 transition-transform" />
+            </div>
+            <div>
+              <h6 class="font-display font-bold text-white text-sm">Muhammad Fajar</h6>
+              <p class="font-mono text-xs text-mono-400">Bendahara 2</p>
+              <p class="font-mono text-[11px] text-mono-500 mt-0.5"></p>
+            </div>
+          </div>
+          <p class="text-xs text-mono-500 leading-relaxed border-t border-mono-800 pt-3">
+            Bertanggung jawab atas pengelolaan keuangan kelas.
+          </p>
+        </div>
+      </div>
+
+      <!-- Hierarchy Tier 3: Sections (Kebersihan & Keamanan) -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-4xl mx-auto">
+        <!-- Seksi Kebersihan -->
+        <div class="reveal-elem p-6 rounded-xl border border-mono-800 bg-black group transition-all duration-300 hover:border-white">
+          <div class="flex items-center justify-between mb-4">
+            <div class="flex items-center gap-2">
+              <h5 class="font-display font-bold text-white text-base">Seksi Kebersihan</h5>
+            </div>
+            <span class="font-mono text-[10px] text-mono-500 uppercase"></span>
+          </div>
+          <div class="flex items-center gap-4 mb-4">
+            <div class="w-14 h-14 rounded-lg overflow-hidden border border-mono-800 flex-shrink-0 bg-mono-900">
+              <img src="Images/Ozora.jpg" 
+                   alt="Shira Ozora Zebaddiah" class="w-full h-full object-cover grayscale group-hover:scale-105 group-hover:grayscale-0 transition-transform" />
+            </div>
+            <div>
+              <h6 class="font-display font-bold text-white text-sm">Shira Ozora Zebaddiah</h6>
+              <p class="font-mono text-xs text-mono-400">Koordinator Kebersihan</p>
+              <p class="font-mono text-[11px] text-mono-500 mt-0.5"></p>
+            </div>
+          </div>
+          <p class="text-xs text-mono-500 leading-relaxed border-t border-mono-800 pt-3">
+            Menjaga kebersihan dan kenyamanan ruang kelas serta standar kebersihan laboratorium jaringan komputer setiap hari.
+          </p>
+        </div>
+
+        <!-- Seksi Keamanan -->
+        <div class="reveal-elem p-6 rounded-xl border border-mono-800 bg-black group transition-all duration-300 hover:border-white">
+          <div class="flex items-center justify-between mb-4">
+            <div class="flex items-center gap-2">
+              <h5 class="font-display font-bold text-white text-base">Seksi Keamanan</h5>
+            </div>
+            <span class="font-mono text-[10px] text-mono-500 uppercase"></span>
+          </div>
+          <div class="flex items-center gap-4 mb-4">
+            <div class="w-14 h-14 rounded-lg overflow-hidden border border-mono-800 flex-shrink-0 bg-mono-900">
+              <img src="Images/Valen.jpeg" 
+                   alt="Rossi Valentino" class="w-full h-full object-cover grayscale group-hover:scale-105 group-hover:grayscale-0 transition-transform" />
+            </div>
+            <div>
+              <h6 class="font-display font-bold text-white text-sm">Rossi Valentino Aldrin Pasha</h6>
+              <p class="font-mono text-xs text-mono-400">Koordinator Keamanan</p>
+              <p class="font-mono text-[11px] text-mono-500 mt-0.5"></p>
+            </div>
+          </div>
+          <p class="text-xs text-mono-500 leading-relaxed border-t border-mono-800 pt-3">
+            Bertanggung jawab atas keamanan dan keselamatan siswa serta menjaga keamanan fasilitas di lingkungan sekolah.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. STUDENT LIST SECTION (HORIZONTAL DRAG-TO-SCROLL, WHEEL, TOUCH SWIPE & IDLE FLOATING) -->
+  <section id="students" class="py-20 sm:py-28 border-b border-mono-800 bg-black relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Section Header -->
+      <div class="reveal-elem flex flex-col md:flex-row md:items-end justify-between mb-8 sm:mb-12 gap-4">
+        <div>
+          <div class="inline-flex items-center gap-2 font-mono text-xs text-mono-400 uppercase tracking-widest mb-2">
+            <span class="w-1.5 h-1.5 bg-white"></span>
+            03 // CLASS ROSTER
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-display font-bold tracking-tight text-white">
+            Siswa X TJKT 1
+          </h2>
+        </div>
+        <!-- Natural Gestures Notice (No Arrow Buttons, Pure Drag/Wheel/Swipe) -->
+        <div class="hidden items-center gap-3 font-mono text-xs text-mono-400 bg-mono-950 px-3.5 py-2 rounded-lg border border-mono-800">
+          <i data-lucide="move-horizontal" class="w-4 h-4 text-white animate-pulse"></i>
+          <span>Drag or mouse-wheel on desktop &bull; Swipe on mobile</span>
+        </div>
+      </div>
+
+      <!-- Scroll Progress Bar -->
+      <div class="w-full h-0.5 bg-mono-900 mb-6 rounded-full overflow-hidden">
+        <div id="studentScrollIndicator" class="h-full bg-white transition-all duration-100 ease-out" style="width: 15%;"></div>
+      </div>
+
+      <!-- Horizontal Scrollable Container (Optimized Physics Drag, Wheel, Touch Swipe Enabled) -->
+      <div id="studentScrollContainer" 
+           class="cursor-grab select-none overflow-x-auto no-scrollbar flex gap-4 pb-6 pt-2 will-change-scroll"
+           style="-webkit-overflow-scrolling: touch;">
+        
+        <!-- Generated Dynamic Student Cards (36 Students) -->
+        <div id="studentCardsWrapper" class="flex gap-4">
+          <!-- Student cards rendered via JavaScript with animate-idle-float -->
+        </div>
+      </div>
+
+      <!-- Mobile Touch Hint Bar -->
+      <div class="mt-4 flex items-center justify-between text-mono-500 font-mono text-[11px]">
+        <span>TOTAL: 35 REGISTERED STUDENTS</span>
+        <span class="flex items-center gap-1.5">
+          <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+          <span>100% ONLINE PRESENCE</span>
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. SCHEDULE SECTION (ZERO HORIZONTAL SCROLL ON MOBILE, CLEAN RESPONSIVE TIMELINE & PIKET) -->
+  <section id="schedule" class="py-20 sm:py-28 border-b border-mono-800 bg-mono-950/30 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Section Header -->
+      <div class="reveal-elem flex flex-col md:flex-row md:items-end justify-between mb-10 sm:mb-14 gap-4">
+        <div>
+          <div class="inline-flex items-center gap-2 font-mono text-xs text-mono-400 uppercase tracking-widest mb-2">
+            <span class="w-1.5 h-1.5 bg-white"></span>
+            04 // ACADEMIC TIMELINE &amp; ROSTER
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-display font-bold tracking-tight text-white">
+            Jadwal Pelajaran &amp; Piket
+          </h2>
+        </div>
+        <p class="font-mono text-xs text-mono-500 uppercase tracking-wider">
+          ACADEMIC TIMETABLE 2026/2027
+        </p>
+      </div>
+
+      <!-- Schedule Sub-tabs: Lesson Schedule vs Jadwal Piket -->
+      <div class="reveal-elem flex flex-wrap items-center gap-2 mb-8 border-b border-mono-800 pb-4">
+        <button id="tabBtnLessons" onclick="switchScheduleTab('lessons')" class="px-5 py-2.5 rounded-lg bg-white text-black font-mono text-xs font-bold uppercase tracking-wider transition-all">
+          Jadwal Pelajaran
+        </button>
+        <button id="tabBtnPiket" onclick="switchScheduleTab('piket')" class="px-5 py-2.5 rounded-lg border border-mono-800 bg-black/60 text-mono-400 hover:text-white font-mono text-xs uppercase tracking-wider transition-all">
+          Jadwal Piket Kebersihan
+        </button>
+      </div>
+
+      <!-- VIEW 1: LESSON SCHEDULE (ZERO HORIZONTAL OVERFLOW ON MOBILE) -->
+      <div id="viewLessons" class="w-full">
+        <!-- Day Filter Selector Pills (Semua Hari & Senin - Jumat) -->
+        <div class="flex flex-wrap gap-2 mb-6 w-full">
+          <button onclick="selectDaySchedule('all')" class="day-tab-btn flex-1 sm:flex-none px-4 py-2 rounded-lg border border-mono-800 bg-black text-mono-400 hover:text-white font-mono text-xs uppercase tracking-wider transition-all" data-day="all">
+            Semua Hari
+          </button>
+          <button onclick="selectDaySchedule('senin')" class="day-tab-btn flex-1 sm:flex-none px-4 py-2 rounded-lg border border-white bg-white text-black font-mono text-xs font-bold uppercase tracking-wider transition-all active-day" data-day="senin">
+            Senin
+          </button>
+          <button onclick="selectDaySchedule('selasa')" class="day-tab-btn flex-1 sm:flex-none px-4 py-2 rounded-lg border border-mono-800 bg-black text-mono-400 hover:text-white font-mono text-xs uppercase tracking-wider transition-all" data-day="selasa">
+            Selasa
+          </button>
+          <button onclick="selectDaySchedule('rabu')" class="day-tab-btn flex-1 sm:flex-none px-4 py-2 rounded-lg border border-mono-800 bg-black text-mono-400 hover:text-white font-mono text-xs uppercase tracking-wider transition-all" data-day="rabu">
+            Rabu
+          </button>
+          <button onclick="selectDaySchedule('kamis')" class="day-tab-btn flex-1 sm:flex-none px-4 py-2 rounded-lg border border-mono-800 bg-black text-mono-400 hover:text-white font-mono text-xs uppercase tracking-wider transition-all" data-day="kamis">
+            Kamis
+          </button>
+          <button onclick="selectDaySchedule('jumat')" class="day-tab-btn flex-1 sm:flex-none px-4 py-2 rounded-lg border border-mono-800 bg-black text-mono-400 hover:text-white font-mono text-xs uppercase tracking-wider transition-all" data-day="jumat">
+            Jumat
+          </button>
+        </div>
+
+        <!-- Mobile & Desktop Adaptive Timeline Container (100% width, no side-scroll) -->
+        <div id="lessonScheduleContainer" class="w-full space-y-3">
+          <!-- Dynamically populated day schedule items with full mobile responsiveness -->
+        </div>
+      </div>
+
+      <!-- VIEW 2: JADWAL PIKET KEBERSIHAN (MON - FRI, MOBILE FULL WIDTH) -->
+      <div id="viewPiket" class="hidden w-full">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 w-full">
+          <!-- Senin -->
+          <div class="p-5 rounded-xl border border-mono-800 bg-black flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between border-b border-mono-800 pb-3 mb-4">
+                <span class="font-display font-bold text-white text-base">SENIN</span>
+                <span class="px-2 py-0.5 rounded bg-mono-900 border border-mono-800 text-[10px] font-mono text-mono-300">TIM 01</span>
+              </div>
+              <ul class="space-y-2 text-xs font-mono text-mono-300">
+                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-white"></span>M Ashofa Shobiburizqi</li>
+                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-white"></span>Ahmad Rizqi Tri utomo</li>
+                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-white"></span>Sandy Heka Janatuka</li>
+                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-white"></span>M Aga Satya</li>
+                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-white"></span>Ahmad Diva Pramudiya</li>
+                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-white"></span>Haninndya Dwi Febriana</li>
+                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-white"></span>Rendyansyah Ramadhan</li>
+              </ul>
+            </div>
+            <div class="hidden mt-4 pt-3 border-t border-mono-900 text-[10px] font-mono text-mono-500">
+              FOKUS: LAB LAN 1 &bull; PAPAN TULIS
+            </div>
+          </div>
+
+          <!-- Selasa -->
+          <div class="p-5 rounded-xl border border-mono-800 bg-black flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between border-b border-mono-800 pb-3 mb-4">
+                <span class="font-display font-bold text-white text-base">SELASA</span>
+                <span class="px-2 py-0.5 rounded bg-mono-900 border border-mono-800 text-[10px] font-mono text-mono-300">TIM 02</span>
+              </div>
+              <ul class="space-y-2 text-xs font-mono text-mono-300">
+                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-white"></span>M Fathan Athaya Putra Purnomo</li>
+                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-white"></span>Aprilian Miftakhul Huda</li>
+                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-white"></span>Atha Arkananta Shaquille</li>
+                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-white"></span>Dava Prayuliansyah</li>
+                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-white"></span>M Fajar</li>
+                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-white"></span>Shira Ozora Zebaddiah</li>
+              </ul>
+            </div>
+            <div class="hidden mt-4 pt-3 border-t border-mono-900 text-[10px] font-mono text-mono-500">
+              FOKUS: MEJA SERVER &bull; KACA JENDELA
+            </div>
+          </div>
+
+          <!-- Rabu -->
+          <div class="p-5 rounded-xl border border-mono-800 bg-black flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between border-b border-mono-800 pb-3 mb-4">
+                <span class="font-display font-bold text-white text-base">RABU</span>
+                <span class="px-2 py-0.5 rounded bg-mono-900 border border-mono-800 text-[10px] font-mono text-mono-300">TIM 03</span>
+              </div>
+              <ul class="space-y-2 text-xs font-mono text-mono-300">
+                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-white"></span>Fajar Dwi Setyo Nugroho</li>
+                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-white"></span>M Tyaga Arifin</li>
+                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-white"></span>M Fajar Dwi Saputra</li>
+                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-white"></span>Ahmad Zacky Zakaria</li>
+                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-white"></span>Rossi Valentino Aldrin Pasha</li>
+                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-white"></span>Arimby Aninndya Nayottama</li>
+                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-white"></span>Yuwanda Mirza Kameel</li>
+              </ul>
+            </div>
+            <div class="hidden mt-4 pt-3 border-t border-mono-900 text-[10px] font-mono text-mono-500">
+              FOKUS: RAK PERANGKAT &bull; LANTAI LAB
+            </div>
+          </div>
+
+          <!-- Kamis -->
+          <div class="p-5 rounded-xl border border-mono-800 bg-black flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between border-b border-mono-800 pb-3 mb-4">
+                <span class="font-display font-bold text-white text-base">KAMIS</span>
+                <span class="px-2 py-0.5 rounded bg-mono-900 border border-mono-800 text-[10px] font-mono text-mono-300">TIM 04</span>
+              </div>
+              <ul class="space-y-2 text-xs font-mono text-mono-300">
+                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-white"></span>M Yusuf Hikmal Akbar</li>
+                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-white"></span>Rizky Wahyu Aditya</li>
+                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-white"></span>Pradibta Bayu Wirananda</li>
+                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-white"></span>M Ilham Mustofa</li>
+                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-white"></span>Raditya Fahmi Ardi Ardianto</li>
+                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-white"></span>julian Khasiib Raditya</li>
+                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-white"></span>Nabilla Ajeng Asih Mariatun</li>
+              </ul>
+            </div>
+            <div class="hidden mt-4 pt-3 border-t border-mono-900 text-[10px] font-mono text-mono-500">
+              FOKUS: MANAJEMEN SAMPAH &bull; KABEL
+            </div>
+          </div>
+
+          <!-- Jumat -->
+          <div class="p-5 rounded-xl border border-mono-800 bg-black flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between border-b border-mono-800 pb-3 mb-4">
+                <span class="font-display font-bold text-white text-base">JUMAT</span>
+                <span class="px-2 py-0.5 rounded bg-mono-900 border border-mono-800 text-[10px] font-mono text-mono-300">TIM 05</span>
+              </div>
+              <ul class="space-y-2 text-xs font-mono text-mono-300">
+                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-white"></span>Zuhad Adidtya Zahril</li>
+                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-white"></span>Al Adib Yusuf Suryawan</li>
+                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-white"></span>M Davin Firman Al Farizzy</li>
+                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-white"></span>Haygal Maulana Rizky</li>
+                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-white"></span>M Ainun Khabibi</li>
+                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-white"></span>ALEX NUR RIF'AN</li>
+                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-white"></span>Ramadhan Yusuf Alrifqi</li>
+                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-white"></span>Fadhila Nuril Sayfani</li>
+              </ul>
+            </div>
+            <div class="hidden mt-4 pt-3 border-t border-mono-900 text-[10px] font-mono text-mono-500">
+              FOKUS: SANITASI TOTAL JUMAT BERSIH
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. GALLERY SECTION (3D TILT ON DESKTOP, ZOOM LIGHTBOX ON CLICK/TAP) -->
+  <section id="gallery" class="py-20 sm:py-28 border-b border-mono-800 bg-black relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Section Header -->
+      <div class="reveal-elem flex flex-col md:flex-row md:items-end justify-between mb-12 sm:mb-16 gap-4">
+        <div>
+          <div class="inline-flex items-center gap-2 font-mono text-xs text-mono-400 uppercase tracking-widest mb-2">
+            <span class="w-1.5 h-1.5 bg-white"></span>
+            05 // VISUAL ARCHIVE
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-display font-bold tracking-tight text-white">
+            Galeri
+          </h2>
+        </div>
+        <p class="font-mono text-xs text-mono-500 uppercase tracking-wider">
+          MOMENTS, PRACTICAL SESSIONS &amp; MILESTONES
+        </p>
+      </div>
+
+      <!-- Gallery Grid (3D Tilt on Desktop, Tap to Zoom Lightbox) -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Photo Item 1 -->
+        <div class="gallery-card tilt-card reveal-elem group relative rounded-2xl border border-mono-800 bg-mono-950 overflow-hidden cursor-pointer"
+             onclick="openLightbox('Images/Fotbar/FotbarSamaKakakKelas.jpeg', 'MPLS Event')">
+          <div class="aspect-[4/3] w-full overflow-hidden bg-mono-900">
+            <img src="Images/Fotbar/FotbarSamaKakakKelas.jpeg" 
+                 alt="MPLS Event" 
+                 class="w-full h-full object-cover group-hover:scale-105 group-hover:grayscale-0 transition-all duration-500" />
+          </div>
+          <div class="p-5 border-t border-mono-800 flex items-center justify-between">
+            <div>
+              <h4 class="font-display font-bold text-white text-sm group-hover:text-mono-200 transition-colors">
+                Fotbar 1
+              </h4>
+              <p class="font-mono text-[10px] text-mono-500 uppercase mt-0.5">Lapangan Basket &bull; Juli 2026</p>
+            </div>
+            <div class="w-8 h-8 rounded-lg border border-mono-800 flex items-center justify-center text-mono-400 group-hover:text-white group-hover:border-white transition-colors">
+              <i data-lucide="maximize-2" class="w-4 h-4"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Photo Item 2 -->
+        <div class="gallery-card tilt-card reveal-elem group relative rounded-2xl border border-mono-800 bg-mono-950 overflow-hidden cursor-pointer"
+             onclick="openLightbox('Images/Fotbar/FotbarSamaKakakKelas1.jpeg', 'MPLS Event')">
+          <div class="aspect-[4/3] w-full overflow-hidden bg-mono-900">
+            <img src="Images/Fotbar/FotbarSamaKakakKelas1.jpeg" 
+                 alt="MPLS Event" 
+                 class="w-full h-full object-cover group-hover:scale-105 group-hover:grayscale-0 transition-all duration-500" />
+          </div>
+          <div class="p-5 border-t border-mono-800 flex items-center justify-between">
+            <div>
+              <h4 class="font-display font-bold text-white text-sm group-hover:text-mono-200 transition-colors">
+                Fotbar 2
+              </h4>
+              <p class="font-mono text-[10px] text-mono-500 uppercase mt-0.5">Lapangan Basket &bull; Juli 2026</p>
+            </div>
+            <div class="w-8 h-8 rounded-lg border border-mono-800 flex items-center justify-center text-mono-400 group-hover:text-white group-hover:border-white transition-colors">
+              <i data-lucide="maximize-2" class="w-4 h-4"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Photo Item 3 -->
+        <div class="gallery-card tilt-card reveal-elem group relative rounded-2xl border border-mono-800 bg-mono-950 overflow-hidden cursor-pointer"
+             onclick="openLightbox('Images/Fotbar/SkagaraMlakuMlaku.jpeg', 'Mlaku-Mlaku Skagara')">
+          <div class="aspect-[4/3] w-full overflow-hidden bg-mono-900">
+            <img src="Images/Fotbar/SkagaraMlakuMlaku.jpeg" 
+                 alt="Mlaku-Mlaku Skagara" 
+                 class="w-full h-full object-cover group-hover:scale-105 group-hover:grayscale-0 transition-all duration-500" />
+          </div>
+          <div class="p-5 border-t border-mono-800 flex items-center justify-between">
+            <div>
+              <h4 class="font-display font-bold text-white text-sm group-hover:text-mono-200 transition-colors">
+                Fotbar 3
+              </h4>
+              <p class="font-mono text-[10px] text-mono-500 uppercase mt-0.5">Lapangan Basket &bull; Agustus 2026</p>
+            </div>
+            <div class="w-8 h-8 rounded-lg border border-mono-800 flex items-center justify-center text-mono-400 group-hover:text-white group-hover:border-white transition-colors">
+              <i data-lucide="maximize-2" class="w-4 h-4"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Photo Item 4 -->
+        <div class="gallery-card tilt-card reveal-elem group relative rounded-2xl border border-mono-800 bg-mono-950 overflow-hidden cursor-pointer"
+             onclick="openLightbox('Images/Fotbar/SkagaraMlakuMlaku1.jpeg', 'Mlaku-Mlaku Skagara')">
+          <div class="aspect-[4/3] w-full overflow-hidden bg-mono-900">
+            <img src="Images/Fotbar/SkagaraMlakuMlaku1.jpeg" 
+                 alt="Mlaku-Mlaku Skagara" 
+                 class="w-full h-full object-cover group-hover:scale-105 group-hover:grayscale-0 transition-all duration-500" />
+          </div>
+          <div class="p-5 border-t border-mono-800 flex items-center justify-between">
+            <div>
+              <h4 class="font-display font-bold text-white text-sm group-hover:text-mono-200 transition-colors">
+                Fotbar 4
+              </h4>
+              <p class="font-mono text-[10px] text-mono-500 uppercase mt-0.5">Jalan Pecinan &bull; Agustus 2026</p>
+            </div>
+            <div class="w-8 h-8 rounded-lg border border-mono-800 flex items-center justify-center text-mono-400 group-hover:text-white group-hover:border-white transition-colors">
+              <i data-lucide="maximize-2" class="w-4 h-4"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LIGHTBOX MODAL FOR GALLERY ZOOM -->
+  <div id="lightboxModal" class="fixed inset-0 z-50 bg-black/95 backdrop-blur-md hidden flex items-center justify-center p-4">
+    <button onclick="closeLightbox()" aria-label="Close Lightbox" class="absolute top-6 right-6 w-10 h-10 rounded-full border border-mono-800 bg-mono-950 text-white flex items-center justify-center hover:bg-mono-900 transition-all">
+      <i data-lucide="x" class="w-5 h-5"></i>
+    </button>
+    <div class="max-w-4xl w-full flex flex-col items-center">
+      <div class="relative max-h-[75vh] w-auto overflow-hidden rounded-xl border border-mono-800 bg-black"
+        data-tilt 
+        data-tilt-max="15" 
+        data-tilt-speed="400" 
+        data-tilt-perspective="1000"
+        data-tilt-scale="1.00">
+        <img id="lightboxImg" src="" alt="Enlarged gallery photo" class="max-h-[75vh] w-auto object-contain transition-transform duration-300" />
+      </div>
+      <p id="lightboxCaption" class="mt-4 font-mono text-sm text-mono-300 text-center max-w-xl"></p>
+    </div>
+  </div>
+
+  <!-- 8. TO-DO LIST / TASK REMINDER (FIREBASE SYNC & ADMIN PIN AUTHORIZATION) -->
+  <section id="tasks" class="py-20 sm:py-28 border-b border-mono-800 bg-mono-950/50 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Section Header -->
+      <div class="reveal-elem flex flex-col md:flex-row md:items-end justify-between mb-8 sm:mb-12 gap-4">
+        <div>
+          <div class="inline-flex items-center gap-2 font-mono text-xs text-mono-400 uppercase tracking-widest mb-2">
+            <span class="w-1.5 h-1.5 bg-white"></span>
+            06 // REAL-TIME SYNCHRONIZATION
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-display font-bold tracking-tight text-white">
+            Pengingat Tugas &amp; Project
+          </h2>
+        </div>
+        <!-- Admin Authorization Status Pill -->
+        <div class="flex items-center gap-3">
+          <div id="adminStatusBadge" class="flex items-center gap-2 px-3 py-1.5 rounded-lg border border-mono-800 bg-black font-mono text-xs text-mono-400">
+            <i data-lucide="lock" class="w-3.5 h-3.5 text-mono-400"></i>
+            <span>PUBLIC VIEW MODE</span>
+          </div>
+          <button id="adminAuthBtn" onclick="openAdminModal('auth')" class="px-4 py-1.5 rounded-lg bg-white text-black font-mono text-xs font-bold uppercase tracking-wider hover:bg-mono-200 transition-all">
+            Admin Login
+          </button>
+        </div>
+      </div>
+
+      <!-- Urgency Banner (Appears when tasks are due tomorrow or today) -->
+      <div id="urgencyAlertBanner" class="hidden mb-8 p-4 rounded-xl border border-mono-800 bg-mono-900 text-white flex items-center justify-between gap-4">
+        <div class="flex items-center gap-3">
+          <div class="w-8 h-8 rounded-lg bg-white text-black flex items-center justify-center flex-shrink-0 font-bold">
+            <i data-lucide="alert-triangle" class="w-4 h-4"></i>
+          </div>
+          <div>
+            <div class="font-mono text-xs font-bold uppercase tracking-wider text-white">
+              PRIORITY DEADLINE WARNING (H-1 ALERT)
+            </div>
+            <div id="urgencyAlertText" class="text-xs text-mono-300 font-sans mt-0.5">
+              Tugas kejuruan mendekati batas waktu penyerahan besok.
+            </div>
+          </div>
+        </div>
+        <span class="px-2.5 py-1 rounded bg-black border border-mono-800 font-mono text-[10px] text-mono-300 uppercase">
+          ACTION REQUIRED
+        </span>
+      </div>
+
+      <!-- Action Bar: Add Task Trigger & Real-time Indicator -->
+      <div class="flex flex-wrap items-center justify-between gap-4 mb-6">
+        <div class="flex items-center gap-2 font-mono text-xs text-mono-400">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+          <span id="firebaseStatusText">FIRESTORE SYNC ACTIVE</span>
+        </div>
+
+        <button onclick="requestAddTask()" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-mono-800 bg-black hover:border-white text-white font-mono text-xs uppercase tracking-wider font-bold transition-all">
+          <i data-lucide="plus" class="w-4 h-4"></i>
+          <span>Add New Task (Admin PIN)</span>
+        </button>
+      </div>
+
+      <!-- Task Grid Container -->
+      <div id="tasksContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <!-- Rendered dynamically from Firestore / Local Fallback -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ADMIN PIN VERIFICATION MODAL -->
+  <div id="adminPinModal" class="fixed inset-0 z-50 bg-black/90 backdrop-blur-md hidden flex items-center justify-center p-4">
+    <div class="max-w-md w-full rounded-2xl border border-mono-800 bg-black p-6 sm:p-8 shadow-2xl relative">
+      <button onclick="closeAdminPinModal()" aria-label="Close Admin Modal" class="absolute top-5 right-5 text-mono-400 hover:text-white">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+
+      <div class="text-center mb-6">
+        <div class="w-12 h-12 rounded-xl border border-mono-800 bg-mono-900 text-white flex items-center justify-center mx-auto mb-3">
+          <i data-lucide="key-round" class="w-6 h-6"></i>
+        </div>
+        <h3 class="text-xl font-display font-bold text-white">Admin Authorization</h3>
+        <p class="text-xs font-mono text-mono-400 mt-1">Enter Secret Secretary PIN to Modify Tasks</p>
+      </div>
+
+      <form id="adminPinForm" onsubmit="verifyAdminPin(event)" class="space-y-4">
+        <div>
+          <label class="block font-mono text-xs text-mono-300 uppercase mb-2"></label>
+          <input type="password" id="adminPinInput" maxlength="6" placeholder="&bull;&bull;&bull;&bull;" 
+                 class="w-full px-4 py-3 rounded-lg border border-mono-800 bg-mono-950 text-white text-center font-mono text-2xl tracking-[0.5em] focus:outline-none focus:border-white" required />
+        </div>
+        <div id="adminPinError" class="hidden text-xs font-mono text-red-400 text-center">
+          Invalid Admin PIN. Access Denied.
+        </div>
+        <button type="submit" class="w-full py-3 rounded-lg bg-white text-black font-mono text-xs font-bold uppercase tracking-wider hover:bg-mono-200 transition-all">
+          Authorize Session
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ADD TASK MODAL (ONLY ACCESSIBLE VIA ADMIN) -->
+  <div id="addTaskModal" class="fixed inset-0 z-50 bg-black/90 backdrop-blur-md hidden flex items-center justify-center p-4">
+    <div class="max-w-lg w-full rounded-2xl border border-mono-800 bg-black p-6 sm:p-8 shadow-2xl relative">
+      <button onclick="closeAddTaskModal()" aria-label="Close Add Task Modal" class="absolute top-5 right-5 text-mono-400 hover:text-white">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+
+      <div class="mb-6">
+        <div class="inline-flex items-center gap-1.5 font-mono text-[10px] text-emerald-400 uppercase tracking-widest mb-1">
+          <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+          ADMIN AUTHORIZED
+        </div>
+        <h3 class="text-xl font-display font-bold text-white">Tambahkan Tugas Baru</h3>
+      </div>
+
+      <form id="createTaskForm" onsubmit="submitNewTask(event)" class="space-y-4">
+        <div>
+          <label class="block font-mono text-xs text-mono-300 uppercase mb-1.5">Mata Pelajaran / Task Name</label>
+          <input type="text" id="taskSubjectInput" placeholder="e.g. Kejuruan TJKT (MikroTik Routing)" 
+                 class="w-full px-4 py-2.5 rounded-lg border border-mono-800 bg-mono-950 text-white font-sans text-sm focus:outline-none focus:border-white" required />
+        </div>
+
+        <div>
+          <label class="block font-mono text-xs text-mono-300 uppercase mb-1.5">Deskripsi Tugas &amp; Format</label>
+          <textarea id="taskDescInput" rows="3" placeholder="e.g. Laporan konfigurasi static route & file pcap di Google Drive" 
+                    class="w-full px-4 py-2.5 rounded-lg border border-mono-800 bg-mono-950 text-white font-sans text-sm focus:outline-none focus:border-white" required></textarea>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block font-mono text-xs text-mono-300 uppercase mb-1.5">Deadline Date</label>
+            <input type="date" id="taskDeadlineInput" 
+                   class="w-full px-4 py-2.5 rounded-lg border border-mono-800 bg-mono-950 text-white font-mono text-xs focus:outline-none focus:border-white" required />
+          </div>
+          <div>
+            <label class="block font-mono text-xs text-mono-300 uppercase mb-1.5">Priority / Tag</label>
+            <select id="taskPriorityInput" class="w-full px-4 py-2.5 rounded-lg border border-mono-800 bg-mono-950 text-white font-mono text-xs focus:outline-none focus:border-white">
+              <option value="VOCATIONAL">Kejuruan TJKT</option>
+              <option value="GENERAL">Umum / Adaptif</option>
+              <option value="P5">Projek P5</option>
+              <option value="EXAM">Ujian / Asesmen</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="pt-2">
+          <button type="submit" class="w-full py-3 rounded-lg bg-white text-black font-mono text-xs font-bold uppercase tracking-wider hover:bg-mono-200 transition-all">
+            Broadcast/Simpan
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- MINIMALIST MONOCHROME FOOTER -->
+  <footer class="border-t border-mono-800 bg-black py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-8 mb-12">
+        <div class="md:col-span-6 space-y-4">
+          <div class="flex items-center gap-3">
+            <div class="w-8 h-8 rounded bg-white text-black font-mono font-bold flex items-center justify-center text-xs">
+              10
+            </div>
+            <span class="font-display font-bold text-lg text-white">X TJKT 1 &bull; SMK SKAGARA</span>
+          </div>
+          <p class="text-xs text-mono-400 font-sans max-w-md leading-relaxed">
+            Portal resmi profil dan manajemen kegiatan kelas X Teknik Jaringan Komputer dan Telekomunikasi 1 SMK Skagara. 
+            Mewujudkan generasi teknisi jaringan yang berkarakter, tangkas, dan berwawasan global.
+          </p>
+        </div>
+
+        <div class="md:col-span-3 space-y-2">
+          <div class="font-mono text-xs text-mono-200 uppercase tracking-widest mb-3">Navigation</div>
+          <ul class="space-y-1.5 font-mono text-xs text-mono-400">
+            <li><a href="#hero" class="hover:text-white transition-colors">Hero Overview</a></li>
+            <li><a href="#profile" class="hover:text-white transition-colors">Identity &amp; Wali Kelas</a></li>
+            <li><a href="#structure" class="hover:text-white transition-colors">Class Governance</a></li>
+            <li><a href="#students" class="hover:text-white transition-colors">Student Roster</a></li>
+            <li><a href="#schedule" class="hover:text-white transition-colors">Academic Schedule</a></li>
+            <li><a href="#gallery" class="hover:text-white transition-colors">Event Gallery</a></li>
+          </ul>
+        </div>
+
+        <div class="md:col-span-3 space-y-2">
+          <div class="font-mono text-xs text-mono-200 uppercase tracking-widest mb-3">Institutional</div>
+          <p class="font-mono text-xs text-mono-400">SMK Skagara Kampus Pusat</p>
+          <p class="font-mono text-xs text-mono-500">Laboratorium Jaringan &amp; Komputasi Awan</p>
+          <div class="pt-3">
+            <span class="inline-block px-2.5 py-1 rounded border border-mono-800 bg-mono-950 font-mono text-[10px] text-mono-400">
+              AKREDITASI A &bull; ISO 9001:2015
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="pt-8 border-t border-mono-900 flex flex-col sm:flex-row items-center justify-between gap-4 font-mono text-xs text-mono-500">
+        <div>&copy; 2026 X TJKT 1 SMK Skagara. All Rights Reserved.</div>
+        <div class="flex items-center gap-4">
+          <a href="#hero" class="hover:text-white transition-colors flex items-center gap-1">
+            <span>Back to top</span>
+            <i data-lucide="arrow-up" class="w-3.5 h-3.5"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JAVASCRIPT LOGIC -->
+  <script>
+    /* ==========================================================================
+       1. GLOBAL STATE & UTILITIES
+       ========================================================================== */
+    let isAdminAuthorized = false;
+    let pendingAction = null; // 'add' or { type: 'delete', taskId: string }
+    const ADMIN_SECRET_PIN = "3324"; // Default demonstration admin PIN
+    let activeDay = "senin"; // Active timetable day filter ('all', 'senin', 'selasa', etc.)
+
+    // Update Live Navigation Clock (WIB)
+    function updateLiveClock() {
+      const clockElem = document.getElementById('navLiveClock');
+      if (!clockElem) return;
+      const now = new Date();
+      const options = { timeZone: 'Asia/Jakarta', hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false };
+      clockElem.textContent = now.toLocaleTimeString('id-ID', options) + ' WIB';
+    }
+    setInterval(updateLiveClock, 1000);
+    updateLiveClock();
+
+    // Theme Toggle (Minimalist Monochrome B&W)
+    const themeToggleBtn = document.getElementById('themeToggleBtn');
+    const sunIcon = document.getElementById('sunIcon');
+    const moonIcon = document.getElementById('moonIcon');
+
+    function applyTheme(isDark) {
+      const sIcon = document.getElementById('sunIcon');
+      const mIcon = document.getElementById('moonIcon');
+      if (isDark) {
+        document.documentElement.classList.add('dark');
+        document.documentElement.classList.remove('light');
+        document.body.classList.remove('bg-white', 'text-black');
+        document.body.classList.add('bg-black', 'text-white');
+        sIcon?.classList.add('hidden');
+        mIcon?.classList.remove('hidden');
+        localStorage.setItem('skagara_monochrome_theme', 'dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+        document.documentElement.classList.add('light');
+        document.body.classList.remove('bg-black', 'text-white');
+        document.body.classList.add('bg-white', 'text-black');
+        sIcon?.classList.remove('hidden');
+        mIcon?.classList.add('hidden');
+        localStorage.setItem('skagara_monochrome_theme', 'light');
+      }
+    }
+
+    // Initialize Theme
+    const savedTheme = localStorage.getItem('skagara_monochrome_theme') || 'dark';
+    applyTheme(savedTheme === 'dark');
+
+    themeToggleBtn?.addEventListener('click', () => {
+      const isDark = document.documentElement.classList.contains('dark');
+      applyTheme(!isDark);
+      if (typeof selectDaySchedule === 'function' && typeof activeDay !== 'undefined') {
+        selectDaySchedule(activeDay);
+      }
+    });
+
+    // Mobile Menu Toggle
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenuDrawer = document.getElementById('mobileMenuDrawer');
+    mobileMenuBtn?.addEventListener('click', () => {
+      mobileMenuDrawer?.classList.toggle('hidden');
+    });
+    // Close mobile menu on link click
+    document.querySelectorAll('#mobileMenuDrawer a').forEach(link => {
+      link.addEventListener('click', () => mobileMenuDrawer?.classList.add('hidden'));
+    });
+
+    /* ==========================================================================
+       2. TYPEWRITER EFFECT (HERO SECTION)
+       ========================================================================== */
+    function startHeroTypewriter() {
+      const line1Elem = document.getElementById('heroTypewriterLine1');
+      const line2Elem = document.getElementById('heroTypewriterLine2');
+      const cursor1 = document.getElementById('cursor1');
+      const cursor2 = document.getElementById('cursor2');
+
+      const text1 = "We are X TJKT 1";
+      const text2 = "Class of skagara school";
+
+      let index1 = 0;
+      let index2 = 0;
+
+      // Type Line 1
+      function typeLine1() {
+        if (index1 < text1.length) {
+          line1Elem.textContent += text1.charAt(index1);
+          index1++;
+          setTimeout(typeLine1, 65);
+        } else {
+          // Switch cursor to Line 2 after short pause
+          setTimeout(() => {
+            cursor1?.classList.add('hidden');
+            cursor2?.classList.remove('hidden');
+            typeLine2();
+          }, 350);
+        }
+      }
+
+      // Type Line 2
+      function typeLine2() {
+        if (index2 < text2.length) {
+          line2Elem.textContent += text2.charAt(index2);
+          index2++;
+          setTimeout(typeLine2, 50);
+        } else {
+          // Finish typing: Keep subtle cursor blinking or fade smoothly
+          setTimeout(() => {
+            cursor2?.classList.remove('hidden');
+          }, 200);
+        }
+      }
+
+      // Start Typing Sequence
+      typeLine1();
+    }
+
+    /* ==========================================================================
+       3. HIGH-INTENSITY LOADING SCREEN & SHUTTER TRANSITION
+       ========================================================================== */
+    // Prevent browser auto-scroll jump to cached positions or #profile
+    if ('scrollRestoration' in history) {
+      history.scrollRestoration = 'manual';
+    }
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+    if (window.location.hash && window.location.hash !== '#hero') {
+      history.replaceState(null, '', ' ');
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+
+      const loadingScreen = document.getElementById('loadingScreen');
+      const loadProgressBar = document.getElementById('loadProgressBar');
+      const loadPercent = document.getElementById('loadPercent');
+      const loadStatusText = document.getElementById('loadStatusText');
+
+      let progress = 0;
+      const statusUpdates = [
+        "ESTABLISHING CONNECTION...",
+        "MOUNTING HARDWARE INTERFACES...",
+        "INITIALIZING TJKT TOPOLOGY...",
+        "AUTHENTICATING SECURE NODES...",
+        "WELCOME TO X TJKT 1"
+      ];
+
+      const interval = setInterval(() => {
+        progress += Math.floor(Math.random() * 12) + 5;
+        if (progress > 100) progress = 100;
+
+        if (loadProgressBar) loadProgressBar.style.width = progress + '%';
+        if (loadPercent) loadPercent.textContent = progress + '%';
+
+        const step = Math.min(Math.floor((progress / 100) * statusUpdates.length), statusUpdates.length - 1);
+        if (loadStatusText) loadStatusText.textContent = statusUpdates[step];
+
+        if (progress >= 100) {
+          clearInterval(interval);
+          setTimeout(() => {
+            // Trigger high-end shutter exit
+            loadingScreen.classList.add('loading-finished');
+            
+            // Background photos entrance trigger
+            const bg1 = document.getElementById('heroBgGroup1');
+            const bg2 = document.getElementById('heroBgGroup2');
+            if (bg1) bg1.style.transform = 'scale(1)';
+            if (bg2) bg2.style.transform = 'scale(1)';
+
+            // Strictly lock and reveal to the Hero Section (0,0)
+            window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+            const heroElem = document.getElementById('hero');
+            if (heroElem) {
+              heroElem.scrollIntoView({ behavior: 'instant', block: 'start' });
+            }
+
+            setTimeout(() => {
+              loadingScreen.style.display = 'none';
+              window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+              // Trigger typewriter effect immediately
+              startHeroTypewriter();
+              // Trigger entrance observer
+              triggerScrollObserver();
+            }, 900);
+          }, 350);
+        }
+      }, 45);
+    });
+
+    /* ==========================================================================
+       4. ULTRA-SMOOTH WEB SCROLL INTERPOLATION (JAVASCRIPT MOMENTUM PHYSICS)
+       ========================================================================== */
+    let smoothScrollY = window.pageYOffset || document.documentElement.scrollTop;
+    let targetScrollY = smoothScrollY;
+    let isSmoothScrolling = false;
+    const scrollLerpEase = 0.085; // Luxurious physics ease
+    let smoothScrollRaf = null;
+
+    function renderSmoothScrollFrame() {
+      const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+      targetScrollY = Math.max(0, Math.min(targetScrollY, maxScroll));
+      
+      const diff = targetScrollY - smoothScrollY;
+      if (Math.abs(diff) > 0.4) {
+        smoothScrollY += diff * scrollLerpEase;
+        window.scrollTo(0, smoothScrollY);
+        smoothScrollRaf = requestAnimationFrame(renderSmoothScrollFrame);
+        isSmoothScrolling = true;
+      } else {
+        smoothScrollY = targetScrollY;
+        window.scrollTo(0, smoothScrollY);
+        isSmoothScrolling = false;
+        cancelAnimationFrame(smoothScrollRaf);
+        smoothScrollRaf = null;
+      }
+    }
+
+    // Intercept window mouse wheel for momentum scrolling (skip horizontal student list or modals)
+    window.addEventListener('wheel', (e) => {
+      if (e.target.closest('#studentScrollContainer') || 
+          e.target.closest('#lightboxModal') || 
+          e.target.closest('#adminPinModal') || 
+          e.target.closest('#addTaskModal')) {
+        return;
+      }
+      e.preventDefault();
+      const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+      targetScrollY = Math.max(0, Math.min(targetScrollY + e.deltaY * 1.05, maxScroll));
+      if (!isSmoothScrolling) {
+        smoothScrollRaf = requestAnimationFrame(renderSmoothScrollFrame);
+      }
+    }, { passive: false });
+
+    // Sync position when dragging native scrollbar or touch swipe
+    window.addEventListener('scroll', () => {
+      if (!isSmoothScrolling) {
+        smoothScrollY = window.pageYOffset || document.documentElement.scrollTop;
+        targetScrollY = smoothScrollY;
+      }
+    }, { passive: true });
+
+    // Smooth momentum navigation for in-page anchors (<a href="#...">)
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('a[href^="#"]').forEach(link => {
+        link.addEventListener('click', (e) => {
+          const targetHash = link.getAttribute('href');
+          if (targetHash === '#' || !targetHash) return;
+          const targetElement = document.querySelector(targetHash);
+          if (targetElement) {
+            e.preventDefault();
+            const navOffset = document.getElementById('mainNav')?.offsetHeight || 64;
+            const targetTop = targetElement.getBoundingClientRect().top + window.pageYOffset - navOffset;
+            targetScrollY = Math.max(0, targetTop);
+            if (!isSmoothScrolling) {
+              smoothScrollRaf = requestAnimationFrame(renderSmoothScrollFrame);
+            }
+          }
+        });
+      });
+    });
+
+    /* ==========================================================================
+       4. SCROLL REVEAL (DYNAMIC STAGGER & DEPTH TRANSITIONS)
+       ========================================================================== */
+    function triggerScrollObserver() {
+      const revealElements = document.querySelectorAll('.reveal-elem');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry, i) => {
+          if (entry.isIntersecting) {
+            setTimeout(() => {
+              entry.target.classList.add('revealed');
+            }, (i % 4) * 80);
+            observer.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.12,
+        rootMargin: '0px 0px -40px 0px'
+      });
+
+      revealElements.forEach(el => observer.observe(el));
+    }
+
+    /* ==========================================================================
+       5. STUDENT LIST GENERATION
+       ========================================================================== */
+    const studentsData = [
+      { id: "01", name: "Ahmad Diva Pramudya", role: "Wakil Ketua", img: "Images/Pramudiya.jpeg" },
+      { id: "02", name: "Ahmad Rizqi Tri Utomo", role: "", img: "PlaceholderImg/Placeholder.jpg" },
+      { id: "03", name: "Ahmad Zacky Zakaria", role: "", img: "PlaceholderImg/Placeholder.jpg" },
+      { id: "04", name: "Al Adib Yusuf Suryawan", role: "", img: "Images/Adib.jpeg" },
+      { id: "05", name: "ALEX NUR RIF'AN", role: "", img: "Images/Alex.jpeg" },
+      { id: "06", name: "Aprilian Miftakhul Huda", role: "", img: "PlaceholderImg/Placeholder.jpg" },
+      { id: "07", name: "Arimby Anindya Nayottama", role: "Bendahara1", img: "Images/Arimby.jpeg" },
+      { id: "08", name: "Atha Arkananta Shaquille", role: "", img: "Images/AthaArkananta.jpeg" },
+      { id: "09", name: "Dava Prayuliansyah", role: "Ketua Kelas", img: "Images/Dafa.jpeg" },
+      { id: "10", name: "Fadhila Nuril Sayfani", role: "Sekretaris1", img: "Images/Fani.jpeg" },
+      { id: "11", name: "Fajar Dwi Setyo Nugroho", role: "", img: "PlaceholderImg/Placeholder.jpg" },
+      { id: "12", name: "Haninndya Dwi Febriana", role: "", img: "Images/Hannindya.png" },
+      { id: "13", name: "Haygal Maulana Rizky", role: "", img: "PlaceholderImg/Placeholder.jpg" },
+      { id: "14", name: "Julian Khasiib Raditya", role: "", img: "Images/Julian.jpeg" },
+      { id: "15", name: "M Yusuf Hikmal Akbar", role: "", img: "PlaceholderImg/Placeholder.jpg" },
+      { id: "16", name: "Mochamad Tyaga Arifin Billah", role: "", img: "PlaceholderImg/Placeholder.jpg" },
+      { id: "17", name: "Muhammad Aga Satya", role: "", img: "PlaceholderImg/Placeholder.jpg" },
+      { id: "18", name: "Muhammad Ainun Khabibi", role: "", img: "Images/Khabibi.jpeg" },
+      { id: "19", name: "Muhammad Ashofa Shobiburizqi", role: "", img: "PlaceholderImg/Placeholder.jpg" },
+      { id: "20", name: "Muhammad Davin Firman Alfarizzy", role: "Sekretaris2", img: "PlaceholderImg/Placeholder.jpg" },
+      { id: "21", name: "Muhammad Fajar", role: "", img: "Images/Fajar.jpeg" },
+      { id: "22", name: "Muhammad Fajar Dwi Saputra", role: "", img: "PlaceholderImg/Placeholder.jpg" },
+      { id: "23", name: "Muhammad Fathan Athaya Putra Purnomo", role: "", img: "Images/Fathan.jpeg" },
+      { id: "24", name: "Muhammad Ilham Mustofa", role: "", img: "PlaceholderImg/Placeholder.jpg" },
+      { id: "25", name: "Nabilla Ajeng Asih Mariatun", role: "", img: "Images/Nabilla.jpeg" },
+      { id: "26", name: "Pradibta Bayu Wirananda", role: "", img: "PlaceholderImg/Placeholder.jpg" },
+      { id: "27", name: "Raditya Fahmi Adhi Ardianto", role: "", img: "Images/Fahmi.jpeg" },
+      { id: "28", name: "Ramadhan Yusuf Alrifqi", role: "", img: "Images/Yusuf.jpeg" },
+      { id: "29", name: "Rendyansyah Ramadhan", role: "", img: "Images/Rendy.jpeg" },
+      { id: "30", name: "Rizky Wahyu Aditya", role: "", img: "PlaceholderImg/Placeholder.jpg" },
+      { id: "31", name: "Rossi Valentino Aldrin Pasha", role: "", img: "PlaceholderImg/Placeholder.jpg" },
+      { id: "32", name: "Sandy Heka Janatuka", role: "", img: "Images/Sandy.jpeg" },
+      { id: "33", name: "Shira Ozora Zebadiah", role: "", img: "Images/Ozora.jpg" },
+      { id: "34", name: "Yuwanda Mirza Kameel", role: "", img: "Images/Yuwanda.jpeg" },
+      { id: "35", name: "Zuhad Adidtya Zahril", role: "", img: "Images/Zuhad.jpeg" },
+    ];
+
+    function renderStudents() {
+      const container = document.getElementById('studentCardsWrapper');
+      if (!container) return;
+
+      container.innerHTML = studentsData.map((s, idx) => `
+        <div class="animate-idle-float flex-shrink-0 w-48 sm:w-56 p-4 rounded-2xl border border-mono-800 bg-mono-950 hover:border-white transition-all duration-300 group"
+             style="animation-delay: ${(idx % 6) * 0.4}s;">
+          <!-- Avatar Photo -->
+          <div class="relative w-full aspect-square rounded-xl overflow-hidden mb-3 border border-mono-800 bg-mono-900">
+            <img src="${s.img}" alt="${s.name}" 
+                 class="w-full h-full object-cover grayscale contrast-125 group-hover:scale-105 group-hover:grayscale-0 transition-all duration-500" loading="lazy" />
+            <div class="absolute top-2 left-2 px-1.5 py-0.5 rounded bg-black/80 border border-mono-800 font-mono text-[9px] text-mono-300">
+              #${s.id}
+            </div>
+            <div class="absolute bottom-2 right-2 w-2 h-2 rounded-full bg-white"></div>
+          </div>
+          <!-- Info -->
+          <h4 class="font-display font-bold text-white text-sm truncate group-hover:text-mono-200 transition-colors">
+            ${s.name}
+          </h4>
+          <p class="font-mono text-[11px] text-mono-400 mt-0.5 truncate">
+            ${s.role}
+          </p>
+          <div class="mt-3 pt-2.5 border-t border-mono-900 flex items-center justify-between text-[10px] font-mono text-mono-500">
+            <span>NIS: 2601${s.id}</span>
+            <span class="text-mono-400">TJKT</span>
+          </div>
+        </div>
+      `).join('');
+    }
+    renderStudents();
+
+    /* ==========================================================================
+       5. OPTIMIZED STUDENT LIST HORIZONTAL SCROLL PHYSICS
+       ========================================================================== */
+    const scrollContainer = document.getElementById('studentScrollContainer');
+    const scrollIndicator = document.getElementById('studentScrollIndicator');
+
+    if (scrollContainer) {
+      let isDown = false;
+      let startX = 0;
+      let scrollStart = 0;
+      let velocityX = 0;
+      let lastX = 0;
+      let lastTime = 0;
+      let inertiaRaf = null;
+
+      // Smooth lerped mouse wheel horizontal scroll
+      let targetWheelX = scrollContainer.scrollLeft;
+      let wheelRaf = null;
+
+      function lerpWheelPan() {
+        const maxScroll = scrollContainer.scrollWidth - scrollContainer.clientWidth;
+        targetWheelX = Math.max(0, Math.min(targetWheelX, maxScroll));
+        const diff = targetWheelX - scrollContainer.scrollLeft;
+        if (Math.abs(diff) > 0.5) {
+          scrollContainer.scrollLeft += diff * 0.16;
+          wheelRaf = requestAnimationFrame(lerpWheelPan);
+        } else {
+          scrollContainer.scrollLeft = targetWheelX;
+          wheelRaf = null;
+        }
+      }
+
+      scrollContainer.addEventListener('wheel', (e) => {
+        const delta = e.deltaX !== 0 ? e.deltaX : e.deltaY;
+        if (delta !== 0) {
+          e.preventDefault();
+          targetWheelX = scrollContainer.scrollLeft + delta * 1.35;
+          if (!wheelRaf) {
+            wheelRaf = requestAnimationFrame(lerpWheelPan);
+          }
+        }
+      }, { passive: false });
+
+      // Mouse Drag with Velocity Momentum (No Stutter, 1:1 Instant Tracking)
+      scrollContainer.addEventListener('mousedown', (e) => {
+        isDown = true;
+        scrollContainer.classList.add('cursor-grabbing');
+        scrollContainer.classList.remove('cursor-grab');
+        startX = e.pageX - scrollContainer.offsetLeft;
+        scrollStart = scrollContainer.scrollLeft;
+        lastX = e.pageX;
+        lastTime = performance.now();
+        velocityX = 0;
+        if (inertiaRaf) cancelAnimationFrame(inertiaRaf);
+        if (wheelRaf) cancelAnimationFrame(wheelRaf);
+      });
+
+      window.addEventListener('mouseup', () => {
+        if (!isDown) return;
+        isDown = false;
+        scrollContainer.classList.remove('cursor-grabbing');
+        scrollContainer.classList.add('cursor-grab');
+
+        // Smooth inertia release on drag release
+        if (Math.abs(velocityX) > 0.4) {
+          function runInertia() {
+            if (Math.abs(velocityX) > 0.1) {
+              scrollContainer.scrollLeft += velocityX;
+              velocityX *= 0.94; // friction
+              inertiaRaf = requestAnimationFrame(runInertia);
+            } else {
+              inertiaRaf = null;
+            }
+          }
+          inertiaRaf = requestAnimationFrame(runInertia);
+        }
+      });
+
+      window.addEventListener('mousemove', (e) => {
+        if (!isDown) return;
+        e.preventDefault();
+        const x = e.pageX - scrollContainer.offsetLeft;
+        const walk = x - startX;
+        scrollContainer.scrollLeft = scrollStart - walk;
+
+        const now = performance.now();
+        const dt = now - lastTime;
+        if (dt > 0) {
+          velocityX = ((lastX - e.pageX) / dt) * 16;
+        }
+        lastX = e.pageX;
+        lastTime = now;
+      });
+
+      // Progress Bar updates cleanly on scroll
+      scrollContainer.addEventListener('scroll', () => {
+        const maxScroll = scrollContainer.scrollWidth - scrollContainer.clientWidth;
+        if (maxScroll > 0) {
+          const percentage = Math.max(5, (scrollContainer.scrollLeft / maxScroll) * 100);
+          if (scrollIndicator) scrollIndicator.style.width = percentage + '%';
+        }
+      }, { passive: true });
+    }
+
+    /* ==========================================================================
+       6. SCHEDULE SECTION (ZERO HORIZONTAL SCROLL ON MOBILE & ALL DAYS OPTION)
+       ========================================================================== */
+    const scheduleByDay = {
+      senin: [
+        { time: "07:00 - 08:00", subject: "Upacara Bendera & Pembiasaan Karakter", room: "Lapangan Skagara", teacher: "", isBreak: false },
+        { time: "08:00 - 08:35", subject: "Dasar-Dasar TJKT", room: "", teacher: "Budiarjo", isBreak: false },
+        { time: "08:35 - 09:10", subject: "Dasar-Dasar TJKT", room: "", teacher: "Budiarjo", isBreak: false },
+        { time: "09:10 - 09:45", subject: "Dasar-Dasar TJKT", room: "", teacher: "Budiarjo", isBreak: false },
+        { time: "09:45 - 10:10", subject: "ISTIRAHAT PAGI // BREAK 01", room: "Area Kantin", teacher: "-", isBreak: true },
+        { time: "10:10 - 10:45", subject: "Dasar-Dasar TJKT", room: "", teacher: "Budiarjo", isBreak: false },
+        { time: "10:45 - 11:20", subject: "Bimbingan Konseling", room: "", teacher: "Saiful Anwar", isBreak: false },
+        { time: "11:20 - 11:55", subject: "Bimbingan Konseling", room: "", teacher: "Saiful Anwar", isBreak: false },
+        { time: "11:55 - 13:00", subject: "ISTIRAHAT SIANG // BREAK 02", room: "Musholla Skagara", teacher: "-", isBreak: true },
+        { time: "13:00 - 13:35", subject: "IPAS", room: "", teacher: "Santi Dewi", isBreak: false },
+        { time: "13:35 - 14:10", subject: "IPAS", room: "", teacher: "Santi Dewi", isBreak: false },
+        { time: "14:10 - 14:45", subject: "IPAS", room: "", teacher: "Santi Dewi", isBreak: false },
+        { time: "14:45 - 15:20", subject: "IPAS", room: "", teacher: "Santi Dewi", isBreak: false }
+      ],
+      selasa: [
+        { time: "07:00 - 07:40", subject: "Dasar-Dasar TJKT", room: "", teacher: "Budiarjo", isBreak: false },
+        { time: "07:40 - 08:20", subject: "Dasar-Dasar TJKT", room: "", teacher: "Budiarjo", isBreak: false },
+        { time: "08:20 - 09:00", subject: "Dasar-Dasar TJKT", room: "", teacher: "Budiarjo", isBreak: false },
+        { time: "09:00 - 09:40", subject: "Dasar-Dasar TJKT", room: "", teacher: "Budiarjo", isBreak: false },
+        { time: "09:40 - 10:20", subject: "ISTIRAHAT PAGI // BREAK 01", room: "Area Kantin", teacher: "-", isBreak: true },
+        { time: "10:20 - 11:00", subject: "Pendidikan Pancasila", room: "", teacher: "Alek Ribowo", isBreak: false },
+        { time: "11:00 - 11:40", subject: "Pendidikan Pancasila", room: "", teacher: "Alek Ribowo", isBreak: false },
+        { time: "11:40 - 12:40", subject: "ISTIRAHAT SIANG // BREAK 02", room: "Musholla Skagara", teacher: "-", isBreak: true },
+        { time: "12:40 - 13:20", subject: "Pendidikan Pancasila", room: "", teacher: "Alek Ribowo", isBreak: false },
+        { time: "13:20 - 14:00", subject: "Bahasa Indonesia", room: "", teacher: "Maria Ulfa", isBreak: false },
+        { time: "14:00 - 14:40", subject: "Bahasa Indonesia", room: "", teacher: "Maria Ulfa", isBreak: false },
+        { time: "14:40 - 15:20", subject: "Bahasa Indonesia", room: "", teacher: "Maria Ulfa", isBreak: false }
+      ],
+      rabu: [
+        { time: "07:00 - 07:40", subject: "Bahasa Indonesia", room: "", teacher: "Maria Ulfa", isBreak: false },
+        { time: "07:40 - 08:20", subject: "Bahasa Indonesia", room: "", teacher: "Maria Ulfa", isBreak: false },
+        { time: "08:20 - 09:00", subject: "Bahasa Inggris", room: "", teacher: "Toetik Irawati", isBreak: false },
+        { time: "09:00 - 09:40", subject: "Bahasa Inggris", room: "", teacher: "Toetik Irawati", isBreak: false },
+        { time: "09:40 - 10:20", subject: "ISTIRAHAT PAGI // BREAK 01", room: "Area Kantin", teacher: "-", isBreak: true },
+        { time: "10:20 - 11:00", subject: "Pendidikan Jasmani", room: "", teacher: "Adhikurniawan", isBreak: false },
+        { time: "11:00 - 11:40", subject: "Pendidikan Jasmani", room: "", teacher: "Adhikurniawan", isBreak: false },
+        { time: "11:40 - 12:40", subject: "ISTIRAHAT SIANG // BREAK 02", room: "Musholla Skagara", teacher: "-", isBreak: true },
+        { time: "12:40 - 13:20", subject: "PAI", room: "", teacher: "Saroni", isBreak: false },
+        { time: "13:20 - 14:00", subject: "PAI", room: "", teacher: "Saroni", isBreak: false },
+        { time: "14:00 - 14:40", subject: "PAI", room: "", teacher: "Saroni", isBreak: false },
+        { time: "14:40 - 15:20", subject: "PAI", room: "", teacher: "Saroni", isBreak: false }
+      ],
+      kamis: [
+        { time: "07:00 - 07:40", subject: "Sejarah", room: "", teacher: "Citra", isBreak: false },
+        { time: "07:40 - 08:20", subject: "Sejarah", room: "", teacher: "Citra", isBreak: false },
+        { time: "08:20 - 09:00", subject: "Matematika", room: "", teacher: "Rini", isBreak: false },
+        { time: "09:00 - 09:40", subject: "Matematika", room: "", teacher: "Rini", isBreak: false },
+        { time: "09:40 - 10:20", subject: "ISTIRAHAT PAGI // BREAK 01", room: "Area Kantin", teacher: "-", isBreak: true },
+        { time: "10:20 - 11:00", subject: "Koding dan AI", room: "", teacher: "Eko Budi Susilo", isBreak: false },
+        { time: "11:00 - 11:40", subject: "Koding dan AI", room: "", teacher: "Eko Budi Susilo", isBreak: false },
+        { time: "11:40 - 12:40", subject: "ISTIRAHAT SIANG // BREAK 02", room: "Musholla Skagara", teacher: "-", isBreak: true },
+        { time: "12:40 - 13:20", subject: "Bahasa Jawa", room: "", teacher: "Agus Setiawan", isBreak: false },
+        { time: "13:20 - 14:00", subject: "Bahasa Jawa", room: "", teacher: "Agus Setiawan", isBreak: false },
+        { time: "14:00 - 14:40", subject: "Seni Rupa", room: "", teacher: "Eka Kusumatuti", isBreak: false },
+        { time: "14:40 - 15:20", subject: "Seni Rupa", room: "", teacher: "Eka Kusumatuti", isBreak: false }
+      ],
+      jumat: [
+        { time: "07:00 - 08:25", subject: "Kokurikuler", room: "Area Sekolah", teacher: "", isBreak: false },
+        { time: "08:25 - 08:55", subject: "Bahasa Inggris", room: "", teacher: "Toetik Irawati", isBreak: false },
+        { time: "08:55 - 09:25", subject: "Bahasa Inggris", room: "", teacher: "Toetik Irawati", isBreak: false },
+        { time: "09:25 - 09:40", subject: "ISTIRAHAT SINGKAT // BREAK 1", room: "Area Kantin", teacher: "-", isBreak: true },
+        { time: "09:40 - 10:10", subject: "Matematika", room: "", teacher: "Rini", isBreak: false },
+        { time: "10:10 - 10:40", subject: "Matematika", room: "", teacher: "Rini", isBreak: false },
+        { time: "10:40 - 11:10", subject: "Matematika", room: "", teacher: "Rini", isBreak: false },
+        { time: "10:10 - 11:40", subject: "Informatika", room: "Lab TKJ Depan", teacher: "Agus Wahyu", isBreak: false },
+        { time: "10:40 - 13:00", subject: "ISTTIRAHAT SINGKAT // BREAK 2", room: "Musholla Skagara", teacher: "", isBreak: true },
+        { time: "13:00 - 13:30", subject: "Informatika", room: "Lab TKJ Depan", teacher: "Agus Wahyu", isBreak: false },
+        { time: "13:30 - 14:00", subject: "Informatika", room: "Lab TKJ Depan", teacher: "Agus Wahyu", isBreak: false },
+      ]
+    };
+
+    const dayLabels = {
+      senin: "SENIN // MONDAY",
+      selasa: "SELASA // TUESDAY",
+      rabu: "RABU // WEDNESDAY",
+      kamis: "KAMIS // THURSDAY",
+      jumat: "JUMAT // FRIDAY"
+    };
+
+    activeDay = "senin";
+
+    function selectDaySchedule(day) {
+      activeDay = day;
+      document.querySelectorAll('.day-tab-btn').forEach(btn => {
+        if (btn.getAttribute('data-day') === day) {
+          btn.className = "day-tab-btn active-day flex-1 sm:flex-none px-4 py-2 rounded-lg border border-white bg-white text-black font-mono text-xs font-bold uppercase tracking-wider transition-all";
+        } else {
+          btn.className = "day-tab-btn flex-1 sm:flex-none px-4 py-2 rounded-lg border border-mono-800 bg-black text-mono-400 hover:text-white font-mono text-xs uppercase tracking-wider transition-all";
+        }
+      });
+      renderDaySchedule();
+    }
+
+    function renderScheduleItemCard(item) {
+      if (item.isBreak) {
+        return `
+          <div class="w-full p-3.5 rounded-xl border border-dashed border-mono-700 bg-mono-950 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+            <div class="flex items-center gap-2.5">
+              <span class="w-2 h-2 rounded-full bg-white"></span>
+              <span class="font-mono text-xs font-bold text-white uppercase tracking-wider">${item.subject}</span>
+            </div>
+            <div class="flex items-center justify-between sm:justify-end gap-3 text-xs font-mono text-mono-400">
+              <span>${item.time}</span>
+              <span class="px-2 py-0.5 rounded bg-black border border-mono-800 text-[10px] text-mono-400 uppercase">${item.room}</span>
+            </div>
+          </div>
+        `;
+      }
+
+      return `
+        <div class="w-full p-4 rounded-xl border border-mono-800 bg-black hover:border-white transition-all flex flex-col md:flex-row md:items-center justify-between gap-3 group">
+          <div class="flex items-start md:items-center gap-3">
+            <div class="px-2.5 py-1 rounded bg-mono-900 border border-mono-800 font-mono text-xs font-bold text-white flex-shrink-0">
+              ${item.time}
+            </div>
+            <div>
+              <h4 class="font-display font-bold text-white text-sm group-hover:text-mono-200 transition-colors">
+                ${item.subject}
+              </h4>
+              <p class="font-mono text-xs text-mono-400 mt-0.5 flex items-center gap-2">
+                <span>${item.teacher}</span>
+              </p>
+            </div>
+          </div>
+          <div class="flex items-center gap-2 self-start md:self-auto">
+            <span class="px-2.5 py-1 rounded border border-mono-800 bg-mono-950 font-mono text-[11px] text-mono-300">
+              ${item.room}
+            </span>
+          </div>
+        </div>
+      `;
+    }
+
+    function renderDaySchedule() {
+      const container = document.getElementById('lessonScheduleContainer');
+      if (!container) return;
+
+      if (activeDay === 'all') {
+        const days = ['senin', 'selasa', 'rabu', 'kamis', 'jumat'];
+        container.innerHTML = days.map(d => {
+          const items = scheduleByDay[d] || [];
+          return `
+            <div class="pt-4 pb-2 border-b border-mono-900 last:border-b-0 space-y-3">
+              <div class="flex items-center justify-between gap-3 pb-1 border-b border-mono-800">
+                <span class="px-3 py-1 rounded-md bg-mono-900 border border-mono-700 font-mono text-xs font-bold text-white uppercase tracking-wider">
+                  ${dayLabels[d]}
+                </span>
+                <span class="text-[11px] font-mono text-mono-500 uppercase">${items.length} Sesi Terjadwal</span>
+              </div>
+              <div class="space-y-3">
+                ${items.map(renderScheduleItemCard).join('')}
+              </div>
+            </div>
+          `;
+        }).join('');
+      } else {
+        const items = scheduleByDay[activeDay] || [];
+        container.innerHTML = items.map(renderScheduleItemCard).join('');
+      }
+    }
+    renderDaySchedule();
+
+    function switchScheduleTab(tab) {
+      const btnLessons = document.getElementById('tabBtnLessons');
+      const btnPiket = document.getElementById('tabBtnPiket');
+      const viewLessons = document.getElementById('viewLessons');
+      const viewPiket = document.getElementById('viewPiket');
+
+      if (tab === 'lessons') {
+        btnLessons.className = "subtab-active px-5 py-2.5 rounded-lg bg-white text-black font-mono text-xs font-bold uppercase tracking-wider transition-all";
+        btnPiket.className = "subtab-inactive px-5 py-2.5 rounded-lg border border-mono-800 bg-black/60 text-mono-400 hover:text-white font-mono text-xs uppercase tracking-wider transition-all";
+        viewLessons.classList.remove('hidden');
+        viewPiket.classList.add('hidden');
+      } else {
+        btnPiket.className = "subtab-active px-5 py-2.5 rounded-lg bg-white text-black font-mono text-xs font-bold uppercase tracking-wider transition-all";
+        btnLessons.className = "subtab-inactive px-5 py-2.5 rounded-lg border border-mono-800 bg-black/60 text-mono-400 hover:text-white font-mono text-xs uppercase tracking-wider transition-all";
+        viewPiket.classList.remove('hidden');
+        viewLessons.classList.add('hidden');
+      }
+    }
+
+    /* ==========================================================================
+       7. GALLERY 3D TILT (DESKTOP ONLY) & LIGHTBOX ZOOM MODAL
+       ========================================================================== */
+    const isTouchDevice = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0);
+
+    if (!isTouchDevice) {
+      // Apply 3D tilt for laptop/desktop pointers only
+      const tiltCards = document.querySelectorAll('.tilt-card');
+      tiltCards.forEach(card => {
+        card.addEventListener('mousemove', (e) => {
+          const rect = card.getBoundingClientRect();
+          const x = e.clientX - rect.left;
+          const y = e.clientY - rect.top;
+          const centerX = rect.width / 2;
+          const centerY = rect.height / 2;
+
+          const rotateX = ((y - centerY) / centerY) * -10;
+          const rotateY = ((x - centerX) / centerX) * 10;
+
+          card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
+        });
+
+        card.addEventListener('mouseleave', () => {
+          card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
+        });
+      });
+    }
+
+    // Lightbox modal zoom
+    function openLightbox(imageUrl, caption) {
+      const modal = document.getElementById('lightboxModal');
+      const img = document.getElementById('lightboxImg');
+      const cap = document.getElementById('lightboxCaption');
+      if (!modal || !img) return;
+
+      img.src = imageUrl;
+      if (cap) cap.textContent = caption || '';
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      const modal = document.getElementById('lightboxModal');
+      if (!modal) return;
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+      document.body.style.overflow = '';
+    }
+
+    document.getElementById('lightboxModal')?.addEventListener('click', (e) => {
+      if (e.target.id === 'lightboxModal') {
+        closeLightbox();
+      }
+    });
+
+    /* ==========================================================================
+       8. REAL-TIME TASKS & FIREBASE INTEGRATION WITH ADMIN PIN AUTHORIZATION
+       ========================================================================== */
+    // Default Tasks Dataset
+    const defaultTasks = [
+      {
+        id: "task-01",
+        subject: "Kejuruan TJKT (Routing & VLAN)",
+        desc: "Dokumentasi topologi Cisco Packet Tracer dan upload file .pkt ke Google Classroom.",
+        deadline: getTomorrowDateString(),
+        priority: "VOCATIONAL"
+      },
+      {
+        id: "task-02",
+        subject: "Matematika Terapan",
+        desc: "Latihan konversi bilangan biner, oktal, desimal, dan heksadesimal halaman 42-45.",
+        deadline: getFutureDateString(3),
+        priority: "GENERAL"
+      },
+      {
+        id: "task-03",
+        subject: "Bahasa Inggris IT",
+        desc: "Technical glossary video reading: Network Hardware Components & Fiber Optics terminology.",
+        deadline: getFutureDateString(5),
+        priority: "GENERAL"
+      }
+    ];
+
+    function getTomorrowDateString() {
+      const d = new Date();
+      d.setDate(d.getDate() + 1);
+      return d.toISOString().split('T')[0];
+    }
+
+    function getFutureDateString(daysAhead) {
+      const d = new Date();
+      d.setDate(d.getDate() + daysAhead);
+      return d.toISOString().split('T')[0];
+    }
+
+    let localTasks = JSON.parse(localStorage.getItem('skagara_local_tasks') || 'null');
+    if (!localTasks || !localTasks.length) {
+      localTasks = defaultTasks;
+      localStorage.setItem('skagara_local_tasks', JSON.stringify(localTasks));
+    }
+
+    // Optional Firebase configuration slot
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyCz0Xx4DoiiRXiKBWb0xHpB3FHTjgaEHfs",
+      authDomain: "classwebprofile.firebaseapp.com",
+      projectId: "classwebprofile",
+      storageBucket: "classwebprofile.firebasestorage.app",
+      messagingSenderId: "574116611348",
+      appId: "1:574116611348:web:e3c44f1dc34823df56ae01",
+      measurementId: "G-VT9QHZSJPK"
+    };
+
+    let isFirebaseReady = false;
+    let db = null;
+
+    try {
+      // Langsung inisialisasi Firebase tanpa if/else
+      firebase.initializeApp(firebaseConfig);
+      db = firebase.firestore();
+      isFirebaseReady = true;
+      document.getElementById('firebaseStatusText').textContent = "CLOUD FIRESTORE LIVE";
+      console.log("Firebase initialized successfully.");
+    } catch (err) {
+      console.warn("Firestore not configured, using local real-time mode:", err);
+      document.getElementById('firebaseStatusText').textContent = "LOCAL STORAGE BOARD";
+    }
+
+    // Check Urgency (Due tomorrow logic)
+    function checkUrgencyStatus(tasks) {
+      const urgencyBanner = document.getElementById('urgencyAlertBanner');
+      const urgencyText = document.getElementById('urgencyAlertText');
+      if (!urgencyBanner) return;
+
+      const today = new Date();
+      today.setHours(0, 0, 0, 0);
+
+      const urgentTasks = tasks.filter(t => {
+        const deadlineDate = new Date(t.deadline);
+        deadlineDate.setHours(0, 0, 0, 0);
+        const diffTime = deadlineDate - today;
+        const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+        return diffDays >= 0 && diffDays <= 1; // Due today or tomorrow
+      });
+
+      if (urgentTasks.length > 0) {
+        urgencyBanner.classList.remove('hidden');
+        urgencyText.textContent = `Perhatian: ${urgentTasks.length} tugas [${urgentTasks.map(t => t.subject).join(', ')}] jatuh tempo besok! Segera selesaikan sebelum batas waktu.`;
+      } else {
+        urgencyBanner.classList.add('hidden');
+      }
+    }
+
+    function renderTasks(tasks) {
+      const container = document.getElementById('tasksContainer');
+      if (!container) return;
+
+      checkUrgencyStatus(tasks);
+
+      if (!tasks.length) {
+        container.innerHTML = `
+          <div class="col-span-full p-8 rounded-2xl border border-mono-800 bg-black text-center font-mono text-mono-400">
+            Tidak ada tugas.
+          </div>
+        `;
+        return;
+      }
+
+      const today = new Date();
+      today.setHours(0, 0, 0, 0);
+
+      container.innerHTML = tasks.map(task => {
+        const deadlineDate = new Date(task.deadline);
+        deadlineDate.setHours(0, 0, 0, 0);
+        const diffDays = Math.ceil((deadlineDate - today) / (1000 * 60 * 60 * 24));
+
+        let urgencyTag = "";
+        let borderClass = "border-mono-800";
+
+        if (diffDays === 1) {
+          urgencyTag = `<span class="px-2 py-0.5 rounded bg-white text-black font-mono text-[10px] font-bold uppercase tracking-wider animate-pulse">H-1 (BESOK!)</span>`;
+          borderClass = "border-white";
+        } else if (diffDays <= 0) {
+          urgencyTag = `<span class="px-2 py-0.5 rounded bg-white text-black font-mono text-[10px] font-bold uppercase tracking-wider">DUE TODAY / OVERDUE</span>`;
+          borderClass = "border-white";
+        } else {
+          urgencyTag = `<span class="px-2 py-0.5 rounded bg-mono-900 border border-mono-800 font-mono text-[10px] text-mono-300 uppercase">${diffDays} Days Left</span>`;
+        }
+
+        return `
+          <div class="p-6 rounded-2xl border ${borderClass} bg-black flex flex-col justify-between hover:border-white transition-all">
+            <div>
+              <div class="flex items-center justify-between mb-3 gap-2">
+                <span class="px-2 py-0.5 rounded border border-mono-800 bg-mono-950 font-mono text-[10px] text-mono-400 uppercase">
+                  ${task.priority || "GENERAL"}
+                </span>
+                ${urgencyTag}
+              </div>
+              <h4 class="font-display font-bold text-white text-base mb-2">
+                ${task.subject}
+              </h4>
+              <p class="text-xs text-mono-400 leading-relaxed font-sans mb-4">
+                ${task.desc}
+              </p>
+            </div>
+
+            <div class="pt-4 border-t border-mono-900 flex items-center justify-between text-xs font-mono">
+              <div class="flex items-center gap-1.5 text-mono-400">
+                <i data-lucide="calendar" class="w-3.5 h-3.5 text-mono-500"></i>
+                <span>${task.deadline}</span>
+              </div>
+              <!-- Delete button requires Admin Authorization -->
+              <button onclick="requestDeleteTask('${task.id}')" 
+                      class="text-mono-500 hover:text-white transition-colors p-1" title="Delete Task (Admin PIN required)">
+                <i data-lucide="trash-2" class="w-4 h-4"></i>
+              </button>
+            </div>
+          </div>
+        `;
+      }).join('');
+
+      // Refresh lucide icons
+      if (window.lucide) {
+        window.lucide.createIcons();
+      }
+    }
+
+    // Initial render
+    renderTasks(localTasks);
+
+    // Admin Authorization UI Controls
+    function openAdminModal(action, taskId = null) {
+      pendingAction = taskId ? { type: 'delete', taskId } : action;
+      const modal = document.getElementById('adminPinModal');
+      const pinInput = document.getElementById('adminPinInput');
+      const pinErr = document.getElementById('adminPinError');
+      if (pinErr) pinErr.classList.add('hidden');
+      if (pinInput) pinInput.value = '';
+      if (modal) modal.classList.remove('hidden');
+      setTimeout(() => pinInput?.focus(), 100);
+    }
+
+    function closeAdminPinModal() {
+      const modal = document.getElementById('adminPinModal');
+      if (modal) modal.classList.add('hidden');
+    }
+
+    function verifyAdminPin(e) {
+      e.preventDefault();
+      const pinInput = document.getElementById('adminPinInput');
+      const pinErr = document.getElementById('adminPinError');
+      const enteredPin = pinInput?.value.trim();
+
+      if (enteredPin === ADMIN_SECRET_PIN) {
+        isAdminAuthorized = true;
+        closeAdminPinModal();
+        updateAdminBadgeUI(true);
+
+        if (pendingAction === 'add') {
+          openAddTaskModal();
+        } else if (pendingAction && pendingAction.type === 'delete') {
+          executeDeleteTask(pendingAction.taskId);
+        }
+        pendingAction = null;
+      } else {
+        if (pinErr) pinErr.classList.remove('hidden');
+      }
+    }
+
+    function updateAdminBadgeUI(isAuth) {
+      const badge = document.getElementById('adminStatusBadge');
+      const authBtn = document.getElementById('adminAuthBtn');
+      if (isAuth) {
+        if (badge) {
+          badge.innerHTML = `<span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span><span class="text-white">ADMIN UNLOCKED</span>`;
+          badge.className = "flex items-center gap-2 px-3 py-1.5 rounded-lg border border-mono-800 bg-black font-mono text-xs";
+        }
+        if (authBtn) {
+          authBtn.textContent = "Lock Session";
+          authBtn.onclick = () => {
+            isAdminAuthorized = false;
+            updateAdminBadgeUI(false);
+          };
+        }
+      } else {
+        if (badge) {
+          badge.innerHTML = `<i data-lucide="lock" class="w-3.5 h-3.5 text-mono-400"></i><span>PUBLIC VIEW MODE</span>`;
+          badge.className = "flex items-center gap-2 px-3 py-1.5 rounded-lg border border-mono-800 bg-black font-mono text-xs text-mono-400";
+        }
+        if (authBtn) {
+          authBtn.textContent = "Admin Login";
+          authBtn.onclick = () => openAdminModal('auth');
+        }
+        if (window.lucide) window.lucide.createIcons();
+      }
+    }
+
+    function requestAddTask() {
+      if (isAdminAuthorized) {
+        openAddTaskModal();
+      } else {
+        openAdminModal('add');
+      }
+    }
+
+    function openAddTaskModal() {
+      const modal = document.getElementById('addTaskModal');
+      const deadlineInput = document.getElementById('taskDeadlineInput');
+      if (deadlineInput) deadlineInput.value = getTomorrowDateString();
+      if (modal) modal.classList.remove('hidden');
+    }
+
+    function closeAddTaskModal() {
+      const modal = document.getElementById('addTaskModal');
+      if (modal) modal.classList.add('hidden');
+    }
+
+    function submitNewTask(e) {
+      e.preventDefault();
+      const subject = document.getElementById('taskSubjectInput')?.value.trim();
+      const desc = document.getElementById('taskDescInput')?.value.trim();
+      const deadline = document.getElementById('taskDeadlineInput')?.value;
+      const priority = document.getElementById('taskPriorityInput')?.value;
+
+      if (!subject || !deadline) return;
+
+      // 1. Buat objek data tugas
+      const newTask = {
+        subject,
+        desc,
+        deadline,
+        priority,
+        createdAt: new Date().toISOString()
+      };
+      closeAddTaskModal();
+
+      if (isFirebaseReady && db) {
+        // 2. Simpan ke Cloud Firestore (kirim `newTask`)
+        db.collection("tasks").add(newTask)
+          .then((docRef) => {
+            console.log("Tugas tersimpan di cloud dengan ID:", docRef.id);
+            e.target.reset(); // Cosmetik: Mengosongkan form setelah berhasil kirim
+          })
+          .catch((err) => {
+            console.error("Gagal menyimpan ke Firestore:", err);
+          });
+      } else {
+        // 3. Jika mode offline, tambahkan ID timestamp lokal
+        const localTaskObj = { id: "task-" + Date.now(), ...newTask };
+        localTasks.push(localTaskObj);
+        localStorage.setItem('skagara_local_tasks', JSON.stringify(localTasks));
+        renderTasks(localTasks);
+        e.target.reset();
+      }
+    }
+
+    function saveTaskLocally(task) {
+      localTasks.unshift(task);
+      localStorage.setItem('skagara_local_tasks', JSON.stringify(localTasks));
+      renderTasks(localTasks);
+      closeAddTaskModal();
+    }
+
+    function requestDeleteTask(taskId) {
+      if (isAdminAuthorized) {
+        executeDeleteTask(taskId);
+      } else {
+        openAdminModal('delete', taskId);
+      }
+    }
+
+    function executeDeleteTask(taskId) {
+      // 1. Hapus dari UI dan LocalStorage secara langsung (Optimistic Update)
+      localTasks = localTasks.filter(t => t.id !== taskId);
+      localStorage.setItem('skagara_local_tasks', JSON.stringify(localTasks));
+      renderTasks(localTasks);
+
+      // 2. Jika Firestore aktif, hapus juga dokumennya di Cloud
+      if (isFirebaseReady && db) {
+        db.collection("tasks").doc(String(taskId)).delete()
+          .then(() => {
+            console.log("Berhasil menghapus tugas dari Firestore:", taskId);
+          })
+          .catch(err => {
+            console.warn("Gagal menghapus dari Firestore:", err);
+          });
+      }
+    }
+
+    // Listen to Real-time Firestore updates if initialized
+    if (isFirebaseReady && db) {
+      db.collection("tasks").onSnapshot((snapshot) => {
+        // Ambil data dan gunakan doc.id asli dari Firestore
+        localTasks = snapshot.docs.map(doc => ({
+          id: doc.id, // WAJIB: gunakan ID dokumen Firestore
+          ...doc.data()
+        }));
+
+        // Simpan ke localStorage agar offline support tetap jalan
+        localStorage.setItem('skagara_local_tasks', JSON.stringify(localTasks));
+        
+        // Rendering UIke tampilan
+        renderTasks(localTasks);
+      });
+    }
+
+    // Initialize Lucide Icons
+    if (window.lucide) {
+      window.lucide.createIcons();
+    }
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+
+</body>
+</html>

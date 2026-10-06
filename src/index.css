@@ -1,0 +1,19 @@
+@import "tailwindcss";
+@config "../tailwind.config.js";
+
+@theme {
+  /* Daftarkan variabel warna mono kamu di sini (sesuaikan kode HEX-nya) */
+  --color-mono-800: #1e1e1e;
+  --color-mono-900: #0a0a0a;
+
+  /* Jika memakai font kustom, atur juga di sini */
+  --font-sans: 'Plus Jakarta Sans', 'Inter', sans-serif;
+}
+
+/* Opsional: Efek font-smoothing agar teks terlihat lebih halus/tipis seperti di CDN */
+@layer base {
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
